@@ -125,12 +125,12 @@ El-Mountassir/
 
 All standards are in `docs/standards/`. Key ones:
 
-| Standard           | Location                                       | Description                                    |
-| ------------------ | ---------------------------------------------- | ---------------------------------------------- |
-| **Project Standards** | `docs/standards/project-standards.md`       | SemVer, Dublin Core, Changelog, Work Mgmt      |
-| Calendar           | `docs/standards/management/time/README.md`     | Time management, appointment tiers             |
-| Missions           | `docs/standards/management/missions/README.md` | Multi-step work packages                       |
-| Versioning         | `docs/standards/specs/versioning.md`           | SemVer with zero-state                         |
+| Standard              | Location                                       | Description                               |
+| --------------------- | ---------------------------------------------- | ----------------------------------------- |
+| **Project Standards** | `docs/standards/project-standards.md`          | SemVer, Dublin Core, Changelog, Work Mgmt |
+| Calendar              | `docs/standards/management/time/README.md`     | Time management, appointment tiers        |
+| Missions              | `docs/standards/management/missions/README.md` | Multi-step work packages                  |
+| Versioning            | `docs/standards/specs/versioning.md`           | SemVer with zero-state                    |
 
 > **Core reference**: `docs/standards/project-standards.md` — Our complete standards guide.
 
