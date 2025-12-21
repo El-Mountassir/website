@@ -3,114 +3,120 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 00:25:00 UTC
+**Last updated**: 2025-12-21 23:12:41 UTC
 
 ---
 
 ```
 ./
 ├── admin/
-│   ├── finance/
-│   │   └── .gitkeep
-│   ├── legal/
-│   │   └── .gitkeep
-│   └── time/
-│       └── .gitkeep
+│   ├── finance/
+│   │   └── .gitkeep
+│   ├── legal/
+│   │   └── .gitkeep
+│   └── time/
+│       └── .gitkeep
 ├── archive/
-│   └── settings.local.json.backup
+│   └── settings.local.json.backup
 ├── .claude/
-│   ├── commands/
-│   │   ├── elevate.md
-│   │   ├── question-w-mermaid-diagrams.md
-│   │   └── sync.md
-│   ├── hooks/
-│   │   └── update-structure.sh*
-│   ├── skills/
-│   │   ├── meta-skill/
-│   │   │   ├── docs/
-│   │   │   └── SKILL.md
-│   │   └── reorganizing-directories/
-│   │       ├── checklist.md
-│   │       └── SKILL.md
-│   ├── settings.json
-│   └── settings.local.json
+│   ├── commands/
+│   │   ├── elevate.md
+│   │   ├── question-w-mermaid-diagrams.md
+│   │   └── sync.md
+│   ├── hooks/
+│   │   └── update-structure.sh*
+│   ├── rules/
+│   │   ├── behavior.md
+│   │   ├── memory-protocol.md
+│   │   ├── partnership.md
+│   │   ├── taxonomy.md
+│   │   └── world-model.md
+│   ├── skills/
+│   │   ├── meta-skill/
+│   │   │   ├── docs/
+│   │   │   └── SKILL.md
+│   │   └── reorganizing-directories/
+│   │       ├── checklist.md
+│   │       └── SKILL.md
+│   ├── settings.json
+│   └── settings.local.json
 ├── configs/
-│   └── system/
-│       ├── agents/
-│       └── prompts/
+│   └── system/
+│       ├── agents/
+│       └── prompts/
 ├── docs/
-│   ├── reference/
-│   │   └── guides/
-│   │       └── claude-code-chrome.md
-│   └── standards/
-│       ├── management/
-│       │   ├── missions/
-│       │   └── time/
-│       ├── specs/
-│       │   └── versioning.md
-│       ├── project-standards.md
-│       └── state-management.md
+│   ├── reference/
+│   │   └── guides/
+│   │       └── claude-code-chrome.md
+│   └── standards/
+│       ├── management/
+│       │   ├── missions/
+│       │   └── time/
+│       ├── specs/
+│       │   └── versioning.md
+│       ├── project-standards.md
+│       └── state-management.md
 ├── history/
-│   └── 2025/
-│       └── Q4/
-│           ├── missions/
-│           │   └── claude-code-mission-init/
-│           └── reports/
-│               ├── claude-code-permissions/
-│               ├── github-setup-diagnostic.md
-│               ├── prompt-claude-web-final.md
-│               ├── prompt-claude-web-structure-review.md
-│               └── structure-diagnostic-2025-12-21.md
+│   └── 2025/
+│       └── Q4/
+│           ├── missions/
+│           └── reports/
 ├── learning/
-│   ├── pac/
-│   │   └── .gitkeep
-│   ├── tac/
-│   │   └── .gitkeep
-│   └── zte/
-│       └── .gitkeep
+│   ├── pac/
+│   │   └── .gitkeep
+│   ├── tac/
+│   │   └── .gitkeep
+│   └── zte/
+│       └── .gitkeep
 ├── LESSONS-LEARNED/
-│   └── .gitkeep
+│   └── .gitkeep
 ├── missions/
-│   ├── active/
-│   │   └── .gitkeep
-│   ├── drafts/
-│   ├── queue/
-│   │   ├── 2025-12-21-omar-cleanup.md
-│   │   └── .gitkeep
-│   └── README.md
+│   ├── active/
+│   │   ├── github-push.md
+│   │   └── .gitkeep
+│   ├── drafts/
+│   │   ├── behavior-fix.md
+│   │   ├── claude-web-sync.md
+│   │   ├── deferred-items.md
+│   │   ├── restructuration-standards.md
+│   │   └── session-commands.md
+│   ├── queue/
+│   │   ├── 2025-12-21-omar-cleanup.md
+│   │   └── .gitkeep
+│   └── README.md
 ├── omar/
-│   ├── context/
-│   │   └── README.md
-│   ├── model/
-│   └── tools/
+│   ├── context/
+│   │   └── README.md
+│   ├── model/
+│   └── tools/
 ├── projects/
-│   ├── gagliano/
-│   │   └── CLAUDE.md
-│   └── thaifa/
-│       ├── state/
-│       │   ├── baseline/
-│       │   ├── current/
-│       │   ├── execution/
-│       │   ├── historical/
-│       │   ├── planned/
-│       │   └── README.md
-│       └── CLAUDE.md
+│   ├── gagliano/
+│   │   └── CLAUDE.md
+│   └── thaifa/
+│       ├── state/
+│       │   ├── baseline/
+│       │   ├── current/
+│       │   ├── execution/
+│       │   ├── historical/
+│       │   ├── planned/
+│       │   └── README.md
+│       └── CLAUDE.md
 ├── templates/
-│   ├── projects/
-│   │   └── CLAUDE.md
-│   ├── state/
-│   │   ├── baseline/
-│   │   │   └── README.md
-│   │   ├── current/
-│   │   │   └── README.md
-│   │   ├── execution/
-│   │   │   └── README.md
-│   │   ├── historical/
-│   │   │   └── README.md
-│   │   ├── planned/
-│   │   │   └── README.md
-│   │   └── README.md
-│   └── README.md
+│   ├── projects/
+│   │   └── CLAUDE.md
+│   ├── state/
+│   │   ├── baseline/
+│   │   │   └── README.md
+│   │   ├── current/
+│   │   │   └── README.md
+│   │   ├── execution/
+│   │   │   └── README.md
+│   │   ├── historical/
+│   │   │   └── README.md
+│   │   ├── planned/
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
 ├── CHANGELOG.md
 ├── CLAUDE.md
 ├── .gitignore
@@ -119,7 +125,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-62 directories, 49 files
+60 directories, 55 files
 ```
 
 ---

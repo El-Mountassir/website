@@ -36,32 +36,36 @@ This guide provides a research-backed, optimized Claude Code permissions configu
 - No logical grouping
 - No deny list
 
-### After (61 allow + 8 deny = 69 entries)
+### After (72 allow + 8 deny = 80 entries)
 
 - 0 duplicates
 - 0 redundancies
-- 8 logical categories
-- Security deny list added for .env, secrets, .aws, .ssh
+- 9 logical categories
+- Security deny list for .env, .env.local, secrets, .aws, .ssh
+- Generalized `Skill` and `SlashCommand` (flexible)
+- Added GitHub CLI (`gh:*`) commands
+- Added project-specific git commands
 
-**Net reduction**: 18 allow entries (23% cleaner)
-**Security added**: 8 deny entries
+**Structure**: Clean, organized, extensible
+**Security**: 8 deny entries for sensitive paths
 
 ---
 
 ## Category Reference
 
-| #   | Category          | Purpose                                         | Count |
-| --- | ----------------- | ----------------------------------------------- | ----- |
-| 1   | Core Tools        | Built-in Claude Code (Read, Write, Edit, Skill) | 4     |
-| 2   | File Operations   | File system commands                            | 11    |
-| 3   | Git Operations    | Version control                                 | 6     |
-| 4   | Build & Test      | Development tooling                             | 8     |
-| 5   | MCP Servers       | External integrations                           | 3     |
-| 6   | Skills & Commands | Custom extensions                               | 3     |
-| 7   | Claude CLI        | Meta-commands                                   | 3     |
-| 8   | Network           | Web access                                      | 2     |
-| 9   | System            | Elevated operations                             | 15    |
-| 10  | Deny List         | Blocked operations                              | 8     |
+| #   | Category          | Purpose                                    | Count |
+| --- | ----------------- | ------------------------------------------ | ----- |
+| 1   | Core Tools        | Built-in (Read, Write, Edit)               | 3     |
+| 2   | File Operations   | File system commands                       | 11    |
+| 3   | Git Operations    | Version control + project-specific         | 11    |
+| 4   | Build & Test      | Development tooling                        | 9     |
+| 5   | MCP Servers       | External integrations                      | 4     |
+| 6   | Skills & Commands | Generalized Skill, SlashCommand            | 2     |
+| 7   | Claude CLI        | Meta-commands                              | 3     |
+| 8   | GitHub CLI        | gh auth, repo, api commands                | 5     |
+| 9   | Network           | Web access                                 | 2     |
+| 10  | System            | Elevated operations                        | 15    |
+| 11  | Deny List         | Blocked operations                         | 8     |
 
 ---
 
@@ -74,7 +78,6 @@ This guide provides a research-backed, optimized Claude Code permissions configu
       "Read",
       "Write",
       "Edit",
-      "Skill",
 
       "Bash(ls:*)",
       "Bash(tree:*)",
@@ -94,6 +97,11 @@ This guide provides a research-backed, optimized Claude Code permissions configu
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
+      "Bash(git -C /home/omar/Work/El-Mountassir ls-files:*)",
+      "Bash(git -C /home/omar/Work/El-Mountassir status omar/)",
+      "Bash(git -C /home/omar/Work/El-Mountassir remote:*)",
+      "Bash(git -C /home/omar/Work/El-Mountassir status --short)",
+      "Bash(git -C /home/omar/Work/El-Mountassir log --oneline -3)",
 
       "Bash(npm test:*)",
       "Bash(pnpm:*)",
@@ -103,18 +111,25 @@ This guide provides a research-backed, optimized Claude Code permissions configu
       "Bash(pandoc:*)",
       "Bash(typst:*)",
       "Bash(wkhtmltopdf:*)",
+      "Bash(./run-test.sh:*)",
 
       "mcp__firecrawl__*",
       "mcp__code-execution__run_python",
       "mcp__MCP_DOCKER__*",
+      "mcp__linear__*",
 
-      "Skill(tunnel-vision-prevention)",
-      "Skill(elevate)",
-      "SlashCommand(/context-audit)",
+      "Skill",
+      "SlashCommand",
 
       "Bash(claude:*)",
       "Bash(claude -p:*)",
       "Bash(claude /doctor)",
+
+      "Bash(gh auth status:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh repo rename:*)",
+      "Bash(gh api:*)",
+      "Bash(gh repo list:*)",
 
       "WebFetch",
       "WebSearch",
@@ -130,16 +145,20 @@ This guide provides a research-backed, optimized Claude Code permissions configu
       "Bash(sudo cat:*)",
       "Bash(sudo find:*)",
       "Bash(sudo grep:*)",
-      "Bash(sudo sed -i:*)",
+      "Bash(sudo sed:*)",
+      "Bash(sudo -u node ls:*)",
       "Bash(getfacl:*)",
       "Bash(getent passwd:*)",
-      "Bash(sudo -u node ls:*)"
+
+      "Bash(done)",
+      "Bash(while read f)",
+      "Bash(__NEW_LINE__ echo:*)"
     ],
     "deny": [
       "Read(./.env)",
-      "Read(./.env.*)",
+      "Read(./.env.local)",
       "Write(./.env)",
-      "Write(./.env.*)",
+      "Write(./.env.local)",
       "Read(./secrets/**)",
       "Write(./secrets/**)",
       "Read(~/.aws/**)",
