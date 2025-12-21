@@ -2,12 +2,12 @@
 
 ```yaml
 mission_id: 2025-12-22-restructuration-standards
-status: DRAFT
+status: ARCHIVED
 assigned_to: Claude Code
 created: 2025-12-22
-assigned:
-completed:
-archived:
+assigned: 2025-12-22
+completed: 2025-12-22
+archived: 2025-12-22
 priority: 3
 blocks: [omar-cleanup]
 ```
@@ -27,12 +27,12 @@ Analyse de `docs/standards/` a révélé un "bordel":
 
 ## Objectives
 
-- [ ] **O1**: Supprimer `specs/versioning.md` (fichier fantôme)
-- [ ] **O2**: Créer `management/work/README.md` avec contenu extrait
-- [ ] **O3**: Retirer section Work Management de `project-standards.md`
-- [ ] **O4**: Créer `docs/standards/INDEX.md` (hub)
-- [ ] **O5**: Mettre à jour références dans CLAUDE.md
-- [ ] **O6**: Commit et vérifier cohérence
+- [x] **O1**: Supprimer `specs/versioning.md` (fichier fantôme)
+- [x] **O2**: Créer `management/work/README.md` avec contenu extrait
+- [x] **O3**: Retirer section Work Management de `project-standards.md`
+- [x] **O4**: Créer `docs/standards/INDEX.md` (hub)
+- [x] **O5**: Mettre à jour références dans CLAUDE.md
+- [x] **O6**: Commit et vérifier cohérence
 
 ---
 
@@ -40,11 +40,11 @@ Analyse de `docs/standards/` a révélé un "bordel":
 
 | # | Criterion | Status | Evidence |
 |---|-----------|--------|----------|
-| 1 | Fichier fantôme supprimé | ⬜ | `specs/versioning.md` n'existe plus |
-| 2 | Work Management extrait | ⬜ | `management/work/README.md` existe |
-| 3 | project-standards.md allégé | ⬜ | Section 4 retirée |
-| 4 | Index créé | ⬜ | `docs/standards/INDEX.md` existe |
-| 5 | Références à jour | ⬜ | CLAUDE.md cohérent |
+| 1 | Fichier fantôme supprimé | ✅ | `specs/versioning.md` deleted |
+| 2 | Work Management extrait | ✅ | `management/work/README.md` created |
+| 3 | project-standards.md allégé | ✅ | Section 4 replaced with redirect note |
+| 4 | Index créé | ✅ | `docs/standards/INDEX.md` created as hub |
+| 5 | Références à jour | ✅ | CLAUDE.md updated with new structure |
 
 ---
 
@@ -147,7 +147,16 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 ### 2025-12-22
 
 - **Created**: Mission drafted based on Claude Web recommendation
+- **Assigned**: Moved to active/
+- **Executed**:
+  - Deleted `docs/standards/specs/versioning.md` (ghost file)
+  - Created `docs/standards/management/work/README.md` with extracted content
+  - Updated `docs/standards/project-standards.md` (removed section 4, added redirect)
+  - Created `docs/standards/INDEX.md` as central hub
+  - Updated CLAUDE.md references
+- **Completed**: All objectives met, structure consistent
+- **Archived**: Moved to history/2025/Q4/missions/restructuration-standards/
 
 ---
 
-_Mission v0.0.1-alpha.0_
+_Mission v0.0.1-alpha.0 | ARCHIVED 2025-12-22_

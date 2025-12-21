@@ -128,12 +128,13 @@ All standards are in `docs/standards/`. Key ones:
 
 | Standard              | Location                                       | Description                               |
 | --------------------- | ---------------------------------------------- | ----------------------------------------- |
-| **Project Standards** | `docs/standards/project-standards.md`          | SemVer, Dublin Core, Changelog, Work Mgmt |
+| **Project Standards** | `docs/standards/project-standards.md`          | SemVer, Dublin Core, Changelog            |
+| **Standards Index**   | `docs/standards/INDEX.md`                      | Hub central pour tous les standards       |
+| Work Management       | `docs/standards/management/work/README.md`     | DoR, DoD, Task Lifecycle, Priority        |
 | Calendar              | `docs/standards/management/time/README.md`     | Time management, appointment tiers        |
 | Missions              | `docs/standards/management/missions/README.md` | Multi-step work packages                  |
-| Versioning            | `docs/standards/specs/versioning.md`           | SemVer with zero-state                    |
 
-> **Core reference**: `docs/standards/project-standards.md` — Our complete standards guide.
+> **Core reference**: `docs/standards/INDEX.md` — Hub central pour tous les standards.
 
 @docs/standards/project-standards.md
 

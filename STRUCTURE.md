@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-21 23:19:02 UTC
+**Last updated**: 2025-12-21 23:24:00 UTC
 
 ---
 
@@ -51,9 +51,9 @@
 │   └── standards/
 │       ├── management/
 │       │   ├── missions/
-│       │   └── time/
-│       ├── specs/
-│       │   └── versioning.md
+│       │   ├── time/
+│       │   └── work/
+│       ├── INDEX.md
 │       ├── project-standards.md
 │       └── state-management.md
 ├── history/
@@ -77,7 +77,6 @@
 │   ├── drafts/
 │   │   ├── claude-web-sync.md
 │   │   ├── deferred-items.md
-│   │   ├── restructuration-standards.md
 │   │   └── session-commands.md
 │   ├── queue/
 │   │   ├── 2025-12-21-omar-cleanup.md
@@ -127,7 +126,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-60 directories, 57 files
+60 directories, 56 files
 ```
 
 ---
