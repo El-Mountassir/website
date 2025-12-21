@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-21 23:36:04 UTC
+**Last updated**: 2025-12-21 23:39:11 UTC
 
 ---
 
@@ -78,14 +78,15 @@
 │   │   ├── claude-web-sync.md
 │   │   └── session-commands.md
 │   ├── queue/
-│   │   ├── 2025-12-21-omar-cleanup.md
 │   │   └── .gitkeep
 │   └── README.md
 ├── omar/
 │   ├── context/
 │   │   └── README.md
 │   ├── model/
+│   │   └── README.md
 │   └── tools/
+│       └── README.md
 ├── projects/
 │   ├── gagliano/
 │   │   └── CLAUDE.md
@@ -125,7 +126,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-60 directories, 55 files
+60 directories, 56 files
 ```
 
 ---
