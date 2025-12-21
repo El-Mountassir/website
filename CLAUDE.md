@@ -171,6 +171,36 @@ All standards are in `docs/standards/`. Key ones:
 
 ---
 
+## SESSION COMMANDS
+
+| Command | Purpose | When to use |
+|---------|---------|-------------|
+| `/start` | Session onboarding | Beginning of any session |
+| `/end` | Safe session closure | End of any session |
+
+### /start
+
+Loads context and orients toward existing work:
+1. Checks `missions/active/` for in-progress work
+2. Checks `missions/queue/` for ready missions
+3. Displays state summary
+4. Asks: resume or new initiative?
+
+### /end
+
+**Enforces HARD STOP #6** with guardrails:
+
+| Guardrail | Condition | Action |
+|-----------|-----------|--------|
+| Uncaptured items | Tasks mentioned but no mission | BLOCK |
+| Git dirty | Uncommitted changes | BLOCK |
+| CHANGELOG | Not updated after changes | WARN |
+
+**Background**: Prevents repeat of 2025-12-21 incident where session ended with items lost.
+See: `LESSONS-LEARNED/2025-12-21-premature-closure.md`
+
+---
+
 ## INTEGRATIONS
 
 | System          | Purpose                    | Status                 |
