@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-21 23:45:00 UTC
+**Last updated**: 2025-12-22 00:25:00 UTC
 
 ---
 
@@ -48,12 +48,19 @@
 │       │   └── time/
 │       ├── specs/
 │       │   └── versioning.md
+│       ├── project-standards.md
 │       └── state-management.md
 ├── history/
 │   └── 2025/
 │       └── Q4/
 │           ├── missions/
+│           │   └── claude-code-mission-init/
 │           └── reports/
+│               ├── claude-code-permissions/
+│               ├── github-setup-diagnostic.md
+│               ├── prompt-claude-web-final.md
+│               ├── prompt-claude-web-structure-review.md
+│               └── structure-diagnostic-2025-12-21.md
 ├── learning/
 │   ├── pac/
 │   │   └── .gitkeep
@@ -104,6 +111,7 @@
 │   │   │   └── README.md
 │   │   └── README.md
 │   └── README.md
+├── CHANGELOG.md
 ├── CLAUDE.md
 ├── .gitignore
 ├── INDEX.md
@@ -111,7 +119,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-59 directories, 42 files
+62 directories, 49 files
 ```
 
 ---
