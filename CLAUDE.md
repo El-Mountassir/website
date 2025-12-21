@@ -31,25 +31,26 @@ This is the filter for EVERYTHING. Every decision, every action, every task.
 ```
 El-Mountassir/
 ├── CLAUDE.md                # You are here (org-level)
-├── ROADMAP.md               # Priorities and phases — THE source of truth
+├── ROADMAP.md               # Strategic phases & milestones (quarterly)
 ├── INDEX.md                 # Master index (IDs, references)
 ├── LESSONS-LEARNED/         # Mistakes and learnings
 │
-├── docs/                    # Documentation (Astro Starlight)
-│   ├── standards/           # Our standards (calendar, work-management, etc.)
+├── templates/               # Reusable templates
+│   ├── state/               # State management templates
+│   └── projects/            # Project structure templates
+│
+├── docs/                    # Documentation
+│   ├── standards/           # Our standards
 │   └── reference/           # Reference material
 │
 ├── configs/                 # Configurations
-│   ├── system/              # System configuration
-│   │   ├── agents /         # Agent configurations (Claude Web, Claude Code, etc. + future)
-│   │   │   ├── prompts/     # System prompts (Claude Web, Claude Code, etc.)
-|   │   │   └── ...
-│   │   └── ...
-│   └── ...
+│   └── system/              # System configuration
+│       └── agents/          # Agent configurations
 │
 ├── projects/                # Client projects
 │   ├── thaifa/              # Villa Thaifa
-│   │   └── CLAUDE.md        # Project-specific context
+│   │   ├── CLAUDE.md        # Project-specific context
+│   │   └── state/           # Project state (SSOT)
 │   └── gagliano/            # Gagliano
 │       └── CLAUDE.md        # Project-specific context
 │
@@ -57,6 +58,9 @@ El-Mountassir/
 │   ├── time/                # Time management, calendar
 │   ├── finance/             # Financial records
 │   └── legal/               # Legal documents
+│
+├── omar/                    # Omar's personal context
+│   └── context/             # Profile & preferences
 │
 └── learning/                # Learning materials
     ├── tac/                 # Tactical Agentic Coding
@@ -96,23 +100,52 @@ El-Mountassir/
 
 All standards are in `docs/standards/`. Key ones:
 
-| Standard        | Location                                    | Description                        |
-| --------------- | ------------------------------------------- | ---------------------------------- |
-| Calendar        | `docs/standards/management/time/READEME.md` | Time management, appointment tiers |
-| Work Management | `docs/standards/management/work/READEME.md` | Task lifecycle, priorities         |
-| Versioning      | `docs/standards/specs/versioning.md`        | SemVer with zero-state             |
+| Standard        | Location                                        | Description                        |
+| --------------- | ----------------------------------------------- | ---------------------------------- |
+| Calendar        | `docs/standards/management/time/README.md`      | Time management, appointment tiers |
+| Work Management | `docs/standards/management/work/README.md`      | Task lifecycle, priorities         |
+| Missions        | `docs/standards/management/missions/README.md`  | Multi-step work packages           |
+| Versioning      | `docs/standards/specs/versioning.md`            | SemVer with zero-state             |
+
+---
+
+## MISSION HANDLING
+
+> **Missions = Multi-step work packages. Tasks = Single actions in Linear.**
+
+### Locations
+
+| Directory | Purpose |
+|-----------|---------|
+| `missions/drafts/` | Ideas, not assigned |
+| `missions/queue/` | Ready for assignment |
+| `missions/active/` | Currently executing |
+| `history/YYYY/QQ/missions/` | Archived (completed) |
+
+### Lifecycle
+
+`CREATE → ASSIGN → EXECUTE → COMPLETE → ARCHIVE`
+
+### For Future Instances
+
+1. **At session start**: Check `missions/active/` for in-progress work
+2. **During work**: Log progress in mission's execution log
+3. **On completion**: Verify success criteria, then archive to `history/`
+4. **If interrupted**: Next instance continues from execution log
+
+**Full standard**: `docs/standards/management/missions/README.md`
 
 ---
 
 ## INTEGRATIONS
 
-| System          | Purpose                    | Status                 |
-| --------------- | -------------------------- | ---------------------- |
-| Google Calendar | Time management            | 🔴 To configure        |
-| Linear          | Work management            | 🔴 To setup            |
-| GitHub          | Version control            | 🟡 Repo exists locally |
-| Vercel          | Deployment                 | 🔴 To connect          |
-| Cloudflare      | Domain (el-mountassir.com) | 🟡 Domain owned        |
+| System          | Purpose                    | Status                      |
+| --------------- | -------------------------- | --------------------------- |
+| Google Calendar | Time management            | 🟢 Basics configured        |
+| Linear          | Work management            | 🟢 Connected (MCP)          |
+| GitHub          | Version control            | 🟡 Repo exists locally      |
+| Vercel          | Deployment                 | 🔴 To connect               |
+| Cloudflare      | Domain (el-mountassir.com) | 🟡 Domain owned             |
 
 ---
 

@@ -14,7 +14,7 @@ Language: en
 Rights: Internal Team Standard
 
 # Extended Metadata
-Version: 0.0.2-alpha.0
+Version: 0.0.3-alpha.0
 Status: VISION
 Dimension: Time
 Maturity: Declared (not yet proven)
@@ -277,15 +277,38 @@ Future_Agents: Time Management Agent, Scheduling Agent
 
 ---
 
-## 10. Implementation Checklist
+## 10. Current Calendar Configuration
+
+> **Configured 2025-12-21** — Actual events created in Google Calendar.
+
+### 10.1 Recurring Events (Active)
+
+| Event                     | Time          | Days    | Color  | Auto-Decline | Notes                      |
+| ------------------------- | ------------- | ------- | ------ | ------------ | -------------------------- |
+| FOCUS - Deep Work Block   | 10:30am - 1pm | Mon-Fri | Grape  | Yes          | Morning focus time         |
+| BREAK - Lunch             | 1pm - 2:30pm  | Mon-Fri | Grape  | Yes (OOO)    | Out of Office type         |
+| FOCUS - Night Deep Work   | 7pm - 10pm    | Mon-Thu | Grape  | No           | Evening focus (high energy)|
+
+### 10.2 Exception Handling
+
+| Situation              | Action                                  | Example                           |
+| ---------------------- | --------------------------------------- | --------------------------------- |
+| Client RDV conflicts   | Delete single occurrence of focus block | Dec 22: No morning block (Thaifa) |
+| Meeting runs late      | Shift lunch block for that day          | Dec 22: Lunch → 3pm-4:30pm        |
+| Weekend work needed    | Create one-time FOCUS block             | —                                 |
+
+---
+
+## 11. Implementation Checklist
 
 | Task                                        | Priority | Status  | Owner       | Automation         |
 | ------------------------------------------- | -------- | ------- | ----------- | ------------------ |
-| Set up "Speedy meetings" in Google Calendar | P1       | ⬜ TODO | Omar        | Manual             |
-| Create recurring "Deep Work" blocks         | P1       | ⬜ TODO | Omar        | Future: Time Agent |
-| Create recurring "Lunch" blocks             | P1       | ⬜ TODO | Omar        | Future: Time Agent |
-| Set default meeting duration to 30 min      | P1       | ⬜ TODO | Omar        | Manual             |
-| Apply color coding to existing events       | P2       | ⬜ TODO | Omar        | Manual             |
+| Set up "Speedy meetings" in Google Calendar | P1       | ✅ DONE | Claude Code | Manual             |
+| Create recurring "Deep Work" blocks         | P1       | ✅ DONE | Claude Code | Future: Time Agent |
+| Create recurring "Lunch" blocks             | P1       | ✅ DONE | Claude Code | Future: Time Agent |
+| Create recurring "Night Deep Work" blocks   | P1       | ✅ DONE | Claude Code | Future: Time Agent |
+| Set default meeting duration to 30 min      | P2       | ⬜ TODO | Omar        | Manual             |
+| Apply color coding to existing events       | P2       | ✅ DONE | Claude Code | Manual             |
 | Review and clean up recurring meetings      | P2       | ⬜ TODO | Omar        | Manual             |
 | Share availability preferences with clients | P2       | ⬜ TODO | Omar        | Manual             |
 | Document current sleep/wake patterns        | P2       | ⬜ TODO | Omar        | Future: Time Agent |
@@ -298,6 +321,7 @@ Future_Agents: Time Management Agent, Scheduling Agent
 
 | Version       | Date       | Changes                                                                                                                           |
 | ------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 0.0.3-alpha.0 | 2025-12-21 | Added Section 10 (Current Calendar Configuration), updated Implementation Checklist with actual state                             |
 | 0.0.2-alpha.0 | 2025-12-21 | Added Dimension metadata, realistic daily structure (night owl), transition plan, travel buffers, automation section, more tables |
 | 0.0.1-alpha.0 | 2025-12-21 | Initial draft                                                                                                                     |
 
