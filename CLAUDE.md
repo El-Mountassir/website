@@ -33,7 +33,24 @@ El-Mountassir/
 ├── CLAUDE.md                # You are here (org-level)
 ├── ROADMAP.md               # Strategic phases & milestones (quarterly)
 ├── INDEX.md                 # Master index (IDs, references)
+├── STRUCTURE.md             # Auto-generated directory tree
 ├── LESSONS-LEARNED/         # Mistakes and learnings
+│
+├── .claude/                 # Claude Code configuration
+│   ├── commands/            # Custom slash commands
+│   ├── skills/              # Agent skills
+│   ├── hooks/               # Automation hooks
+│   └── settings.json        # Project settings
+│
+├── missions/                # Mission management
+│   ├── drafts/              # Ideas, not assigned
+│   ├── queue/               # Ready for assignment
+│   └── active/              # Currently executing
+│
+├── history/                 # Historical records
+│   └── YYYY/QQ/             # Quarterly archives
+│       ├── missions/        # Completed missions
+│       └── reports/         # Generated reports
 │
 ├── templates/               # Reusable templates
 │   ├── state/               # State management templates
@@ -56,8 +73,8 @@ El-Mountassir/
 │
 ├── admin/                   # Life administration
 │   ├── time/                # Time management, calendar
-│   ├── finance/             # Financial records
-│   └── legal/               # Legal documents
+│   ├── finance/             # Financial records [PROTECTED]
+│   └── legal/               # Legal documents [PROTECTED]
 │
 ├── omar/                    # Omar's personal context
 │   └── context/             # Profile & preferences
@@ -67,6 +84,14 @@ El-Mountassir/
     ├── pac/                 # Principled AI Coding
     └── zte/                 # Zero Touch Engineering
 ```
+
+---
+
+## LIVE STRUCTURE
+
+> **For real-time directory tree, see STRUCTURE.md** — auto-updated by hooks.
+
+@STRUCTURE.md
 
 ---
 
@@ -100,12 +125,12 @@ El-Mountassir/
 
 All standards are in `docs/standards/`. Key ones:
 
-| Standard        | Location                                        | Description                        |
-| --------------- | ----------------------------------------------- | ---------------------------------- |
-| Calendar        | `docs/standards/management/time/README.md`      | Time management, appointment tiers |
-| Work Management | `docs/standards/management/work/README.md`      | Task lifecycle, priorities         |
-| Missions        | `docs/standards/management/missions/README.md`  | Multi-step work packages           |
-| Versioning      | `docs/standards/specs/versioning.md`            | SemVer with zero-state             |
+| Standard        | Location                                       | Description                        |
+| --------------- | ---------------------------------------------- | ---------------------------------- |
+| Calendar        | `docs/standards/management/time/README.md`     | Time management, appointment tiers |
+| Work Management | `docs/standards/management/work/README.md`     | Task lifecycle, priorities         |
+| Missions        | `docs/standards/management/missions/README.md` | Multi-step work packages           |
+| Versioning      | `docs/standards/specs/versioning.md`           | SemVer with zero-state             |
 
 ---
 
@@ -115,11 +140,11 @@ All standards are in `docs/standards/`. Key ones:
 
 ### Locations
 
-| Directory | Purpose |
-|-----------|---------|
-| `missions/drafts/` | Ideas, not assigned |
-| `missions/queue/` | Ready for assignment |
-| `missions/active/` | Currently executing |
+| Directory                   | Purpose              |
+| --------------------------- | -------------------- |
+| `missions/drafts/`          | Ideas, not assigned  |
+| `missions/queue/`           | Ready for assignment |
+| `missions/active/`          | Currently executing  |
 | `history/YYYY/QQ/missions/` | Archived (completed) |
 
 ### Lifecycle
@@ -128,10 +153,13 @@ All standards are in `docs/standards/`. Key ones:
 
 ### For Future Instances
 
-1. **At session start**: Check `missions/active/` for in-progress work
-2. **During work**: Log progress in mission's execution log
-3. **On completion**: Verify success criteria, then archive to `history/`
-4. **If interrupted**: Next instance continues from execution log
+1. **At session start**:
+   - Check `missions/active/` for in-progress work
+   - Check `missions/queue/` for ready-to-execute missions
+2. **Before executing**: Move mission from `queue/` to `active/`
+3. **During work**: Log progress in mission's execution log
+4. **On completion**: Verify success criteria, then archive to `history/`
+5. **If interrupted**: Next instance continues from execution log
 
 **Full standard**: `docs/standards/management/missions/README.md`
 
@@ -139,13 +167,13 @@ All standards are in `docs/standards/`. Key ones:
 
 ## INTEGRATIONS
 
-| System          | Purpose                    | Status                      |
-| --------------- | -------------------------- | --------------------------- |
-| Google Calendar | Time management            | 🟢 Basics configured        |
-| Linear          | Work management            | 🟢 Connected (MCP)          |
-| GitHub          | Version control            | 🟡 Repo exists locally      |
-| Vercel          | Deployment                 | 🔴 To connect               |
-| Cloudflare      | Domain (el-mountassir.com) | 🟡 Domain owned             |
+| System          | Purpose                    | Status                 |
+| --------------- | -------------------------- | ---------------------- |
+| Google Calendar | Time management            | 🟢 Basics configured   |
+| Linear          | Work management            | 🟢 Connected (MCP)     |
+| GitHub          | Version control            | 🟡 Repo exists locally |
+| Vercel          | Deployment                 | 🔴 To connect          |
+| Cloudflare      | Domain (el-mountassir.com) | 🟡 Domain owned        |
 
 ---
 
