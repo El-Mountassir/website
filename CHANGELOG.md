@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Live structure reference in CLAUDE.md (`@STRUCTURE.md`)
 - CHANGELOG.md following Keep a Changelog standard
 - Project standards documentation (`docs/standards/project-standards.md`)
+- Mission: omar-cleanup in queue (`missions/queue/2025-12-21-omar-cleanup.md`)
+- Skill: reorganizing-directories (`.claude/skills/reorganizing-directories/`)
 
 ### Changed
 - CLAUDE.md REPOSITORY STRUCTURE now includes missions/, history/, .claude/
@@ -20,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - .gitignore now protects admin/finance/ and admin/legal/
+- STRUCTURE.md manually updated (hook not triggering automatically)
 
 ## [0.0.1-alpha.0] - 2025-12-21
 
