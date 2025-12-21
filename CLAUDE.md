@@ -104,6 +104,7 @@ El-Mountassir/
 | 3   | **Golden Circle**         | WHY → HOW → WHAT. Always.                            |
 | 4   | **Capture what persists** | Important = file. Ephemeral = stays in conversation. |
 | 5   | **Prove > Declare**       | Actions matter, not words.                           |
+| 6   | **No premature closure**  | NEVER say "session complete" without capturing ALL remaining items as missions. Even minor/non-blocking items must be captured. |
 
 ---
 

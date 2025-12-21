@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-21 23:12:41 UTC
+**Last updated**: 2025-12-21 23:19:02 UTC
 
 ---
 
@@ -69,13 +69,12 @@
 │   └── zte/
 │       └── .gitkeep
 ├── LESSONS-LEARNED/
+│   ├── 2025-12-21-premature-closure.md
 │   └── .gitkeep
 ├── missions/
 │   ├── active/
-│   │   ├── github-push.md
 │   │   └── .gitkeep
 │   ├── drafts/
-│   │   ├── behavior-fix.md
 │   │   ├── claude-web-sync.md
 │   │   ├── deferred-items.md
 │   │   ├── restructuration-standards.md
@@ -120,12 +119,15 @@
 ├── CHANGELOG.md
 ├── CLAUDE.md
 ├── .gitignore
+├── GOVERNANCE.md
 ├── INDEX.md
+├── MANIFESTO.md
 ├── .mcp.json*
+├── README.md
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-60 directories, 55 files
+60 directories, 57 files
 ```
 
 ---

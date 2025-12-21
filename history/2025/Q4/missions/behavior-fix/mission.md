@@ -2,12 +2,12 @@
 
 ```yaml
 mission_id: 2025-12-21-behavior-fix
-status: DRAFT
+status: ARCHIVED
 assigned_to: Claude Code
 created: 2025-12-21
-assigned:
-completed:
-archived:
+assigned: 2025-12-22
+completed: 2025-12-22
+archived: 2025-12-22
 priority: 2
 blocks: [session-commands]
 ```
@@ -24,9 +24,9 @@ Omar a identifié un problème de comportement: dire "session complete" sans avo
 
 ## Objectives
 
-- [ ] **O1**: Ajouter règle anti-clôture dans CLAUDE.md
-- [ ] **O2**: Créer LESSONS-LEARNED/2025-12-21-premature-closure.md
-- [ ] **O3**: Commit la correction
+- [x] **O1**: Ajouter règle anti-clôture dans CLAUDE.md
+- [x] **O2**: Créer LESSONS-LEARNED/2025-12-21-premature-closure.md
+- [x] **O3**: Commit la correction
 
 ---
 
@@ -34,9 +34,9 @@ Omar a identifié un problème de comportement: dire "session complete" sans avo
 
 | # | Criterion | Status | Evidence |
 |---|-----------|--------|----------|
-| 1 | Règle dans CLAUDE.md | ⬜ | Section HARD STOPS mise à jour |
-| 2 | Lesson learned créée | ⬜ | Fichier existe avec contenu |
-| 3 | Commit fait | ⬜ | Commit hash |
+| 1 | Règle dans CLAUDE.md | ✅ | HARD STOP #6 added |
+| 2 | Lesson learned créée | ✅ | File created with full content |
+| 3 | Commit fait | ✅ | Part of final commit |
 
 ---
 
@@ -132,6 +132,15 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
 
 - **Created**: Mission drafted
 
+### 2025-12-22
+
+- **Assigned**: Mission moved to active/
+- **Executed**:
+  - Added HARD STOP #6 to CLAUDE.md: "No premature closure"
+  - Created LESSONS-LEARNED/2025-12-21-premature-closure.md with full documentation
+- **Completed**: All objectives met
+- **Archived**: Moved to history/2025/Q4/missions/behavior-fix/
+
 ---
 
-_Mission v0.0.1-alpha.0_
+_Mission v0.0.1-alpha.0 | ARCHIVED 2025-12-22_
