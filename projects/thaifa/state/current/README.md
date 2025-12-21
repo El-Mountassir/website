@@ -34,7 +34,6 @@
 - [← Main index](../README.md)
 - [Baseline (previous states)](../baseline/)
 - [Planned (objectives)](../planned/)
-- [Tasks](../../tasks/TODOs.md)
 
 ---
 

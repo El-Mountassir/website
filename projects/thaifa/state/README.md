@@ -14,7 +14,6 @@
 | **Planned** | WHAT WILL BE (objectives) | [planned/](planned/) |
 | **Execution** | WHAT WAS DONE (logs) | [execution/](execution/) |
 | **Historical** | CHANGES/CORRECTIONS | [historical/](historical/) |
-| **Tasks** | Active tasks | [../tasks/TODOs.md](../tasks/TODOs.md) |
 
 ---
 

@@ -6,11 +6,11 @@
 
 ## Structure
 
-| Directory | Purpose | Lifecycle Stage |
-|-----------|---------|-----------------|
-| `drafts/` | Mission ideas, not yet assigned | CREATE |
-| `queue/` | Ready for assignment | ASSIGN |
-| `active/` | Currently being executed | EXECUTE |
+| Directory | Purpose                         | Lifecycle Stage |
+| --------- | ------------------------------- | --------------- |
+| `drafts/` | Mission ideas, not yet assigned | CREATE          |
+| `queue/`  | Ready for assignment            | ASSIGN          |
+| `active/` | Currently being executed        | EXECUTE         |
 
 **Archived missions** → `history/YYYY/QQ/missions/{slug}/`
 

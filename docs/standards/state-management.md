@@ -136,7 +136,7 @@ Create a baseline snapshot BEFORE:
 
 ## Template Files
 
-See `omar/context/state/` for generic templates that can be copied for new projects.
+See `templates/state/` for generic templates that can be copied for new projects.
 
 ---
 
