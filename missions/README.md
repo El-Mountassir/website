@@ -18,8 +18,8 @@
 
 ## Queued Missions
 
-| Mission | Created | Assigned To | Description |
-|---------|---------|-------------|-------------|
+| Mission                                          | Created    | Assigned To | Description                        |
+| ------------------------------------------------ | ---------- | ----------- | ---------------------------------- |
 | [omar-cleanup](queue/2025-12-21-omar-cleanup.md) | 2025-12-21 | Claude Code | Clean up omar/ directory structure |
 
 ---

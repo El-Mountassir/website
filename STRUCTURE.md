@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-21 23:24:00 UTC
+**Last updated**: 2025-12-21 23:36:04 UTC
 
 ---
 
@@ -76,7 +76,6 @@
 │   │   └── .gitkeep
 │   ├── drafts/
 │   │   ├── claude-web-sync.md
-│   │   ├── deferred-items.md
 │   │   └── session-commands.md
 │   ├── queue/
 │   │   ├── 2025-12-21-omar-cleanup.md
@@ -126,7 +125,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-60 directories, 56 files
+60 directories, 55 files
 ```
 
 ---

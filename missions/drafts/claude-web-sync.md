@@ -9,7 +9,7 @@ assigned:
 completed:
 archived:
 priority: 2
-depends_on: [github-push]
+depends_on: []  # github-push completed (archived)
 ```
 
 ---
@@ -33,11 +33,11 @@ Maintenir la synchronisation entre Claude Code et Claude Web. Claude Web a besoi
 
 ## Success Criteria
 
-| # | Criterion | Status | Evidence |
-|---|-----------|--------|----------|
-| 1 | Claude Web peut voir le repo | ⬜ | Confirmation dans conversation |
-| 2 | System prompt récupéré | ⬜ | Fichier créé |
-| 3 | Pont de communication à jour | ⬜ | Fichier mis à jour |
+| #   | Criterion                    | Status | Evidence                       |
+| --- | ---------------------------- | ------ | ------------------------------ |
+| 1   | Claude Web peut voir le repo | ⬜     | Confirmation dans conversation |
+| 2   | System prompt récupéré       | ⬜     | Fichier créé                   |
+| 3   | Pont de communication à jour | ⬜     | Fichier mis à jour             |
 
 ---
 
@@ -61,6 +61,7 @@ git log origin/main -1
 ### Step 2: Continuer conversation Claude Web
 
 Via Chrome automation:
+
 1. Naviguer vers https://claude.ai/chat/4c192da5-e9fb-46c7-99a4-c0305b5d1b00
 2. Informer Claude Web que le repo est accessible
 3. Demander le system prompt

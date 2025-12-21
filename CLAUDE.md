@@ -97,13 +97,13 @@ El-Mountassir/
 
 ## HARD STOPS
 
-| #   | Rule                      | Meaning                                              |
-| --- | ------------------------- | ---------------------------------------------------- |
-| 1   | **Praxis > Theory**       | Do, don't just plan. If we can act now, we act now.  |
-| 2   | **No yes-man**            | Challenge if something seems wrong.                  |
-| 3   | **Golden Circle**         | WHY → HOW → WHAT. Always.                            |
-| 4   | **Capture what persists** | Important = file. Ephemeral = stays in conversation. |
-| 5   | **Prove > Declare**       | Actions matter, not words.                           |
+| #   | Rule                      | Meaning                                                                                                                         |
+| --- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Praxis > Theory**       | Do, don't just plan. If we can act now, we act now.                                                                             |
+| 2   | **No yes-man**            | Challenge if something seems wrong.                                                                                             |
+| 3   | **Golden Circle**         | WHY → HOW → WHAT. Always.                                                                                                       |
+| 4   | **Capture what persists** | Important = file. Ephemeral = stays in conversation.                                                                            |
+| 5   | **Prove > Declare**       | Actions matter, not words.                                                                                                      |
 | 6   | **No premature closure**  | NEVER say "session complete" without capturing ALL remaining items as missions. Even minor/non-blocking items must be captured. |
 
 ---
@@ -126,13 +126,13 @@ El-Mountassir/
 
 All standards are in `docs/standards/`. Key ones:
 
-| Standard              | Location                                       | Description                               |
-| --------------------- | ---------------------------------------------- | ----------------------------------------- |
-| **Project Standards** | `docs/standards/project-standards.md`          | SemVer, Dublin Core, Changelog            |
-| **Standards Index**   | `docs/standards/INDEX.md`                      | Hub central pour tous les standards       |
-| Work Management       | `docs/standards/management/work/README.md`     | DoR, DoD, Task Lifecycle, Priority        |
-| Calendar              | `docs/standards/management/time/README.md`     | Time management, appointment tiers        |
-| Missions              | `docs/standards/management/missions/README.md` | Multi-step work packages                  |
+| Standard              | Location                                       | Description                         |
+| --------------------- | ---------------------------------------------- | ----------------------------------- |
+| **Project Standards** | `docs/standards/project-standards.md`          | SemVer, Dublin Core, Changelog      |
+| **Standards Index**   | `docs/standards/INDEX.md`                      | Hub central pour tous les standards |
+| Work Management       | `docs/standards/management/work/README.md`     | DoR, DoD, Task Lifecycle, Priority  |
+| Calendar              | `docs/standards/management/time/README.md`     | Time management, appointment tiers  |
+| Missions              | `docs/standards/management/missions/README.md` | Multi-step work packages            |
 
 > **Core reference**: `docs/standards/INDEX.md` — Hub central pour tous les standards.
 

@@ -9,7 +9,7 @@ assigned:
 completed:
 archived:
 priority: 4
-depends_on: [behavior-fix]
+depends_on: []  # behavior-fix completed (archived)
 ```
 
 ---

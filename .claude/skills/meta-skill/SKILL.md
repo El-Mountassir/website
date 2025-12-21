@@ -449,6 +449,7 @@ You would:
    touch .claude/skills/transcribe/spell_corrections.md
    ```
 4. Write correction mappings in new file:
+
    ```markdown
    # Spell Corrections
 
@@ -456,6 +457,7 @@ You would:
    - "API" → "API" (ensure caps)
      ...
    ```
+
 5. Update SKILL.md workflow:
    - Add step: "Apply spell corrections from [spell_corrections.md](spell_corrections.md)"
    - Reference the corrections file
