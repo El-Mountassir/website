@@ -192,16 +192,16 @@ El-Mountassir/
 
 ## Implementation Status
 
-| Action | Status |
-|--------|--------|
-| Créer `shared/` structure | ✅ Done |
-| Créer `shared/INDEX.md` | ✅ Done |
-| Créer `shared/standards/confidence-system.md` | ✅ Done |
-| Créer `shared/user/preferences.md` | ✅ Done |
-| Créer `shared/memory/` files | ✅ Done |
+| Action                                         | Status  |
+| ---------------------------------------------- | ------- |
+| Créer `shared/` structure                      | ✅ Done |
+| Créer `shared/INDEX.md`                        | ✅ Done |
+| Créer `shared/standards/confidence-system.md`  | ✅ Done |
+| Créer `shared/user/preferences.md`             | ✅ Done |
+| Créer `shared/memory/` files                   | ✅ Done |
 | Migrer `docs/standards/` → `shared/standards/` | ✅ Done |
-| Mettre à jour CLAUDE.md | ✅ Done |
-| Mettre à jour références critiques | ✅ Done |
+| Mettre à jour CLAUDE.md                        | ✅ Done |
+| Mettre à jour références critiques             | ✅ Done |
 
 ---
 

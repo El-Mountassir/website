@@ -13,9 +13,7 @@ See: `LESSONS-LEARNED/2025-12-21-premature-closure.md`
 
 ## ZERO TOLERANCE POLICY
 
-> **ALL guardrails are BLOCKING. There are NO warnings.**
-> **If ANY guardrail fails → FIX IT AUTOMATICALLY before authorizing closure.**
-> **Don't ask Omar to decide obvious things. Just fix them.**
+> **ALL guardrails are BLOCKING. There are NO warnings.** > **If ANY guardrail fails → FIX IT AUTOMATICALLY before authorizing closure.** > **Don't ask Omar to decide obvious things. Just fix them.**
 
 This is non-negotiable. Every guardrail must PASS or be AUTO-FIXED.
 
@@ -95,6 +93,7 @@ If significant changes were made this session:
 3. Commit the CHANGELOG update
 
 **What counts as "significant changes":**
+
 - New features added
 - Bug fixes
 - Breaking changes
@@ -103,16 +102,20 @@ If significant changes were made this session:
 - Any user-facing changes
 
 **Auto-fix format:**
+
 ```markdown
 ## [Unreleased]
 
 ### Added
+
 - [description of additions]
 
 ### Changed
+
 - [description of changes]
 
 ### Fixed
+
 - [description of fixes]
 ```
 
@@ -124,13 +127,13 @@ If significant changes were made this session:
 
 > **Every blocker has an automatic fix. Use it.**
 
-| Blocker                      | Automatic Fix                    |
-| ---------------------------- | -------------------------------- |
-| Completed mission in active/ | Archive it                       |
-| Undocumented learning        | Document in rules/memory         |
-| Uncaptured item              | Create mission                   |
-| Uncommitted changes          | Commit them                      |
-| CHANGELOG not updated        | Update with session changes      |
+| Blocker                      | Automatic Fix               |
+| ---------------------------- | --------------------------- |
+| Completed mission in active/ | Archive it                  |
+| Undocumented learning        | Document in rules/memory    |
+| Uncaptured item              | Create mission              |
+| Uncommitted changes          | Commit them                 |
+| CHANGELOG not updated        | Update with session changes |
 
 **Only ask when the action is genuinely ambiguous.** Most actions are NOT ambiguous.
 

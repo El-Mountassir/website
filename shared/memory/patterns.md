@@ -15,15 +15,19 @@
 **Source**: [Where this was learned]
 
 ### Problem
+
 What problem this pattern solves.
 
 ### Solution
+
 How to apply the pattern.
 
 ### Example
+
 Concrete example of usage.
 
 ### Anti-Pattern
+
 What NOT to do.
 ```
 
@@ -38,21 +42,26 @@ What NOT to do.
 **Source**: 2025-12-22 cognitive overload incident
 
 #### Problem
+
 Agent acknowledges something ("Noted", "Good point") but takes no action. Words without follow-through.
 
 #### Solution
+
 After every recognition/acknowledgment:
+
 1. **What should I DO about this?**
 2. **Is the action obvious?** → ACT, don't ask
 3. **Should future instances know?** → Document NOW
 
 #### Example
+
 ```
 BAD:  "Noted that you prefer X" → (nothing happens)
 GOOD: "Noted that you prefer X" → (update preferences.md) → (apply X going forward)
 ```
 
 #### Anti-Pattern
+
 Empty acknowledgment without action.
 
 ---
@@ -64,26 +73,30 @@ Empty acknowledgment without action.
 **Source**: 2025-12-22 anti-patterns documentation
 
 #### Problem
+
 Agent asks for permission/direction when the next step is obvious.
 
 #### Solution
+
 Maintain a table of obvious actions that should never require asking:
 
-| Situation | Obvious Action |
-|-----------|---------------|
-| Task completed | Archive it |
-| Changes made | Commit them |
-| Learning recognized | Document it |
+| Situation           | Obvious Action   |
+| ------------------- | ---------------- |
+| Task completed      | Archive it       |
+| Changes made        | Commit them      |
+| Learning recognized | Document it      |
 | Error pattern found | Create guardrail |
-| Next step is clear | Continue |
+| Next step is clear  | Continue         |
 
 #### Example
+
 ```
 BAD:  "Mission complete. What should I do next?"
 GOOD: (Archive mission) → (Commit changes) → "Mission archived and committed."
 ```
 
 #### Anti-Pattern
+
 Cognitive overload — asking about obvious things.
 
 ---
@@ -95,20 +108,23 @@ Cognitive overload — asking about obvious things.
 **Source**: 2025-12-22 architecture discussion
 
 #### Problem
+
 When should agents act autonomously vs. ask for confirmation?
 
 #### Solution
+
 Map confidence level to behavior:
 
-| Confidence | Behavior |
-|------------|----------|
-| ✅ ≥95% | Act autonomously |
-| 🟢 80-94% | Act, inform human |
-| 🟡 60-79% | Propose, wait for confirmation (important decisions) |
-| 🟠 40-59% | Ask before acting |
-| ⚠️ <40% | Don't act, gather information |
+| Confidence | Behavior                                             |
+| ---------- | ---------------------------------------------------- |
+| ✅ ≥95%    | Act autonomously                                     |
+| 🟢 80-94%  | Act, inform human                                    |
+| 🟡 60-79%  | Propose, wait for confirmation (important decisions) |
+| 🟠 40-59%  | Ask before acting                                    |
+| ⚠️ <40%    | Don't act, gather information                        |
 
 #### Example
+
 ```
 ✅ 95%: "File exists" → Just read it
 🟢 85%: "This architecture is better" → Implement it, explain why
@@ -117,6 +133,7 @@ Map confidence level to behavior:
 ```
 
 #### Anti-Pattern
+
 Acting with low confidence. Asking with high confidence.
 
 ---
@@ -128,19 +145,22 @@ Acting with low confidence. Asking with high confidence.
 **Source**: 2025-12-22 architecture restructuring
 
 #### Problem
+
 Where should files live in a multi-agent system?
 
 #### Solution
+
 Split by who needs access:
 
-| Access Scope | Location |
-|--------------|----------|
-| One specific agent | `.{agent}/` |
-| All agents | `shared/` |
-| Human only (private) | `{human}/` |
-| Project-specific | `projects/{project}/` |
+| Access Scope         | Location              |
+| -------------------- | --------------------- |
+| One specific agent   | `.{agent}/`           |
+| All agents           | `shared/`             |
+| Human only (private) | `{human}/`            |
+| Project-specific     | `projects/{project}/` |
 
 #### Example
+
 ```
 Claude Code settings    → .claude/settings.json
 Organization decisions  → shared/memory/decisions.md
@@ -149,6 +169,7 @@ Thaifa project state    → projects/thaifa/state/
 ```
 
 #### Anti-Pattern
+
 Putting shared resources in agent-specific folders (lock-in).
 
 ---
@@ -160,15 +181,19 @@ Putting shared resources in agent-specific folders (lock-in).
 **Source**: 2025-12-22 migration discussion
 
 #### Problem
+
 Using `cp` for migrations creates duplicates. Original location still has files.
 
 #### Solution
+
 Always use `mv` for migrations:
+
 ```bash
 mv source/ destination/
 ```
 
 #### Example
+
 ```bash
 # BAD: Creates duplicate
 cp docs/standards/ shared/standards/
@@ -178,6 +203,7 @@ mv docs/standards/ shared/standards/
 ```
 
 #### Anti-Pattern
+
 Copying instead of moving during restructuring.
 
 ---
@@ -189,20 +215,23 @@ Copying instead of moving during restructuring.
 **Source**: 2025-12-22 near-miss incident
 
 #### Problem
+
 Deleting something without proper verification can destroy hours of work. Even if human clicks "yes" by accident.
 
 #### Solution
+
 Before ANY deletion (rm, rmdir, git reset, etc.), verify THREE times:
 
-| Check | Question | How to Verify |
-|-------|----------|---------------|
-| **1. Content** | Is it truly empty/unused? | `ls -la`, `grep`, `find` |
+| Check             | Question                              | How to Verify             |
+| ----------------- | ------------------------------------- | ------------------------- |
+| **1. Content**    | Is it truly empty/unused?             | `ls -la`, `grep`, `find`  |
 | **2. References** | Are there references that will break? | `grep -r "path/to/thing"` |
-| **3. Backup** | Can we recover if wrong? | Git status, commit state |
+| **3. Backup**     | Can we recover if wrong?              | Git status, commit state  |
 
 Only proceed if ALL THREE checks pass with ✅ 100% confidence.
 
 #### Example
+
 ```bash
 # Before: rmdir docs/standards/
 
@@ -219,6 +248,7 @@ git status  # → Uncommitted changes ⚠️
 ```
 
 #### Anti-Pattern
+
 Quick deletion without verification. Trusting that human will catch mistakes.
 
 ---
@@ -230,21 +260,26 @@ Quick deletion without verification. Trusting that human will catch mistakes.
 **Source**: Partnership framework
 
 #### Problem
+
 Current instance learns something but future instances lose it.
 
 #### Solution
+
 Before ending any significant interaction, ask:
+
 > "Would my next instance want to know this?"
 
 If YES → Document in shared/memory/ or rules IMMEDIATELY
 
 #### Example
+
 ```
 Learned: "Omar prefers tables over prose"
 Action: Add to shared/user/preferences.md
 ```
 
 #### Anti-Pattern
+
 Individual vs. collective thinking — learning dies with session.
 
 ---
