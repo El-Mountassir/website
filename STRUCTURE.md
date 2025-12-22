@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 02:54:46 UTC
+**Last updated**: 2025-12-22 02:58:21 UTC
 
 ---
 
@@ -74,19 +74,11 @@
 │       │   └── README.md
 │       └── prompts/
 ├── docs/
-│   ├── reference/
-│   │   ├── guides/
-│   │   │   ├── claude-code-chrome.md
-│   │   │   └── claude-code-permissions.md
-│   │   └── INDEX.md
-│   └── standards/
-│       ├── management/
-│       │   ├── missions/
-│       │   ├── time/
-│       │   └── work/
-│       ├── INDEX.md
-│       ├── project-standards.md
-│       └── state-management.md
+│   └── reference/
+│       ├── guides/
+│       │   ├── claude-code-chrome.md
+│       │   └── claude-code-permissions.md
+│       └── INDEX.md
 ├── history/
 │   └── 2025/
 │       └── Q4/
@@ -111,6 +103,7 @@
 │   │   └── multi-instance-coordination.md
 │   ├── queue/
 │   │   ├── 2025-12-22-claude-permissions-fix.md
+│   │   ├── 2025-12-22-destructive-operations-guardrails.md
 │   │   ├── 2025-12-22-docs-base-alignment.md
 │   │   ├── 2025-12-22-jisr-mokawala-investigation.md
 │   │   ├── 2025-12-22-M1-rule-deduplication.md
@@ -213,7 +206,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-92 directories, 111 files
+87 directories, 109 files
 ```
 
 ---
