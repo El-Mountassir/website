@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Unified mission template with 6 types (`templates/missions/mission.md`)
+- Dublin Core metadata templates (`templates/metadata/dublin-core-*.md`)
+- Template extraction rule (`.claude/rules/templates.md`)
+- P0 Mission: Destructive operations guardrails (`missions/queue/2025-12-22-destructive-operations-guardrails.md`)
+- Shared resources directory (`shared/`) with INDEX, memory, standards, user preferences
+- Permissions audit with expanded allow patterns (92 patterns)
+- Reports: permissions-audit, agentic-cognitive-gaps (`history/2025/Q4/reports/`)
+- Thaifa project files: reports, templates, assets, communication logs
 - Auto-update hook for STRUCTURE.md (`.claude/hooks/update-structure.sh`)
 - Project settings hook configuration (`.claude/settings.json`)
 - Live structure reference in CLAUDE.md (`@STRUCTURE.md`)
@@ -17,6 +25,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skill: reorganizing-directories (`.claude/skills/reorganizing-directories/`)
 
 ### Changed
+- /end command now ZERO TOLERANCE (all guardrails BLOCKING, no warnings)
+- Mission standard: inline template extracted to `templates/missions/`
+- Project standards: Dublin Core section links to templates
+- CLAUDE.md: Added SHARED RESOURCES section, standards moved to `shared/standards/`
 - CLAUDE.md REPOSITORY STRUCTURE now includes missions/, history/, .claude/
 - GitHub repo renamed: El-Mountassir/El-Mountassir → El-Mountassir/website
 
