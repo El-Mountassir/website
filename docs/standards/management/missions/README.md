@@ -14,7 +14,7 @@ Language: en
 Rights: Internal Team Standard
 
 # Extended Metadata
-Version: 0.0.2-alpha.0
+Version: 0.0.3-alpha.0
 Status: ACTIVE
 Dimension: Work
 Maturity: Tested (1 mission archived)
@@ -28,21 +28,21 @@ Integration_Required: Linear (future)
 
 > **Missions are multi-step work packages. Tasks are single actions.**
 
-| Concept | Definition | Example |
-|---------|------------|---------|
-| **Mission** | Multi-step work package with clear objectives and success criteria | "Initialize repository and configure calendar" |
-| **Task** | Single, atomic action | "Create CLAUDE.md file" |
-| **Linear Task** | Task tracked in Linear | Bug fix, single feature |
+| Concept         | Definition                                                         | Example                                        |
+| --------------- | ------------------------------------------------------------------ | ---------------------------------------------- |
+| **Mission**     | Multi-step work package with clear objectives and success criteria | "Initialize repository and configure calendar" |
+| **Task**        | Single, atomic action                                              | "Create CLAUDE.md file"                        |
+| **Linear Task** | Task tracked in Linear                                             | Bug fix, single feature                        |
 
 ### When to Use Missions
 
-| Use Mission | Use Linear Task |
-|-------------|-----------------|
-| Multi-day effort | Single session |
-| Multiple objectives | Single objective |
-| Cross-system work | Single system |
-| Requires handoff between sessions | Completable in one go |
-| Needs archival for future reference | Routine, forgettable |
+| Use Mission                         | Use Linear Task       |
+| ----------------------------------- | --------------------- |
+| Multi-day effort                    | Single session        |
+| Multiple objectives                 | Single objective      |
+| Cross-system work                   | Single system         |
+| Requires handoff between sessions   | Completable in one go |
+| Needs archival for future reference | Routine, forgettable  |
 
 ---
 
@@ -56,23 +56,23 @@ CREATE → ASSIGN → EXECUTE → COMPLETE → ARCHIVE
 
 ### 2.1 Phase Details
 
-| Phase | Location | Actor | Actions |
-|-------|----------|-------|---------|
-| **CREATE** | `missions/drafts/` | Omar or Claude Web | Write mission spec with objectives |
-| **ASSIGN** | `missions/queue/` | Omar | Move to queue, assign to agent |
-| **EXECUTE** | `missions/active/` | Assigned agent | Work through objectives, log progress |
-| **COMPLETE** | `missions/active/` | Agent | Verify success criteria, update status |
-| **ARCHIVE** | `history/YYYY/QQ/missions/` | Agent | Move to history with full documentation |
+| Phase        | Location                    | Actor              | Actions                                 |
+| ------------ | --------------------------- | ------------------ | --------------------------------------- |
+| **CREATE**   | `missions/drafts/`          | Omar or Claude Web | Write mission spec with objectives      |
+| **ASSIGN**   | `missions/queue/`           | Omar               | Move to queue, assign to agent          |
+| **EXECUTE**  | `missions/active/`          | Assigned agent     | Work through objectives, log progress   |
+| **COMPLETE** | `missions/active/`          | Agent              | Verify success criteria, update status  |
+| **ARCHIVE**  | `history/YYYY/QQ/missions/` | Agent              | Move to history with full documentation |
 
 ### 2.2 Status Values
 
-| Status | Meaning | File Location |
-|--------|---------|---------------|
-| `DRAFT` | Idea, not ready | `missions/drafts/` |
-| `QUEUED` | Ready for assignment | `missions/queue/` |
-| `ACTIVE` | Currently being executed | `missions/active/` |
-| `COMPLETED` | Done, awaiting archival | `missions/active/` |
-| `ARCHIVED` | Closed, in history | `history/YYYY/QQ/missions/{slug}/` |
+| Status      | Meaning                  | File Location                      |
+| ----------- | ------------------------ | ---------------------------------- |
+| `DRAFT`     | Idea, not ready          | `missions/drafts/`                 |
+| `QUEUED`    | Ready for assignment     | `missions/queue/`                  |
+| `ACTIVE`    | Currently being executed | `missions/active/`                 |
+| `COMPLETED` | Done, awaiting archival  | `missions/active/`                 |
+| `ARCHIVED`  | Closed, in history       | `history/YYYY/QQ/missions/{slug}/` |
 
 ### 2.3 Claiming Protocol
 
@@ -85,22 +85,22 @@ CREATE → ASSIGN → EXECUTE → COMPLETE → ARCHIVE
 CHECK → MOVE → UPDATE → LOG → WORK
 ```
 
-| Step | Action | Purpose |
-|------|--------|---------|
-| **CHECK** | `ls missions/active/` | See if someone is already working |
-| **MOVE** | `mv queue/{mission}.md active/` | Filesystem state = claim |
-| **UPDATE** | Set `claimed_at`, `claimed_by` in YAML | Metadata for audit |
-| **LOG** | First execution entry = "CLAIMED" | Audit trail |
-| **WORK** | Begin execution | Actual work |
+| Step       | Action                                 | Purpose                           |
+| ---------- | -------------------------------------- | --------------------------------- |
+| **CHECK**  | `ls missions/active/`                  | See if someone is already working |
+| **MOVE**   | `mv queue/{mission}.md active/`        | Filesystem state = claim          |
+| **UPDATE** | Set `claimed_at`, `claimed_by` in YAML | Metadata for audit                |
+| **LOG**    | First execution entry = "CLAIMED"      | Audit trail                       |
+| **WORK**   | Begin execution                        | Actual work                       |
 
 #### Claiming Rules
 
-| Rule | Rationale |
-|------|-----------|
-| **Never work from queue/** | If it's in queue/, it's unclaimed |
-| **Check active/ first** | Another instance may be working |
-| **Move before work** | Filesystem location is the source of truth |
-| **Log the claim** | Audit trail for handoff |
+| Rule                       | Rationale                                  |
+| -------------------------- | ------------------------------------------ |
+| **Never work from queue/** | If it's in queue/, it's unclaimed          |
+| **Check active/ first**    | Another instance may be working            |
+| **Move before work**       | Filesystem location is the source of truth |
+| **Log the claim**          | Audit trail for handoff                    |
 
 #### Conflict Detection
 
@@ -154,91 +154,31 @@ El-Mountassir/
 
 ### Naming Convention
 
-| Stage | Pattern | Example |
-|-------|---------|---------|
-| Draft | `{slug}.md` | `calendar-setup.md` |
-| Queued | `{YYYY-MM-DD}-{slug}.md` | `2025-12-22-calendar-setup.md` |
-| Active | `{YYYY-MM-DD}-{slug}.md` | `2025-12-22-calendar-setup.md` |
-| Archived | `{slug}/` directory | `calendar-setup/` |
+| Stage    | Pattern                  | Example                        |
+| -------- | ------------------------ | ------------------------------ |
+| Draft    | `{slug}.md`              | `calendar-setup.md`            |
+| Queued   | `{YYYY-MM-DD}-{slug}.md` | `2025-12-22-calendar-setup.md` |
+| Active   | `{YYYY-MM-DD}-{slug}.md` | `2025-12-22-calendar-setup.md` |
+| Archived | `{slug}/` directory      | `calendar-setup/`              |
 
 ---
 
 ## 4. Mission Template
 
-```markdown
-# Mission: [Descriptive Title]
+> **Template location**: [`templates/missions/mission.md`](../../../../templates/missions/mission.md)
 
-```yaml
-mission_id: YYYY-MM-DD-{slug}
-status: [DRAFT|QUEUED|ACTIVE|COMPLETED|ARCHIVED]
-assigned_to: [Claude Code|Claude Web|Omar|Unassigned]
-created: YYYY-MM-DD
-assigned: YYYY-MM-DD
-claimed_at:     # ISO timestamp when instance started work (e.g., 2025-12-22T03:45:00+01:00)
-claimed_by:     # Session description (e.g., "Thaifa P0 migration session")
-completed: YYYY-MM-DD
-archived: YYYY-MM-DD
-```
+The unified mission template supports multiple mission types:
 
----
+| Type | Use Case |
+|------|----------|
+| `STANDARD` | General multi-step work packages |
+| `ELEVATE` | /elevate outputs requiring mission-level tracking |
+| `FIX` | Bug fixes with root cause analysis |
+| `FEATURE` | New feature implementation |
+| `RESEARCH` | Investigation and analysis |
+| `MIGRATION` | Data or system migrations |
 
-## Context
-
-[Why this mission exists. Business impact. Background.]
-
----
-
-## Objectives
-
-- [ ] Objective 1: [Clear, measurable]
-- [ ] Objective 2: [Clear, measurable]
-- [ ] Objective 3: [Clear, measurable]
-
----
-
-## Success Criteria
-
-| # | Criterion | Status | Evidence |
-|---|-----------|--------|----------|
-| 1 | [Measurable outcome] | ⬜ | |
-| 2 | [Measurable outcome] | ⬜ | |
-| 3 | [Measurable outcome] | ⬜ | |
-
----
-
-## Constraints
-
-- [Time constraint]
-- [Resource constraint]
-- [Technical constraint]
-
----
-
-## Execution Log
-
-> Append-only. Add entries as work progresses.
-
-### YYYY-MM-DD
-
-- HH:MM - [Action taken]
-- HH:MM - [Result]
-
----
-
-## Deviations
-
-[Document any differences from spec]
-
----
-
-## Lessons Learned
-
-[What to do differently next time]
-
----
-
-_Mission v0.0.1-alpha.0_
-```
+Type-specific sections are included as HTML comments in the template. Uncomment the sections relevant to your mission type.
 
 ---
 
@@ -255,7 +195,7 @@ All criteria must be checked with evidence:
 |---|-----------|--------|----------|
 | 1 | Files created | ✅ | `ls` output shows files |
 | 2 | Tests pass | ✅ | CI green |
-```
+````
 
 ### Step 2: Create Archive Directory
 
@@ -265,11 +205,11 @@ mkdir -p history/YYYY/QQ/missions/{slug}
 
 ### Step 3: Create Archive Files
 
-| File | Content |
-|------|---------|
-| `mission.md` | Updated mission with ARCHIVED status |
-| `execution-log.md` | Full execution history |
-| `deviations.md` | Documented differences from spec |
+| File               | Content                              |
+| ------------------ | ------------------------------------ |
+| `mission.md`       | Updated mission with ARCHIVED status |
+| `execution-log.md` | Full execution history               |
+| `deviations.md`    | Documented differences from spec     |
 
 ### Step 4: Remove from Active
 
@@ -306,6 +246,7 @@ Remove from active list, add to completed count.
 ### Context Preservation
 
 Key information to preserve:
+
 - Current objective being worked on
 - Files modified
 - Decisions made
@@ -317,12 +258,12 @@ Key information to preserve:
 
 > To be implemented when automation matures.
 
-| Mission Event | Linear Action |
-|---------------|---------------|
-| Mission created | Create parent issue |
-| Objective added | Create sub-issue |
-| Mission completed | Close parent issue |
-| Deviation logged | Add comment |
+| Mission Event     | Linear Action       |
+| ----------------- | ------------------- |
+| Mission created   | Create parent issue |
+| Objective added   | Create sub-issue    |
+| Mission completed | Close parent issue  |
+| Deviation logged  | Add comment         |
 
 ---
 
@@ -350,10 +291,11 @@ Before archiving, verify:
 
 ## Changelog
 
-| Version | Date | Changes |
-|---------|------|---------|
+| Version       | Date       | Changes                                                                 |
+| ------------- | ---------- | ----------------------------------------------------------------------- |
+| 0.0.3-alpha.0 | 2025-12-22 | Extracted template to `templates/missions/`, added type system          |
 | 0.0.2-alpha.0 | 2025-12-22 | Added Claiming Protocol (Section 2.3), `claimed_at`/`claimed_by` fields |
-| 0.0.1-alpha.0 | 2025-12-21 | Initial version based on first mission |
+| 0.0.1-alpha.0 | 2025-12-21 | Initial version based on first mission                                  |
 
 ---
 

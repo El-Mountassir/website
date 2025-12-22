@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 01:51:31 UTC
+**Last updated**: 2025-12-22 02:43:31 UTC
 
 ---
 
@@ -35,12 +35,17 @@
 │   │   └── sync.md
 │   ├── hooks/
 │   │   └── update-structure.sh*
+│   ├── input/
+│   │   └── 2025-12-22-architecture-clarification.md
+│   ├── memory/
+│   │   └── README.md
 │   ├── rules/
 │   │   ├── anti-patterns.md
 │   │   ├── behavior.md
 │   │   ├── memory-protocol.md
 │   │   ├── partnership.md
 │   │   ├── taxonomy.md
+│   │   ├── templates.md
 │   │   └── world-model.md
 │   ├── skills/
 │   │   ├── creating-commands/
@@ -102,11 +107,17 @@
 │   ├── active/
 │   │   └── .gitkeep
 │   ├── drafts/
-│   │   └── claude-web-sync.md
+│   │   ├── claude-web-sync.md
+│   │   └── multi-instance-coordination.md
 │   ├── queue/
 │   │   ├── 2025-12-22-claude-permissions-fix.md
 │   │   ├── 2025-12-22-docs-base-alignment.md
+│   │   ├── 2025-12-22-jisr-mokawala-investigation.md
 │   │   ├── 2025-12-22-M1-rule-deduplication.md
+│   │   ├── 2025-12-22-M2-mcp-on-demand.md
+│   │   ├── 2025-12-22-M3-orchestrator-pattern.md
+│   │   ├── 2025-12-22-M4-subagent-architecture.md
+│   │   ├── 2025-12-22-M5-hierarchical-claude-md.md
 │   │   ├── 2025-12-22-thaifa-migration-cleanup.md
 │   │   ├── 2025-12-22-thaifa-migration-critical.md
 │   │   ├── 2025-12-22-thaifa-migration-operational.md
@@ -138,6 +149,9 @@
 │       │   ├── templates/
 │       │   ├── lessons-learned.md
 │       │   └── services-transport.md
+│       ├── projects/
+│       │   ├── booking-hotelrunner/
+│       │   └── jisr-mokawala/
 │       ├── state/
 │       │   ├── baseline/
 │       │   ├── current/
@@ -146,9 +160,22 @@
 │       │   ├── planned/
 │       │   └── README.md
 │       └── CLAUDE.md
+├── shared/
+│   ├── memory/
+│   │   ├── decisions.md
+│   │   ├── episodes.md
+│   │   ├── facts.md
+│   │   └── patterns.md
+│   ├── standards/
+│   │   └── confidence-system.md
+│   ├── user/
+│   │   └── preferences.md
+│   └── INDEX.md
 ├── templates/
 │   ├── commands/
 │   │   └── slash-command.md
+│   ├── missions/
+│   │   └── mission.md
 │   ├── projects/
 │   │   └── CLAUDE.md
 │   ├── state/
@@ -175,7 +202,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-77 directories, 88 files
+87 directories, 105 files
 ```
 
 ---
