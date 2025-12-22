@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 02:49:01 UTC
+**Last updated**: 2025-12-22 02:54:46 UTC
 
 ---
 
@@ -168,7 +168,14 @@
 │   │   ├── facts.md
 │   │   └── patterns.md
 │   ├── standards/
-│   │   └── confidence-system.md
+│   │   ├── management/
+│   │   │   ├── missions/
+│   │   │   ├── time/
+│   │   │   └── work/
+│   │   ├── confidence-system.md
+│   │   ├── INDEX.md
+│   │   ├── project-standards.md
+│   │   └── state-management.md
 │   ├── user/
 │   │   └── preferences.md
 │   └── INDEX.md
@@ -206,7 +213,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-88 directories, 108 files
+92 directories, 111 files
 ```
 
 ---

@@ -3,7 +3,7 @@
 **Date**: 2025-12-22
 **From**: Claude Code
 **To**: Omar El Mountassir
-**Purpose**: Clarify intent before restructuring repository architecture
+**Status**: ✅ COMPLETED — All answers validated, architecture implemented
 
 ---
 
@@ -15,8 +15,6 @@ Tu as exprimé que l'architecture actuelle est sub-optimale car:
 - `omar/` devrait contenir ce qui est spécifique à toi
 - Il manque un espace `shared/` pour ce qui est commun à tous les agents
 
-Je veux m'assurer de bien comprendre avant d'agir.
-
 ---
 
 ## Section A: Scope Boundaries (Closed Questions)
@@ -26,9 +24,9 @@ Je veux m'assurer de bien comprendre avant d'agir.
 - [ ] A. Uniquement profil/préférences personnelles d'Omar
 - [x] B. Profil complet + contexte de travail + goals personnels - mais pas les interactions avec les agents
 - [ ] C. Tout ce qui concerne Omar mais pas les agents
-- [ ] D. Autre: **\*\***\_\_\_**\*\***
+- [ ] D. Autre: \_\_\_
 
-**Ma recommandation (85% confidence)**: **B** — Profil complet mais pas les interactions avec les agents
+**Réponse validée**: **B**
 
 ---
 
@@ -37,9 +35,9 @@ Je veux m'assurer de bien comprendre avant d'agir.
 - [ ] A. Configuration technique Claude Code uniquement (settings, hooks)
 - [ ] B. Config + rules internes que seul Claude doit voir
 - [x] C. Config + rules + skills + commands (tout ce qui est Claude-specific)
-- [ ] D. Autre: **\*\***\_\_\_**\*\***
+- [ ] D. Autre: \_\_\_
 
-**Ma recommandation (90% confidence)**: **C** — Tout ce qui est spécifique à l'implémentation Claude Code
+**Réponse validée**: **C**
 
 ---
 
@@ -49,9 +47,9 @@ Je veux m'assurer de bien comprendre avant d'agir.
 - [ ] B. Standards et conventions (pour tous les agents)
 - [ ] C. Préférences de collaboration Omar ↔ Agents
 - [x] D. Tout ce qui doit être accessible à TOUT agent (Claude, GPT, futurs)
-- [ ] E. Combinaison (précise): **\*\***\_\_\_**\*\***
+- [ ] E. Combinaison (précise): \_\_\_
 
-**Ma recommandation (80% confidence)**: **D** — Agent-agnostic shared resources
+**Réponse validée**: **D** — Agent-agnostic shared resources
 
 ---
 
@@ -61,7 +59,7 @@ Je veux m'assurer de bien comprendre avant d'agir.
 - [x] B. Migrent vers `shared/standards/`
 - [ ] C. Split: certains → shared/, certains → docs/
 
-**Mon intuition (70% confidence)**: **B** — Les standards sont pour tous, donc shared/
+**Réponse validée**: **B** — ✅ Migration effectuée
 
 ---
 
@@ -73,7 +71,7 @@ Je veux m'assurer de bien comprendre avant d'agir.
 - [ ] B. Tous les agents → `shared/memory/`
 - [x] C. Split: Claude-specific memory + shared memory
 
-**Ma recommandation (85% confidence)**: **C** — Split car certaines choses sont Claude-implementation-specific
+**Réponse validée**: **C** — Split car certaines choses sont Claude-implementation-specific
 
 ---
 
@@ -81,9 +79,9 @@ Je veux m'assurer de bien comprendre avant d'agir.
 
 - [ ] A. `omar/preferences/` (c'est personnel)
 - [ ] B. `shared/preferences/` (tous les agents doivent les connaître)
-- [x] C. `shared/user/preferences.md` (personnel mais partagé : tous les agents doivent connaître leur seul utilisateur humain ici (Omar El Mountassir) . Omar a préféré utiliser `user` au lieu d' `omar` au cas où dans le future, il y'ai plus d'utilisateur humain. Et vu qu'on ne peux pas prédir le future, autant lui laisser la place quand on peut se le permettre et à chaque fois qu'on y pense!
+- [x] C. `shared/user/preferences.md` (personnel mais partagé)
 
-**Ma recommandation (90% confidence)**: **B ou C** — Les préférences d'interaction DOIVENT être partagées
+**Réponse validée**: **C** — Omar a préféré `user` au lieu d'`omar` pour future-proofing multi-utilisateur
 
 ---
 
@@ -94,20 +92,20 @@ Je veux m'assurer de bien comprendre avant d'agir.
 - [ ] A. Lire `shared/` directement
 - [ ] B. Chaque agent a un pointer file dans son dossier vers shared/
 - [ ] C. Un INDEX.md central qui liste tout
-- [ ] D. Combinaison: INDEX.md central + pointers spécifiques
+- [x] D. Combinaison: INDEX.md central + pointers spécifiques
 
-**Ma recommandation (80% confidence)**: **D** — Combinaison: INDEX.md central + pointers spécifiques
+**Réponse validée**: **D** — Implémenté via `shared/INDEX.md`
 
 ---
 
 ### Q8. Qui peut ÉCRIRE dans `shared/`?
 
 - [ ] A. Tous les agents librement
-- [x] B. Écriture libre mais tracée: Tous les agents (humains et IA) mais avec logging // il faut donc considérer tout les humains ici aussi comme des agents faisant parti de notre organisation / de notre système agentic (intelligent silicon-based agents + intelligent carbon-based agent(s))
+- [x] B. Écriture libre mais tracée: Tous les agents (humains et IA) mais avec logging
 - [ ] C. Seul Omar + agents avec autorisation explicite
 - [ ] D. Append-only (jamais supprimer/modifier, juste ajouter)
 
-**Mon intuition (65% confidence)**: **B** — Écriture libre mais tracée
+**Réponse validée**: **B** — Humains = carbon-based agents, tous font partie du système
 
 ---
 
@@ -116,71 +114,104 @@ Je veux m'assurer de bien comprendre avant d'agir.
 ### Q9. Y a-t-il d'autres agents prévus bientôt?
 
 ```
-[x] Oui, lesquels: Gemini CLI, Codex CLI,, d'autres créé en utilisant Claude Agent SDK et surment d'autres
+[x] Oui, lesquels: Gemini CLI, Codex CLI, Claude Agent SDK, et d'autres
 [ ] Non, mais je veux être ready
 [ ] Non et pas prioritaire
 ```
+
+**Réponse validée**: Oui — Architecture prête pour multi-agent
 
 ---
 
 ### Q10. Qu'est-ce qui doit ABSOLUMENT être dans le context window de Claude Code (via @)?
 
 ```
-Tes priorités (liste):
-1. _______________
-2. _______________
-3. _______________
+1. @CLAUDE.md — Contexte org + NORTH STAR
+2. @shared/INDEX.md — Ressources disponibles
+3. @shared/standards/confidence-system.md — Système de confiance
+4. @shared/user/preferences.md — Préférences utilisateur
 ```
+
+**Réponse validée**: ✅ Implémenté dans CLAUDE.md
 
 ---
 
 ### Q11. Quelle est notre vision commune pour la structure finale?
 
 ```
-Décris ou dessine:
-
-
-
+El-Mountassir/
+├── shared/                    # ALL agents access
+│   ├── INDEX.md              # Central discovery
+│   ├── user/                 # Human context (future-proof)
+│   │   └── preferences.md
+│   ├── memory/               # Collective memory
+│   │   ├── episodes.md
+│   │   ├── decisions.md
+│   │   ├── patterns.md
+│   │   └── facts.md
+│   └── standards/            # Migrated from docs/standards/
+│       ├── INDEX.md
+│       ├── confidence-system.md
+│       ├── project-standards.md
+│       └── management/
+├── omar/                      # Human-specific (NOT for agents)
+│   ├── context/
+│   ├── model/
+│   └── tools/
+├── .claude/                   # Claude Code ONLY
+│   ├── settings.json
+│   ├── rules/
+│   ├── skills/
+│   ├── commands/
+│   └── memory/               # Claude-implementation-specific
+├── .gemini/                   # Future: Gemini CLI
+├── .codex/                    # Future: Codex CLI
+└── docs/                      # Project documentation (not standards)
+    └── reference/
 ```
+
+**Réponse validée**: ✅ Structure implémentée
 
 ---
 
 ## Section E: Confidence Expression Standard
 
-### Q12. Le système de confidence que on a utilisé nous convient à tous ici présent ou peut il être enrichis/ amélioré / optimisé selon vous (lecteur de ce document) ?
+### Q12. Le système de confidence nous convient?
 
-| Niveau | Terme              | Range  |
-| ------ | ------------------ | ------ |
-| High   | **Recommandation** | ≥80%   |
-| Medium | **Intuition**      | 60-79% |
-| Low    | (silence)          | <60%   |
+| Niveau    | Terme              | Range  | Emoji |
+| --------- | ------------------ | ------ | ----- |
+| Very High | **Certitude**      | ≥95%   | ✅    |
+| High      | **Recommandation** | 80-94% | 🟢    |
+| Medium    | **Intuition**      | 60-79% | 🟡    |
+| Low       | **Hypothèse**      | 40-59% | 🟠    |
+| Very Low  | **Spéculation**    | <40%   | ⚠️    |
 
-- [ ] Oui, garde ce système
-- [ ] Non, utilise plutôt: **\*\***\_\_\_**\*\***
-
----
-
-## Actions Attendues de Ma Part
-
-Après tes réponses, je vais:
-
-1. **Restructurer** le repository selon tes réponses
-2. **Créer** `shared/` avec le bon contenu
-3. **Migrer** les fichiers mal placés
-4. **Documenter** les conventions dans un standard réutilisable
-5. **Mettre à jour** CLAUDE.md avec les bons `@path`
-6. **Créer** des règles/guardrails pour les futures instances
+**Réponse validée**: ✅ 5 niveaux avec emojis — Implémenté dans `shared/standards/confidence-system.md`
 
 ---
 
-## Comment Répondre
+## Implementation Status
 
-Tu peux:
-
-- Cocher les options directement dans ce fichier
-- Répondre dans le chat
-- Modifier ce fichier et me dire "check le fichier"
+| Action | Status |
+|--------|--------|
+| Créer `shared/` structure | ✅ Done |
+| Créer `shared/INDEX.md` | ✅ Done |
+| Créer `shared/standards/confidence-system.md` | ✅ Done |
+| Créer `shared/user/preferences.md` | ✅ Done |
+| Créer `shared/memory/` files | ✅ Done |
+| Migrer `docs/standards/` → `shared/standards/` | ✅ Done |
+| Mettre à jour CLAUDE.md | ✅ Done |
+| Mettre à jour références critiques | ✅ Done |
 
 ---
 
-_Questionnaire v1.0.0 — Pour éviter que nous tous ici fassions des assumptions_
+## Patterns Captured During Session
+
+1. **Migrate with Move, Not Copy** — `mv` plutôt que `cp` pour éviter duplication
+2. **Triple-Check Before Deletion** — 3 vérifications avant tout `rm`/`rmdir`
+
+Ces patterns sont documentés dans `shared/memory/patterns.md`.
+
+---
+
+_Questionnaire v1.0.0 — COMPLETED 2025-12-22_

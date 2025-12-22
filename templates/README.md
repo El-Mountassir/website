@@ -8,12 +8,12 @@
 
 | Template | Location | Purpose | Standard |
 |----------|----------|---------|----------|
-| **Mission** | [missions/mission.md](missions/mission.md) | Multi-step work packages (supports 6 types) | [Mission Standard](../docs/standards/management/missions/README.md) |
-| **State Management** | [state/](state/) | Track project/context state | [State Standard](../docs/standards/state-management.md) |
+| **Mission** | [missions/mission.md](missions/mission.md) | Multi-step work packages (supports 6 types) | [Mission Standard](../shared/standards/management/missions/README.md) |
+| **State Management** | [state/](state/) | Track project/context state | [State Standard](../shared/standards/state-management.md) |
 | **Project CLAUDE.md** | [projects/CLAUDE.md](projects/CLAUDE.md) | Project-specific context for Claude Code | — |
 | **Slash Command** | [commands/slash-command.md](commands/slash-command.md) | Custom Claude Code commands | — |
 | **Dublin Core (Standard)** | [metadata/dublin-core-standard.md](metadata/dublin-core-standard.md) | Basic document metadata (10 fields) | [Dublin Core](https://www.dublincore.org/) |
-| **Dublin Core (Extended)** | [metadata/dublin-core-extended.md](metadata/dublin-core-extended.md) | Standards with versioning & lifecycle | [Project Standards](../docs/standards/project-standards.md) |
+| **Dublin Core (Extended)** | [metadata/dublin-core-extended.md](metadata/dublin-core-extended.md) | Standards with versioning & lifecycle | [Project Standards](../shared/standards/project-standards.md) |
 
 ---
 
@@ -94,15 +94,15 @@ When you find inline templates in documentation:
 
 ### Documents Using Extended Metadata
 
-- `docs/standards/**/*.md` — All standards
+- `shared/standards/**/*.md` — All standards
 - `docs/reference/guides/*.md` — Reference guides
 
 ---
 
 ## Related Standards
 
-- [Mission Management Standard](../docs/standards/management/missions/README.md)
-- [State Management Standard](../docs/standards/state-management.md)
+- [Mission Management Standard](../shared/standards/management/missions/README.md)
+- [State Management Standard](../shared/standards/state-management.md)
 
 ---
 

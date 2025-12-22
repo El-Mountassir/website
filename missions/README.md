@@ -35,7 +35,7 @@ _None currently active._
 
 ## Standard
 
-See `docs/standards/management/missions/README.md` for the full Mission Management standard.
+See `shared/standards/management/missions/README.md` for the full Mission Management standard.
 
 ---
 

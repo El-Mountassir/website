@@ -27,10 +27,11 @@
 
 ## Standards
 
-| ID  | Standard        | Path                                       | Version       |
-| --- | --------------- | ------------------------------------------ | ------------- |
-| S1  | Calendar        | `docs/standards/management/time/README.md` | 0.0.2-alpha.0 |
-| S2  | Work Management | `docs/standards/work-management.md`        | TBD           |
+| ID  | Standard        | Path                                         | Version       |
+| --- | --------------- | -------------------------------------------- | ------------- |
+| S0  | Confidence      | `shared/standards/confidence-system.md`      | 1.0.0         |
+| S1  | Calendar        | `shared/standards/management/time/README.md` | 0.0.2-alpha.0 |
+| S2  | Work Management | `shared/standards/management/work/README.md` | TBD           |
 
 ---
 

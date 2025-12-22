@@ -56,9 +56,14 @@ El-Mountassir/
 │   ├── state/               # State management templates
 │   └── projects/            # Project structure templates
 │
+├── shared/                  # Resources for ALL agents
+│   ├── INDEX.md             # Central discovery
+│   ├── user/                # Human context (future-proof)
+│   ├── memory/              # Collective memory
+│   └── standards/           # Organizational standards
+│
 ├── docs/                    # Documentation
-│   ├── standards/           # Our standards
-│   └── reference/           # Reference material
+│   └── reference/           # Reference guides
 │
 ├── configs/                 # Configurations
 │   └── system/              # System configuration
@@ -122,21 +127,39 @@ El-Mountassir/
 
 ---
 
+## SHARED RESOURCES
+
+> **All agents (Claude, Gemini, Codex, future) access `shared/`**
+
+@shared/INDEX.md
+@shared/standards/confidence-system.md
+@shared/user/preferences.md
+
+| Resource | Path | Purpose |
+|----------|------|---------|
+| **Index** | `shared/INDEX.md` | Central discovery for all agents |
+| **Confidence System** | `shared/standards/confidence-system.md` | How to express certainty (✅🟢🟡🟠⚠️) |
+| **User Preferences** | `shared/user/preferences.md` | How Omar wants to work with AI |
+| **Collective Memory** | `shared/memory/` | Episodes, decisions, patterns, facts |
+
+---
+
 ## STANDARDS
 
-All standards are in `docs/standards/`. Key ones:
+All standards are in `shared/standards/`. Key ones:
 
-| Standard              | Location                                       | Description                         |
-| --------------------- | ---------------------------------------------- | ----------------------------------- |
-| **Project Standards** | `docs/standards/project-standards.md`          | SemVer, Dublin Core, Changelog      |
-| **Standards Index**   | `docs/standards/INDEX.md`                      | Hub central pour tous les standards |
-| Work Management       | `docs/standards/management/work/README.md`     | DoR, DoD, Task Lifecycle, Priority  |
-| Calendar              | `docs/standards/management/time/README.md`     | Time management, appointment tiers  |
-| Missions              | `docs/standards/management/missions/README.md` | Multi-step work packages            |
+| Standard              | Location                                         | Description                         |
+| --------------------- | ------------------------------------------------ | ----------------------------------- |
+| **Confidence System** | `shared/standards/confidence-system.md`          | Express certainty (5 levels)        |
+| **Project Standards** | `shared/standards/project-standards.md`          | SemVer, Dublin Core, Changelog      |
+| **Standards Index**   | `shared/standards/INDEX.md`                      | Hub central pour tous les standards |
+| Work Management       | `shared/standards/management/work/README.md`     | DoR, DoD, Task Lifecycle, Priority  |
+| Calendar              | `shared/standards/management/time/README.md`     | Time management, appointment tiers  |
+| Missions              | `shared/standards/management/missions/README.md` | Multi-step work packages            |
 
-> **Core reference**: `docs/standards/INDEX.md` — Hub central pour tous les standards.
+> **Core reference**: `shared/standards/INDEX.md` — Hub central pour tous les standards.
 
-@docs/standards/project-standards.md
+@shared/standards/project-standards.md
 
 ---
 
@@ -146,10 +169,10 @@ All standards are in `docs/standards/`. Key ones:
 
 See: `docs/reference/INDEX.md`
 
-| Topic | Guide | When to Use |
-|-------|-------|-------------|
-| **Permissions** | `docs/reference/guides/claude-code-permissions.md` | Settings config, allow/deny patterns |
-| **Chrome** | `docs/reference/guides/claude-code-chrome.md` | Browser automation, calendar, web apps |
+| Topic           | Guide                                              | When to Use                            |
+| --------------- | -------------------------------------------------- | -------------------------------------- |
+| **Permissions** | `docs/reference/guides/claude-code-permissions.md` | Settings config, allow/deny patterns   |
+| **Chrome**      | `docs/reference/guides/claude-code-chrome.md`      | Browser automation, calendar, web apps |
 
 ---
 
@@ -179,15 +202,16 @@ See: `docs/reference/INDEX.md`
 CHECK → MOVE → UPDATE → LOG → WORK
 ```
 
-| Step | Action |
-|------|--------|
-| **CHECK** | `ls missions/active/` - If not empty, someone is working |
-| **MOVE** | `mv queue/{mission}.md active/` |
-| **UPDATE** | Set `claimed_at`, `claimed_by` in YAML |
-| **LOG** | First entry: "CLAIMED by [session description]" |
-| **WORK** | Begin execution |
+| Step       | Action                                                   |
+| ---------- | -------------------------------------------------------- |
+| **CHECK**  | `ls missions/active/` - If not empty, someone is working |
+| **MOVE**   | `mv queue/{mission}.md active/`                          |
+| **UPDATE** | Set `claimed_at`, `claimed_by` in YAML                   |
+| **LOG**    | First entry: "CLAIMED by [session description]"          |
+| **WORK**   | Begin execution                                          |
 
 **Rules**:
+
 - **Never work from queue/** — if it's in queue, it's unclaimed
 - **Check active/ first** — another instance may be working
 - **If active/ not empty**: Ask user before proceeding (may be abandoned > 24h)
@@ -202,20 +226,14 @@ CHECK → MOVE → UPDATE → LOG → WORK
 4. **On completion**: Verify success criteria, then archive to `history/`
 5. **If interrupted**: Next instance continues from execution log
 
-**Full standard**: `docs/standards/management/missions/README.md`
+**Full standard**: `shared/standards/management/missions/README.md`
 
 ---
-
-## SESSION COMMANDS
-
-| Command | Purpose | When to use |
-|---------|---------|-------------|
-| `/start` | Session onboarding | Beginning of any session |
-| `/end` | Safe session closure | End of any session |
 
 ### /start
 
 Loads context and orients toward existing work, **enforcing Claiming Protocol**:
+
 1. Checks `missions/active/` — if not empty, **warns about existing claim**
 2. Checks `missions/queue/` for ready missions
 3. Displays state summary
@@ -225,11 +243,11 @@ Loads context and orients toward existing work, **enforcing Claiming Protocol**:
 
 **Enforces HARD STOP #6** with guardrails:
 
-| Guardrail | Condition | Action |
-|-----------|-----------|--------|
-| Uncaptured items | Tasks mentioned but no mission | BLOCK |
-| Git dirty | Uncommitted changes | BLOCK |
-| CHANGELOG | Not updated after changes | WARN |
+| Guardrail        | Condition                      | Action |
+| ---------------- | ------------------------------ | ------ |
+| Uncaptured items | Tasks mentioned but no mission | BLOCK  |
+| Git dirty        | Uncommitted changes            | BLOCK  |
+| CHANGELOG        | Not updated after changes      | WARN   |
 
 **Background**: Prevents repeat of 2025-12-21 incident where session ended with items lost.
 See: `LESSONS-LEARNED/2025-12-21-premature-closure.md`
@@ -279,7 +297,7 @@ Setup + TAC Learning → toward the NORTH STAR.
 ## WHEN MAKING CHANGES
 
 1. Check if it serves the NORTH STAR
-2. Update ROADMAP.md if priorities change
+2. Update @ROADMAP.md if priorities change
 3. Capture lessons in LESSONS-LEARNED/
 4. Commit with meaningful messages
 

@@ -1,5 +1,5 @@
 ---
-description: Initialize session by checking active missions and loading context
+description: Session onboarding: Initialize session by checking active missions and loading context. Use for Beginning of any session
 allowed-tools: Read, Glob, Bash(ls:*)
 argument-hint: [mission-name]
 ---
@@ -39,6 +39,7 @@ ls missions/active/
    - New initiative
 
 **Conflict rules**:
+
 - If claimed < 24h ago: Recommend working on queue instead
 - If claimed > 24h ago: May be abandoned, resuming is reasonable
 - Always ask user before claiming an active mission
@@ -52,10 +53,12 @@ ls missions/queue/
 ```
 
 **If missions found**:
+
 - List by priority (from YAML frontmatter)
 - Present: "These missions are ready. Which to start?"
 
 **To claim a mission**:
+
 1. Move file: `mv missions/queue/{mission}.md missions/active/`
 2. Update YAML: Set `status: ACTIVE`, add `claimed_at`, `claimed_by`
 3. Log: Add "CLAIMED" as first execution entry
@@ -70,6 +73,7 @@ ls missions/drafts/
 ```
 
 **If drafts found**:
+
 - Present as options for new work
 
 ### Step 4: Display Summary

@@ -153,6 +153,76 @@ Putting shared resources in agent-specific folders (lock-in).
 
 ---
 
+### Pattern: Migrate with Move, Not Copy
+
+**Author**: Omar
+**Confidence**: ✅ Certitude (95%)
+**Source**: 2025-12-22 migration discussion
+
+#### Problem
+Using `cp` for migrations creates duplicates. Original location still has files.
+
+#### Solution
+Always use `mv` for migrations:
+```bash
+mv source/ destination/
+```
+
+#### Example
+```bash
+# BAD: Creates duplicate
+cp docs/standards/ shared/standards/
+
+# GOOD: Single source of truth
+mv docs/standards/ shared/standards/
+```
+
+#### Anti-Pattern
+Copying instead of moving during restructuring.
+
+---
+
+### Pattern: Triple-Check Before Deletion
+
+**Author**: Omar
+**Confidence**: ✅ Certitude (100%)
+**Source**: 2025-12-22 near-miss incident
+
+#### Problem
+Deleting something without proper verification can destroy hours of work. Even if human clicks "yes" by accident.
+
+#### Solution
+Before ANY deletion (rm, rmdir, git reset, etc.), verify THREE times:
+
+| Check | Question | How to Verify |
+|-------|----------|---------------|
+| **1. Content** | Is it truly empty/unused? | `ls -la`, `grep`, `find` |
+| **2. References** | Are there references that will break? | `grep -r "path/to/thing"` |
+| **3. Backup** | Can we recover if wrong? | Git status, commit state |
+
+Only proceed if ALL THREE checks pass with ✅ 100% confidence.
+
+#### Example
+```bash
+# Before: rmdir docs/standards/
+
+# Check 1: Is it empty?
+ls -la docs/standards/  # → Only . and ..  ✅
+
+# Check 2: Are there references?
+grep -r "docs/standards" . --include="*.md"  # → Found in CLAUDE.md! ❌
+
+# Check 3: Can we recover?
+git status  # → Uncommitted changes ⚠️
+
+# RESULT: Do NOT delete yet. Fix references first.
+```
+
+#### Anti-Pattern
+Quick deletion without verification. Trusting that human will catch mistakes.
+
+---
+
 ### Pattern: Document for the Collective
 
 **Author**: Omar

@@ -1,5 +1,5 @@
 ---
-description: Close session safely with guardrails preventing premature closure
+description: Close session safely with guardrails preventing premature closure. Use when looking to end of any session
 allowed-tools: Read, Bash(git status:*), Bash(git:*), Glob, Write, Edit
 argument-hint: [--force]
 ---
@@ -13,8 +13,7 @@ See: `LESSONS-LEARNED/2025-12-21-premature-closure.md`
 
 ## HARD RULE
 
-> **NEVER authorize closure if ANY guardrail fails.**
-> **After identifying a blocker, FIX IT AUTOMATICALLY. Don't ask Omar to decide obvious things.**
+> **NEVER authorize closure if ANY guardrail fails.** > **After identifying a blocker, FIX IT AUTOMATICALLY. Don't ask Omar to decide obvious things.**
 
 ## Variables
 
@@ -44,6 +43,7 @@ ls missions/active/
 ```
 
 **If NOT empty**:
+
 - Read each mission file
 - If status = `COMPLETED` → Archive automatically
 - If status = `ACTIVE` → Ask: complete or document stopping point?
@@ -53,6 +53,7 @@ ls missions/active/
 ### Guardrail 2: Session Learnings (BLOCKING)
 
 Scan conversation for:
+
 - Mistakes made and recognized
 - New patterns discovered
 - Preferences expressed by Omar
@@ -63,6 +64,7 @@ Scan conversation for:
 ### Guardrail 3: Uncaptured Items (BLOCKING)
 
 Scan conversation for:
+
 - Mentioned tasks not in missions
 - "TODO", "later", "should", "need to" statements
 - User requests not fully addressed
@@ -86,12 +88,12 @@ If significant changes were made, warn if CHANGELOG.md wasn't updated. (Don't bl
 
 ## Automatic Fix Principle
 
-| Blocker | Automatic Fix |
-|---------|---------------|
-| Completed mission in active/ | Archive it |
-| Undocumented learning | Document in rules/memory |
-| Uncaptured item | Create mission |
-| Uncommitted changes | Commit them |
+| Blocker                      | Automatic Fix            |
+| ---------------------------- | ------------------------ |
+| Completed mission in active/ | Archive it               |
+| Undocumented learning        | Document in rules/memory |
+| Uncaptured item              | Create mission           |
+| Uncommitted changes          | Commit them              |
 
 Only ask when the action is genuinely ambiguous.
 
