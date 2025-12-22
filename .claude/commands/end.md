@@ -6,14 +6,18 @@ argument-hint: [--force]
 
 # Purpose
 
-Safely close a work session by enforcing HARD STOP #6: No premature closure. Checks for active missions, undocumented learnings, uncaptured items, and uncommitted changes.
+Safely close a work session by enforcing HARD STOP #6: No premature closure. Checks for active missions, undocumented learnings, uncaptured items, uncommitted changes, and CHANGELOG updates.
 
 **Background**: Prevents repeat of 2025-12-21 incident.
 See: `LESSONS-LEARNED/2025-12-21-premature-closure.md`
 
-## HARD RULE
+## ZERO TOLERANCE POLICY
 
-> **NEVER authorize closure if ANY guardrail fails.** > **After identifying a blocker, FIX IT AUTOMATICALLY. Don't ask Omar to decide obvious things.**
+> **ALL guardrails are BLOCKING. There are NO warnings.**
+> **If ANY guardrail fails → FIX IT AUTOMATICALLY before authorizing closure.**
+> **Don't ask Omar to decide obvious things. Just fix them.**
+
+This is non-negotiable. Every guardrail must PASS or be AUTO-FIXED.
 
 ## Variables
 
@@ -26,11 +30,13 @@ If empty: Run full guardrail sequence.
 
 ## Guardrail Order
 
+> **ALL are BLOCKING. Zero tolerance.**
+
 1. **Active Missions State** (BLOCKING)
 2. **Session Learnings** (BLOCKING)
 3. **Uncaptured Items** (BLOCKING)
 4. **Git Status** (BLOCKING)
-5. **CHANGELOG** (WARNING)
+5. **CHANGELOG** (BLOCKING)
 
 ---
 
@@ -80,22 +86,53 @@ git status --porcelain
 
 **If NOT empty** → Commit automatically with appropriate message.
 
-### Guardrail 5: CHANGELOG.md (WARNING)
+### Guardrail 5: CHANGELOG.md (BLOCKING)
 
-If significant changes were made, warn if CHANGELOG.md wasn't updated. (Don't block)
+If significant changes were made this session:
+
+1. Check if CHANGELOG.md was updated
+2. **If NOT updated** → Update it automatically with session changes
+3. Commit the CHANGELOG update
+
+**What counts as "significant changes":**
+- New features added
+- Bug fixes
+- Breaking changes
+- New rules/standards created
+- Template additions
+- Any user-facing changes
+
+**Auto-fix format:**
+```markdown
+## [Unreleased]
+
+### Added
+- [description of additions]
+
+### Changed
+- [description of changes]
+
+### Fixed
+- [description of fixes]
+```
+
+**DO NOT proceed until CHANGELOG reflects session work.**
 
 ---
 
 ## Automatic Fix Principle
 
-| Blocker                      | Automatic Fix            |
-| ---------------------------- | ------------------------ |
-| Completed mission in active/ | Archive it               |
-| Undocumented learning        | Document in rules/memory |
-| Uncaptured item              | Create mission           |
-| Uncommitted changes          | Commit them              |
+> **Every blocker has an automatic fix. Use it.**
 
-Only ask when the action is genuinely ambiguous.
+| Blocker                      | Automatic Fix                    |
+| ---------------------------- | -------------------------------- |
+| Completed mission in active/ | Archive it                       |
+| Undocumented learning        | Document in rules/memory         |
+| Uncaptured item              | Create mission                   |
+| Uncommitted changes          | Commit them                      |
+| CHANGELOG not updated        | Update with session changes      |
+
+**Only ask when the action is genuinely ambiguous.** Most actions are NOT ambiguous.
 
 ---
 
@@ -110,7 +147,12 @@ Only ask when the action is genuinely ambiguous.
 ### Issue 2: Uncommitted Changes
 - Modified: CLAUDE.md → Committing now...
 
+### Issue 3: CHANGELOG Not Updated
+- Significant changes made → Updating CHANGELOG now...
+
 Proceeding with automatic fixes...
+
+[After fixes complete, re-run guardrails to verify all PASSED]
 ```
 
 ## Output: If Passed
@@ -118,10 +160,21 @@ Proceeding with automatic fixes...
 ```
 ## Session Closure Authorized
 
+### All Guardrails PASSED
+
+| Guardrail | Status |
+|-----------|--------|
+| Active Missions | PASSED |
+| Session Learnings | PASSED |
+| Uncaptured Items | PASSED |
+| Git Status | PASSED |
+| CHANGELOG | PASSED |
+
 ### Summary
 - **Missions archived**: [list]
 - **Learnings documented**: [list]
 - **Commits made**: [count]
+- **CHANGELOG updated**: Yes/No (if significant changes)
 
 ### Git Status
 Clean.
