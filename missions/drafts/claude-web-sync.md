@@ -43,8 +43,9 @@ Maintenir la synchronisation entre Claude Code et Claude Web. Claude Web a besoi
 
 ## Constraints
 
-- **Dépend de M1** (GitHub Push) — ne pas exécuter avant
+- ~~**Dépend de M1** (GitHub Push)~~ — ✅ COMPLETED (archived)
 - **Via Chrome automation** (`--chrome` mode)
+- **Conversation link may be stale** — verify accessibility first
 
 ---
 
@@ -74,10 +75,12 @@ mkdir -p configs/system/prompts/
 # Sauvegarder le contenu récupéré
 ```
 
-### Step 4: Mettre à jour pont
+### Step 4: Document sync status
 
 ```bash
-# Mettre à jour history/2025/Q4/reports/prompt-claude-web-final.md
+# Create sync report in history/
+mkdir -p history/2025/Q4/reports/claude-web-sync/
+# Document: what was synced, conversation status, next steps
 ```
 
 ---
