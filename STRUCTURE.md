@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 00:56:16 UTC
+**Last updated**: 2025-12-22 01:37:36 UTC
 
 ---
 
@@ -36,6 +36,7 @@
 │   ├── hooks/
 │   │   └── update-structure.sh*
 │   ├── rules/
+│   │   ├── anti-patterns.md
 │   │   ├── behavior.md
 │   │   ├── memory-protocol.md
 │   │   ├── partnership.md
@@ -69,8 +70,10 @@
 │       └── prompts/
 ├── docs/
 │   ├── reference/
-│   │   └── guides/
-│   │       └── claude-code-chrome.md
+│   │   ├── guides/
+│   │   │   ├── claude-code-chrome.md
+│   │   │   └── claude-code-permissions.md
+│   │   └── INDEX.md
 │   └── standards/
 │       ├── management/
 │       │   ├── missions/
@@ -124,8 +127,17 @@
 │       │   ├── client/
 │       │   ├── contacts.md
 │       │   └── credentials.md
+│       ├── assets/
+│       │   └── images/
+│       ├── .claude/
+│       │   ├── input/
+│       │   └── output/
+│       ├── communication/
+│       │   └── whatsapp/
 │       ├── docs/
-│       │   └── lessons-learned.md
+│       │   ├── templates/
+│       │   ├── lessons-learned.md
+│       │   └── services-transport.md
 │       ├── state/
 │       │   ├── baseline/
 │       │   ├── current/
@@ -163,7 +175,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-69 directories, 84 files
+77 directories, 88 files
 ```
 
 ---
