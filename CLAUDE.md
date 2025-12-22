@@ -140,6 +140,19 @@ All standards are in `docs/standards/`. Key ones:
 
 ---
 
+## KNOWLEDGE RESOURCES
+
+> **When you need guidance on a topic, check the index first.**
+
+See: `docs/reference/INDEX.md`
+
+| Topic | Guide | When to Use |
+|-------|-------|-------------|
+| **Permissions** | `docs/reference/guides/claude-code-permissions.md` | Settings config, allow/deny patterns |
+| **Chrome** | `docs/reference/guides/claude-code-chrome.md` | Browser automation, calendar, web apps |
+
+---
+
 ## MISSION HANDLING
 
 > **Missions = Multi-step work packages. Tasks = Single actions in Linear.**
@@ -157,12 +170,34 @@ All standards are in `docs/standards/`. Key ones:
 
 `CREATE → ASSIGN → EXECUTE → COMPLETE → ARCHIVE`
 
+### Claiming Protocol
+
+> **Problem**: Multiple Claude instances can unknowingly work on the same mission.
+> **Solution**: Filesystem location IS the claim. `active/` = claimed.
+
+```
+CHECK → MOVE → UPDATE → LOG → WORK
+```
+
+| Step | Action |
+|------|--------|
+| **CHECK** | `ls missions/active/` - If not empty, someone is working |
+| **MOVE** | `mv queue/{mission}.md active/` |
+| **UPDATE** | Set `claimed_at`, `claimed_by` in YAML |
+| **LOG** | First entry: "CLAIMED by [session description]" |
+| **WORK** | Begin execution |
+
+**Rules**:
+- **Never work from queue/** — if it's in queue, it's unclaimed
+- **Check active/ first** — another instance may be working
+- **If active/ not empty**: Ask user before proceeding (may be abandoned > 24h)
+
 ### For Future Instances
 
-1. **At session start**:
-   - Check `missions/active/` for in-progress work
+1. **At session start** (`/start`):
+   - Check `missions/active/` — if not empty, warn about existing claim
    - Check `missions/queue/` for ready-to-execute missions
-2. **Before executing**: Move mission from `queue/` to `active/`
+2. **Before executing**: Claim by moving `queue/` → `active/` + update YAML
 3. **During work**: Log progress in mission's execution log
 4. **On completion**: Verify success criteria, then archive to `history/`
 5. **If interrupted**: Next instance continues from execution log
@@ -180,11 +215,11 @@ All standards are in `docs/standards/`. Key ones:
 
 ### /start
 
-Loads context and orients toward existing work:
-1. Checks `missions/active/` for in-progress work
+Loads context and orients toward existing work, **enforcing Claiming Protocol**:
+1. Checks `missions/active/` — if not empty, **warns about existing claim**
 2. Checks `missions/queue/` for ready missions
 3. Displays state summary
-4. Asks: resume or new initiative?
+4. Asks: resume, claim from queue, or new initiative?
 
 ### /end
 

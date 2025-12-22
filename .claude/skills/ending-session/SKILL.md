@@ -14,18 +14,86 @@ Prevent premature session closure. Ensure ALL work items are captured before end
 ## HARD RULE
 
 > **NEVER authorize session closure if ANY guardrail fails.**
+> **After identifying a blocker, FIX IT AUTOMATICALLY if the action is obvious. Don't ask.**
+
+## Guardrail Order
+
+1. **Active Missions State** (BLOCKING) — Check first
+2. **Session Learnings** (BLOCKING) — New
+3. **Uncaptured Items** (BLOCKING)
+4. **Git Status** (BLOCKING)
+5. **CHANGELOG** (WARNING)
+
+---
 
 ## Instructions
 
-### Guardrail 1: Uncaptured Items (BLOCKING)
+### Guardrail 1: Active Missions State (BLOCKING)
 
-**Scan the conversation for**:
+```bash
+ls missions/active/
+```
+
+**If NOT empty**:
+
+1. Read each mission file
+2. Check `status` field in YAML
+3. Take action based on status:
+
+| Status | Action | Ask? |
+|--------|--------|------|
+| `COMPLETED` | Archive to `history/YYYY/QQ/missions/` | NO — just do it |
+| `ACTIVE` | Document stopping point in execution log | YES — ask if should complete or pause |
+
+```
+## BLOCKED: Active Missions Exist
+
+missions/active/ is not empty:
+
+| Mission | Status | Action |
+|---------|--------|--------|
+| mission-claim-protocol | COMPLETED | Archiving now... |
+| thaifa-migration | ACTIVE | Need to document stopping point |
+
+Proceeding with automatic fixes...
+```
+
+**DO NOT authorize closure with missions in active/.**
+
+### Guardrail 2: Session Learnings (BLOCKING)
+
+Scan the conversation for:
+- Mistakes made and recognized
+- New patterns discovered
+- Preferences expressed by Omar
+- Behaviors to change
+- Insights gained
+
+**If found and NOT documented**:
+
+```
+## BLOCKED: Undocumented Learnings
+
+The following learnings were recognized but not documented:
+
+1. [Learning description]
+2. [Learning description]
+
+**Action**: Documenting now in appropriate rules/memory files...
+```
+
+**Automatically document learnings before proceeding.**
+
+### Guardrail 3: Uncaptured Items (BLOCKING)
+
+Scan the conversation for:
 - Mentioned tasks not in missions
 - Questions asked but not resolved
 - "TODO", "later", "should", "need to" statements
 - User requests not fully addressed
 
 **If found**:
+
 ```
 ## BLOCKED: Uncaptured Items Detected
 
@@ -34,20 +102,19 @@ The following items were mentioned but not captured as missions:
 1. [Item description]
 2. [Item description]
 
-**Action Required**: Create missions for these items before closing.
-
-Would you like me to create missions for these items now?
+**Action**: Creating missions for these items...
 ```
 
-**DO NOT proceed until items are captured or explicitly dismissed by user.**
+**Automatically create missions for uncaptured items.**
 
-### Guardrail 2: Git Status (BLOCKING)
+### Guardrail 4: Git Status (BLOCKING)
 
 ```bash
 git status --porcelain
 ```
 
 **If output is NOT empty**:
+
 ```
 ## BLOCKED: Uncommitted Changes
 
@@ -55,14 +122,12 @@ You have uncommitted changes:
 
 [git status output]
 
-**Action Required**: Commit or stash changes before closing.
-
-Would you like me to commit these changes now?
+**Action**: Committing changes now...
 ```
 
-**DO NOT proceed until git is clean.**
+**Automatically commit changes with appropriate message.**
 
-### Guardrail 3: CHANGELOG.md (WARNING)
+### Guardrail 5: CHANGELOG.md (WARNING)
 
 **If significant changes were made this session**:
 - Check if CHANGELOG.md was updated
@@ -76,15 +141,18 @@ Significant changes were made this session but CHANGELOG.md was not updated.
 Consider updating before next session.
 ```
 
-### If All Guardrails Pass
+---
+
+## If All Guardrails Pass
 
 ```
 ## Session Closure Authorized
 
 ### Summary
-- **Missions advanced**: [list]
+- **Missions completed**: [list]
 - **Missions archived**: [list]
-- **Missions created**: [list]
+- **Learnings documented**: [list]
+- **Commits made**: [count]
 
 ### Git Status
 Clean. All changes committed.
@@ -98,6 +166,8 @@ Clean. All changes committed.
 Session may be safely closed.
 ```
 
+---
+
 ## Override Protocol
 
 If user insists on closing despite blocks:
@@ -108,63 +178,21 @@ If user insists on closing despite blocks:
 
 **Never silently allow premature closure.**
 
-## Example: Blocked Closure
+---
 
-User types: `/end`
+## Key Principle
 
-Claude checks and finds:
-- Uncommitted file: `CLAUDE.md`
-- Mentioned but uncaptured: "fix the API bug"
+> **Fix blockers automatically. Don't ask Omar to decide obvious things.**
 
-Claude responds:
+| Blocker | Automatic Fix |
+|---------|---------------|
+| Completed mission not archived | Archive it |
+| Learning not documented | Document it |
+| Changes not committed | Commit them |
+| Uncaptured items | Create missions |
 
-```
-## BLOCKED: Cannot Close Session
-
-### Issue 1: Uncaptured Items
-- "fix the API bug" — mentioned but no mission created
-
-### Issue 2: Uncommitted Changes
-- Modified: CLAUDE.md
-
-**Required Actions**:
-1. Create mission for "fix the API bug"
-2. Commit CLAUDE.md changes
-
-Shall I proceed with these actions?
-```
-
-## Example: Clean Closure
-
-User types: `/end`
-
-Claude checks:
-- No uncaptured items
-- Git is clean
-- CHANGELOG updated
-
-Claude responds:
-
-```
-## Session Closure Authorized
-
-### Summary
-- **Missions advanced**: session-commands (M4)
-- **Missions archived**: omar-cleanup (M7)
-- **Missions created**: 0
-
-### Git Status
-Clean.
-
-### Next Session
-- Pending in queue: 3 missions
-- Recommended next: thaifa-migration-critical
+Only ask when the action is genuinely ambiguous.
 
 ---
 
-Session may be safely closed.
-```
-
----
-
-_Skill v1.0.0 | Enforces HARD STOP rule #6_
+_Skill v2.0.0 | Enforces HARD STOP rule #6 | Auto-fixes obvious blockers_

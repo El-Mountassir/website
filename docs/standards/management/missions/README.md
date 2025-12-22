@@ -14,7 +14,7 @@ Language: en
 Rights: Internal Team Standard
 
 # Extended Metadata
-Version: 0.0.1-alpha.0
+Version: 0.0.2-alpha.0
 Status: ACTIVE
 Dimension: Work
 Maturity: Tested (1 mission archived)
@@ -74,6 +74,61 @@ CREATE → ASSIGN → EXECUTE → COMPLETE → ARCHIVE
 | `COMPLETED` | Done, awaiting archival | `missions/active/` |
 | `ARCHIVED` | Closed, in history | `history/YYYY/QQ/missions/{slug}/` |
 
+### 2.3 Claiming Protocol
+
+> **Problem**: Multiple Claude instances can unknowingly work on the same mission.
+> **Solution**: Filesystem location IS the claim. Move = Claim.
+
+#### The Claim Process
+
+```
+CHECK → MOVE → UPDATE → LOG → WORK
+```
+
+| Step | Action | Purpose |
+|------|--------|---------|
+| **CHECK** | `ls missions/active/` | See if someone is already working |
+| **MOVE** | `mv queue/{mission}.md active/` | Filesystem state = claim |
+| **UPDATE** | Set `claimed_at`, `claimed_by` in YAML | Metadata for audit |
+| **LOG** | First execution entry = "CLAIMED" | Audit trail |
+| **WORK** | Begin execution | Actual work |
+
+#### Claiming Rules
+
+| Rule | Rationale |
+|------|-----------|
+| **Never work from queue/** | If it's in queue/, it's unclaimed |
+| **Check active/ first** | Another instance may be working |
+| **Move before work** | Filesystem location is the source of truth |
+| **Log the claim** | Audit trail for handoff |
+
+#### Conflict Detection
+
+If `missions/active/` is NOT empty when you start:
+
+1. **Read the active mission file**
+2. **Check `claimed_at` timestamp** - How recent?
+3. **If < 24h**: Assume another instance is working. Ask user before proceeding.
+4. **If > 24h**: May be abandoned. Ask user if they want to resume or reassign.
+
+#### Example Claim
+
+```yaml
+mission_id: 2025-12-22-thaifa-migration
+status: ACTIVE
+claimed_at: 2025-12-22T03:45:00+01:00
+claimed_by: "Thaifa P0 migration session"
+```
+
+```markdown
+## Execution Log
+
+### 2025-12-22
+
+- 03:45 - **CLAIMED** by session "Thaifa P0 migration"
+- 03:46 - Starting objective 1...
+```
+
 ---
 
 ## 3. Storage Convention
@@ -119,6 +174,8 @@ status: [DRAFT|QUEUED|ACTIVE|COMPLETED|ARCHIVED]
 assigned_to: [Claude Code|Claude Web|Omar|Unassigned]
 created: YYYY-MM-DD
 assigned: YYYY-MM-DD
+claimed_at:     # ISO timestamp when instance started work (e.g., 2025-12-22T03:45:00+01:00)
+claimed_by:     # Session description (e.g., "Thaifa P0 migration session")
 completed: YYYY-MM-DD
 archived: YYYY-MM-DD
 ```
@@ -295,6 +352,7 @@ Before archiving, verify:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 0.0.2-alpha.0 | 2025-12-22 | Added Claiming Protocol (Section 2.3), `claimed_at`/`claimed_by` fields |
 | 0.0.1-alpha.0 | 2025-12-21 | Initial version based on first mission |
 
 ---

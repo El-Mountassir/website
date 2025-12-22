@@ -1,5 +1,15 @@
 # Protocole de Mémoire Auto-Actualisante
 
+## HARD RULE
+
+> **Recognizing a learning and NOT documenting it = FAILURE.**
+
+This is not optional. Future instances depend on current instances.
+
+See: `.claude/rules/anti-patterns.md` — Pattern 4: Individual vs Collective Thinking
+
+---
+
 ## Principe
 
 Les instances Claude doivent **systématiquement** documenter les informations importantes pour les futures sessions. Ne jamais attendre qu'Omar le demande.
