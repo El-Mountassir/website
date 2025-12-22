@@ -135,12 +135,12 @@ El-Mountassir/
 @shared/standards/confidence-system.md
 @shared/user/preferences.md
 
-| Resource | Path | Purpose |
-|----------|------|---------|
-| **Index** | `shared/INDEX.md` | Central discovery for all agents |
+| Resource              | Path                                    | Purpose                               |
+| --------------------- | --------------------------------------- | ------------------------------------- |
+| **Index**             | `shared/INDEX.md`                       | Central discovery for all agents      |
 | **Confidence System** | `shared/standards/confidence-system.md` | How to express certainty (✅🟢🟡🟠⚠️) |
-| **User Preferences** | `shared/user/preferences.md` | How Omar wants to work with AI |
-| **Collective Memory** | `shared/memory/` | Episodes, decisions, patterns, facts |
+| **User Preferences**  | `shared/user/preferences.md`            | How Omar wants to work with AI        |
+| **Collective Memory** | `shared/memory/`                        | Episodes, decisions, patterns, facts  |
 
 ---
 
