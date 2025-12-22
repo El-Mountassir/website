@@ -114,3 +114,5 @@ temp/
 *.credentials
 *.secret
 *.secrets
+# Config backups
+.claude/*.backup
