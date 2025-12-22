@@ -18,9 +18,12 @@
 
 ## Queued Missions
 
-| Mission                                          | Created    | Assigned To | Description                        |
-| ------------------------------------------------ | ---------- | ----------- | ---------------------------------- |
-| [omar-cleanup](queue/2025-12-21-omar-cleanup.md) | 2025-12-21 | Claude Code | Clean up omar/ directory structure |
+| Mission                                          | Created    | Assigned To | Priority | Description                        |
+| ------------------------------------------------ | ---------- | ----------- | -------- | ---------------------------------- |
+| [thaifa-migration-critical](queue/2025-12-22-thaifa-migration-critical.md) | 2025-12-22 | Claude Code | P0 | Migrate admin/, CLAUDE.md, lessons-learned |
+| [thaifa-migration-operational](queue/2025-12-22-thaifa-migration-operational.md) | 2025-12-22 | Claude Code | P1 | Migrate assets/, communication/, templates |
+| [thaifa-migration-cleanup](queue/2025-12-22-thaifa-migration-cleanup.md) | 2025-12-22 | Claude Code | P2 | Task conversion, OLD path cleanup |
+| [omar-cleanup](queue/2025-12-21-omar-cleanup.md) | 2025-12-21 | Claude Code | P2 | Clean up omar/ directory structure |
 
 ---
 

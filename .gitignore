@@ -105,3 +105,12 @@ temp/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Sensitive files (credentials, secrets)
+**/credentials.md
+**/admin/credentials.md
+**/contacts.md
+**/admin/contacts.md
+*.credentials
+*.secret
+*.secrets
