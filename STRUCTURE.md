@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 03:30:45 UTC
+**Last updated**: 2025-12-22 03:37:34 UTC
 
 ---
 
@@ -113,9 +113,6 @@
 │   │   ├── 2025-12-22-M4-subagent-architecture.md
 │   │   ├── 2025-12-22-M5-hierarchical-claude-md.md
 │   │   ├── 2025-12-22-multi-instance-coordination.md
-│   │   ├── 2025-12-22-thaifa-migration-cleanup.md
-│   │   ├── 2025-12-22-thaifa-migration-critical.md
-│   │   ├── 2025-12-22-thaifa-migration-operational.md
 │   │   └── .gitkeep
 │   └── README.md
 ├── omar/
@@ -210,7 +207,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-88 directories, 112 files
+88 directories, 109 files
 ```
 
 ---
