@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 02:43:31 UTC
+**Last updated**: 2025-12-22 02:44:26 UTC
 
 ---
 
@@ -174,6 +174,9 @@
 ├── templates/
 │   ├── commands/
 │   │   └── slash-command.md
+│   ├── metadata/
+│   │   ├── dublin-core-extended.md
+│   │   └── dublin-core-standard.md
 │   ├── missions/
 │   │   └── mission.md
 │   ├── projects/
@@ -202,7 +205,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-87 directories, 105 files
+88 directories, 107 files
 ```
 
 ---

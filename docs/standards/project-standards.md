@@ -108,6 +108,15 @@ For the full specification, visit the official [Semantic Versioning website](htt
 
 To facilitate information discovery on the growing web (and within our internal archives) by embedding simple, catalog-like metadata directly with resources, making them easier for **us** to find and manage.
 
+### Templates
+
+> **Ready-to-use templates**: See [`templates/metadata/`](../../templates/metadata/)
+
+| Template | Use For |
+|----------|---------|
+| [dublin-core-standard.md](../../templates/metadata/dublin-core-standard.md) | General docs, guides |
+| [dublin-core-extended.md](../../templates/metadata/dublin-core-extended.md) | Standards with versioning |
+
 For the full specification, visit the official [Dublin Core Element Set](https://www.dublincore.org/specifications/dublin-core/dces/ "null").
 
 ## 3. Changelog Standards (Keep a Changelog)

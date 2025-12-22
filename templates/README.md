@@ -12,6 +12,8 @@
 | **State Management** | [state/](state/) | Track project/context state | [State Standard](../docs/standards/state-management.md) |
 | **Project CLAUDE.md** | [projects/CLAUDE.md](projects/CLAUDE.md) | Project-specific context for Claude Code | — |
 | **Slash Command** | [commands/slash-command.md](commands/slash-command.md) | Custom Claude Code commands | — |
+| **Dublin Core (Standard)** | [metadata/dublin-core-standard.md](metadata/dublin-core-standard.md) | Basic document metadata (10 fields) | [Dublin Core](https://www.dublincore.org/) |
+| **Dublin Core (Extended)** | [metadata/dublin-core-extended.md](metadata/dublin-core-extended.md) | Standards with versioning & lifecycle | [Project Standards](../docs/standards/project-standards.md) |
 
 ---
 
@@ -72,14 +74,28 @@ When you find inline templates in documentation:
 
 ---
 
-## Future Candidates
+## Metadata Templates
 
-Templates identified but not yet extracted:
+### When to Use Which
 
-| Candidate | Current Location | Priority |
-|-----------|------------------|----------|
-| Dublin Core (Standard) | 5 docs | Low (metadata, not content) |
-| Dublin Core (Extended) | 3 docs | Low (metadata, not content) |
+| Template | Use For |
+|----------|---------|
+| **Dublin Core Standard** | General docs, guides, how-tos |
+| **Dublin Core Extended** | Standards, managed docs with versioning |
+
+### Usage
+
+```bash
+# For a new standard
+# 1. Copy extended template's YAML block
+# 2. Paste at top of your markdown file
+# 3. Fill in the fields
+```
+
+### Documents Using Extended Metadata
+
+- `docs/standards/**/*.md` — All standards
+- `docs/reference/guides/*.md` — Reference guides
 
 ---
 
@@ -90,5 +106,5 @@ Templates identified but not yet extracted:
 
 ---
 
-_Templates v0.2.0_
+_Templates v0.3.0_
 _El-Mountassir Organization_
