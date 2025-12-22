@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-21 23:39:11 UTC
+**Last updated**: 2025-12-22 00:55:50 UTC
 
 ---
 
@@ -19,9 +19,19 @@
 ├── archive/
 │   └── settings.local.json.backup
 ├── .claude/
+│   ├── agents/
+│   │   ├── build-agent.md
+│   │   ├── docs-scraper.md
+│   │   ├── meta-agent.md
+│   │   ├── planner.md
+│   │   ├── playwright-validator.md
+│   │   ├── scout-report-suggest-fast.md
+│   │   └── scout-report-suggest.md
 │   ├── commands/
 │   │   ├── elevate.md
+│   │   ├── end.md
 │   │   ├── question-w-mermaid-diagrams.md
+│   │   ├── start.md
 │   │   └── sync.md
 │   ├── hooks/
 │   │   └── update-structure.sh*
@@ -32,17 +42,30 @@
 │   │   ├── taxonomy.md
 │   │   └── world-model.md
 │   ├── skills/
+│   │   ├── creating-commands/
+│   │   │   └── SKILL.md
+│   │   ├── ending-session/
+│   │   │   └── SKILL.md
 │   │   ├── meta-skill/
 │   │   │   ├── docs/
 │   │   │   └── SKILL.md
-│   │   └── reorganizing-directories/
-│   │       ├── checklist.md
+│   │   ├── reorganizing-directories/
+│   │   │   ├── checklist.md
+│   │   │   └── SKILL.md
+│   │   └── starting-session/
 │   │       └── SKILL.md
 │   ├── settings.json
-│   └── settings.local.json
+│   ├── settings.json.backup
+│   ├── settings.local.json
+│   └── settings.local.json.backup
 ├── configs/
 │   └── system/
 │       ├── agents/
+│       ├── mcp/
+│       │   ├── knowledge-graph.md
+│       │   ├── linear.md
+│       │   ├── notion.md
+│       │   └── README.md
 │       └── prompts/
 ├── docs/
 │   ├── reference/
@@ -70,14 +93,20 @@
 │       └── .gitkeep
 ├── LESSONS-LEARNED/
 │   ├── 2025-12-21-premature-closure.md
+│   ├── 2025-12-22-permissions-config.md
 │   └── .gitkeep
 ├── missions/
 │   ├── active/
 │   │   └── .gitkeep
 │   ├── drafts/
-│   │   ├── claude-web-sync.md
-│   │   └── session-commands.md
+│   │   └── claude-web-sync.md
 │   ├── queue/
+│   │   ├── 2025-12-22-claude-permissions-fix.md
+│   │   ├── 2025-12-22-docs-base-alignment.md
+│   │   ├── 2025-12-22-M1-rule-deduplication.md
+│   │   ├── 2025-12-22-thaifa-migration-cleanup.md
+│   │   ├── 2025-12-22-thaifa-migration-critical.md
+│   │   ├── 2025-12-22-thaifa-migration-operational.md
 │   │   └── .gitkeep
 │   └── README.md
 ├── omar/
@@ -91,6 +120,12 @@
 │   ├── gagliano/
 │   │   └── CLAUDE.md
 │   └── thaifa/
+│       ├── admin/
+│       │   ├── client/
+│       │   ├── contacts.md
+│       │   └── credentials.md
+│       ├── docs/
+│       │   └── lessons-learned.md
 │       ├── state/
 │       │   ├── baseline/
 │       │   ├── current/
@@ -100,6 +135,8 @@
 │       │   └── README.md
 │       └── CLAUDE.md
 ├── templates/
+│   ├── commands/
+│   │   └── slash-command.md
 │   ├── projects/
 │   │   └── CLAUDE.md
 │   ├── state/
@@ -126,7 +163,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-60 directories, 56 files
+69 directories, 84 files
 ```
 
 ---
