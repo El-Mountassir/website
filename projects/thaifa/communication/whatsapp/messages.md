@@ -17,17 +17,12 @@ Hospitality Web Services
 https://drive.google.com/drive/folders/11WkUW3zm2Bjee3H5GLR57eK7Bb58PMVX?usp=sharing
 ```
 
-Images que Said Raifa nous à envoyer
-
-![alt text](image.png)
-
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-![alt text](image-3.png)
+Information que Said Thaifa nous à envoyer
 
 ```
+
+Ce sont les nouveaux types de chambres
+
 - 1, 3, 8 chambre triple Deluxe
 - 2 chambres double Deluxe
 - 4, 5, chambres double supérieure
@@ -37,7 +32,6 @@ Images que Said Raifa nous à envoyer
 - 9 , 11 , suite familiale
 - 12 suite présidentielle
 
-Hadou houma les nouveaux types de chambres
 ```
 
 ---

@@ -1,7 +1,7 @@
 # Current State — Rooms & Pricing
 
-**Last updated**: 2025-12-20
-**Source**: HotelRunner (app.hotelrunner.com)
+**Last updated**: 2025-12-22
+**Source**: HotelRunner (app.hotelrunner.com) + Booking.com
 **Booking.com Commission**: 25%
 
 ---
@@ -11,9 +11,25 @@
 | Metric | Value |
 |--------|-------|
 | Total rooms | **12** |
-| Room types | **9** |
+| Room types (HotelRunner) | **9** |
+| Room types (Booking.com) | **8** |
 | Prices configured | **0** (all pending) |
 | Pricing formula | `Booking Price = Net margin / 0.75` |
+
+---
+
+## Booking.com Room Types & Bed Configuration
+
+| Room Type | Rooms | Beds | Max Guests |
+|-----------|-------|------|------------|
+| Superior Double Room | 4, 5 | 1 king | 2 |
+| Deluxe Double Room | 2 | 1 king | 2 |
+| Deluxe Triple Room | 1, 3, 8 | 1 king + 1 sofa | 3 |
+| Executive Suite | 6 | 1 king + 1 sofa | 3 |
+| Suite | 10 | 1 king + 1 sofa | 3 |
+| Deluxe King Suite | 7 | 1 king + 2 sofas | 4 |
+| Family Suite | 9, 11 | 1 king + 2 sofas | 4 |
+| Presidential Suite | 12 | 1 king + 2 sofas | 4 |
 
 ---
 

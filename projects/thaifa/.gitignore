@@ -1,0 +1,19 @@
+# Backups
+*.backup-*
+*.bak
+
+# Credentials (should be in admin/ but extra safety)
+**/secrets/
+*.secret
+
+# Temp files
+*.tmp
+*~
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Local settings
+.claude/settings.local.json

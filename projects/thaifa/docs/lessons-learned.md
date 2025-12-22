@@ -26,12 +26,12 @@ Envoyé un message à Said demandant des infos (nom invité, tarif, nb adultes) 
 
 ### Pattern correct
 
-| Phase | Action | Exemple |
-|-------|--------|---------|
-| **Scout** | Explorer en éclaireur | Se connecter, vérifier dispo |
-| **Rapport** | Informer le client | "Bonne nouvelle, la chambre est dispo" |
-| **Questions** | Demander ce qui manque | "Pour finaliser, j'ai besoin de..." |
-| **Action** | Exécuter | Créer la réservation |
+| Phase         | Action                 | Exemple                                |
+| ------------- | ---------------------- | -------------------------------------- |
+| **Scout**     | Explorer en éclaireur  | Se connecter, vérifier dispo           |
+| **Rapport**   | Informer le client     | "Bonne nouvelle, la chambre est dispo" |
+| **Questions** | Demander ce qui manque | "Pour finaliser, j'ai besoin de..."    |
+| **Action**    | Exécuter               | Créer la réservation                   |
 
 ### Checklist communication client
 
@@ -73,11 +73,13 @@ Omar
 Messages proposés avec un ton trop informel/familier ("tu", style décontracté) pour un client de +60 ans dans un contexte professionnel.
 
 **Exemple problématique** :
+
 ```
 Au fait Said, j'aurais dû commencer par ça...
 ```
 
 **Ce qui aurait dû être écrit** :
+
 ```
 Monsieur Thaifa,
 
@@ -86,12 +88,11 @@ Veuillez m'excuser, j'aurais dû commencer par vous informer que...
 
 ### Facteurs à considérer
 
-| Facteur | Impact sur le registre |
-|---------|------------------------|
-| Âge du client | +60 ans → vouvoiement |
-| Relation | Nouveau client → formel |
-| Culture | Maroc → respect des aînés |
-| Enjeu | High-ticket → professionnalisme |
+| Facteur  | Impact sur le registre          |
+| -------- | ------------------------------- |
+| Relation | Nouveau client → formel         |
+| Culture  | Maroc → respect des aînés       |
+| Enjeu    | High-ticket → professionnalisme |
 
 ### Registre correct pour ce client
 
@@ -101,13 +102,14 @@ Veuillez m'excuser, j'aurais dû commencer par vous informer que...
 
 ### Adaptation au canal (WhatsApp)
 
-| Situation | Approche |
-|-----------|----------|
-| **1er message du jour** | Salutation + signature |
+| Situation                        | Approche                             |
+| -------------------------------- | ------------------------------------ |
+| **1er message du jour**          | Salutation + signature               |
 | **Messages suivants (même fil)** | Direct, fluide, pas de re-salutation |
-| **Message important/formel** | Salutation + signature |
+| **Message important/formel**     | Salutation + signature               |
 
 **Exemple fluide (message de suivi)** :
+
 ```
 Excusez-moi, j'aurais dû commencer par là :
 Bonne nouvelle — [contenu]
@@ -137,11 +139,13 @@ Bonne nouvelle — [contenu]
 Créé un fichier `.md` avec le message WhatsApp contenant des métadonnées, des sections d'explication, du contexte — alors qu'Omar avait besoin d'un fichier `.txt` prêt à copier-coller directement.
 
 **Ce qui a été fait** :
+
 ```
 draft-message-rapport-reservations.md  ← Markdown avec métadonnées
 ```
 
 **Ce qui était attendu** :
+
 ```
 2025-12-20-message-rapport-reservations.txt  ← Texte brut prêt à copier
 ```
@@ -156,12 +160,12 @@ draft-message-rapport-reservations.md  ← Markdown avec métadonnées
 
 Quand on prépare un livrable pour envoi client (message, email, document) :
 
-| Type | Format | Nommage |
-|------|--------|---------|
-| Message WhatsApp/SMS | `.txt` | `YYYY-MM-DD-message-[sujet].txt` |
-| Email | `.txt` ou `.eml` | `YYYY-MM-DD-email-[sujet].txt` |
-| Rapport/Document | `.pdf` | `rapport-[sujet]-YYYY-MM-DD.pdf` |
-| Notes internes | `.md` | Libre |
+| Type                 | Format           | Nommage                          |
+| -------------------- | ---------------- | -------------------------------- |
+| Message WhatsApp/SMS | `.txt`           | `YYYY-MM-DD-message-[sujet].txt` |
+| Email                | `.txt` ou `.eml` | `YYYY-MM-DD-email-[sujet].txt`   |
+| Rapport/Document     | `.pdf`           | `rapport-[sujet]-YYYY-MM-DD.pdf` |
+| Notes internes       | `.md`            | Libre                            |
 
 ### Structure livrables
 
@@ -191,20 +195,57 @@ projects/[projet]/
 
 ---
 
+## [2025-12-22] Confusion Dates : Vérifier les Années
+
+### L'erreur
+
+Dates mentionnées sans année explicite, créant confusion entre 2024 et 2025. Particulièrement problématique lors du passage d'année (décembre → janvier).
+
+### Impact
+
+- Mauvaise compréhension des délais
+- Risque de planification incorrecte
+- Confusion dans l'historique des réservations
+
+### Ce qui doit être fait
+
+| Situation                         | Action                     |
+| --------------------------------- | -------------------------- |
+| Client mentionne "le 20 décembre" | Demander/confirmer l'année |
+| Date proche du Nouvel An          | Double-vérifier l'année    |
+| Réservation pour "janvier"        | Clarifier 2025 ou 2026     |
+
+**Pattern de vérification** :
+
+- Toujours spécifier l'année complète (ex: "20 décembre 2025")
+- Vérifier l'année quand un client mentionne juste le mois/jour
+- Attention particulière au passage d'année (déc → jan)
+
+### Leçon retenue
+
+> **Toujours vérifier l'année.** "Le 20 décembre" peut être 2024 ou 2025.
+> Ne jamais présumer — toujours expliciter.
+
+---
+
 ## Template pour futures leçons
 
 ```markdown
 ## [YYYY-MM-DD] Titre court
 
 ### L'erreur
+
 [Description factuelle de ce qui s'est passé]
 
 ### Impact
+
 [Conséquences de l'erreur]
 
 ### Ce qui aurait dû être fait
+
 [La bonne approche]
 
 ### Leçon retenue
+
 [Principe généralisable]
 ```

@@ -43,7 +43,7 @@
     - Questions → `.claude/output/.../questions-pending.md`
     - Issues → `.claude/output/.../blocages.md`
     - Décisions en attente → dans les rapports avec espace réponse
-  - **Action** : Mettre à jour `CLAUDE.md` avec cette règle
+  - **Action** : Mettre à jour `.claude/rules` avec cette règle
   - Voir : `.claude/output/2025/Q4/reports/pricing-strategy-session/rapport-session-20-dec-2025.md`
 
 - [ ] **Configurer prix HotelRunner** — Session pricing en cours

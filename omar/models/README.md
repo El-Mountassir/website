@@ -1,4 +1,4 @@
-# Omar Model
+# Omar Models
 
 **Status**: Placeholder
 **Purpose**: Future - Omar's mental models, decision frameworks, thinking patterns

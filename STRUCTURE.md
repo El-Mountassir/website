@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 03:37:34 UTC
+**Last updated**: 2025-12-22 21:17:04 UTC
 
 ---
 
@@ -93,13 +93,14 @@
 │       └── .gitkeep
 ├── LESSONS-LEARNED/
 │   ├── 2025-12-21-premature-closure.md
+│   ├── 2025-12-22-backup-before-edit.md
 │   ├── 2025-12-22-permissions-config.md
+│   ├── 2025-12-22-rushing-hurricane.md
 │   └── .gitkeep
 ├── missions/
 │   ├── active/
 │   │   └── .gitkeep
 │   ├── drafts/
-│   │   └── claude-web-sync.md
 │   ├── queue/
 │   │   ├── 2025-12-22-claude-audit-deduplication.md
 │   │   ├── 2025-12-22-claude-permissions-fix.md
@@ -113,13 +114,15 @@
 │   │   ├── 2025-12-22-M4-subagent-architecture.md
 │   │   ├── 2025-12-22-M5-hierarchical-claude-md.md
 │   │   ├── 2025-12-22-multi-instance-coordination.md
+│   │   ├── 2025-12-22-sync-claude-code-claude-web.md
 │   │   └── .gitkeep
 │   └── README.md
 ├── omar/
 │   ├── context/
 │   │   └── README.md
-│   ├── model/
+│   ├── models/
 │   │   └── README.md
+│   ├── prompt/
 │   └── tools/
 │       └── README.md
 ├── projects/
@@ -127,23 +130,29 @@
 │   │   └── CLAUDE.md
 │   └── thaifa/
 │       ├── admin/
-│       │   ├── client/
-│       │   ├── contacts.md
-│       │   └── credentials.md
-│       ├── assets/
-│       │   └── images/
+│       │   └── client/
+│       ├── base/
+│       ├── briefs/
+│       │   └── 2025-12-22-hws-introduction.md
 │       ├── .claude/
+│       │   ├── commands/
 │       │   ├── input/
-│       │   └── output/
+│       │   ├── output/
+│       │   ├── rules/
+│       │   └── settings.local.json
 │       ├── communication/
 │       │   └── whatsapp/
+│       ├── data/
 │       ├── docs/
 │       │   ├── templates/
+│       │   ├── guest-testimonials.md
+│       │   ├── INDEX.md
 │       │   ├── lessons-learned.md
 │       │   └── services-transport.md
-│       ├── projects/
-│       │   ├── booking-hotelrunner/
-│       │   └── jisr-mokawala/
+│       ├── export/
+│       │   └── constants/
+│       ├── history/
+│       │   └── 2025/
 │       ├── state/
 │       │   ├── baseline/
 │       │   ├── current/
@@ -153,14 +162,31 @@
 │       │   └── README.md
 │       ├── tasks/
 │       │   └── TODOs.md
+│       ├── workflows/
+│       │   ├── guest-communication.md
+│       │   ├── pricing.md
+│       │   └── reservation.md
+│       ├── AGENTS.md
 │       ├── CLAUDE.md
-│       └── CLAUDE_older_to_be_merge.md
+│       ├── .gitignore
+│       ├── INDEX.md
+│       ├── ROADMAP.md
+│       └── STRUCTURE.md
+├── scripts/
+│   └── get/
+│       ├── transcript/
+│       │   ├── video/
+│       │   └── indy_dev_dan_2026_roadmap_transcript.md
+│       └── video/
+│           └── get_transcript.py
 ├── shared/
 │   ├── memory/
 │   │   ├── decisions.md
 │   │   ├── episodes.md
 │   │   ├── facts.md
 │   │   └── patterns.md
+│   ├── philosophy/
+│   │   └── 2026-playbook.md
 │   ├── standards/
 │   │   ├── management/
 │   │   │   ├── missions/
@@ -207,7 +233,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-88 directories, 109 files
+100 directories, 123 files
 ```
 
 ---

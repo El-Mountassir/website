@@ -15,38 +15,38 @@ The promotions listed below were identified as problematic.
 
 ## Promotions State (8 total)
 
-| # | Promotion | Discount | Stay period | Performance | Planned action |
-|---|-----------|----------|-------------|-------------|----------------|
-| 1 | Basic Deal | 30% | Dec 8, 2025 → Nov 30, 2026 | -- | P1: Reduce to **10%** |
-| 2 | Basic Deal | 33% | Dec 8, 2025 → Nov 30, 2026 | 1 booking, 10 nights, €118.50 | P1: Reduce to **15%** |
-| 3 | Basic Deal | **38%** | Dec 8, 2025 → Nov 30, 2026 | 3 bookings, 9 nights, €102.92 | P0: **DEACTIVATE** |
-| 4 | Geo-targeted Europe | **10%** | Always active | -- | P0: **DEACTIVATE** |
-| 5 | Geo-targeted Morocco | **10%** | Always active | -- | P0: **DEACTIVATE** |
-| 6 | Early Booker Deal | **40%** | Dec 8, 2025 → Nov 30, 2026 | -- | P0: **DEACTIVATE** |
-| 7 | Late Escape Deal | **43%** | Oct 1, 2025 → Jan 7, 2026 | -- | P0: **DEACTIVATE** |
-| 8 | Late Escape Deal | **42%** | Oct 1, 2025 → Jan 7, 2026 | -- | P0: **DEACTIVATE** |
+| #   | Promotion            | Discount | Stay period                | Performance                   | Planned action        |
+| --- | -------------------- | -------- | -------------------------- | ----------------------------- | --------------------- |
+| 1   | Basic Deal           | 30%      | Dec 8, 2025 → Nov 30, 2026 | --                            | P1: Reduce to **10%** |
+| 2   | Basic Deal           | 33%      | Dec 8, 2025 → Nov 30, 2026 | 1 booking, 10 nights, €118.50 | P1: Reduce to **15%** |
+| 3   | Basic Deal           | **38%**  | Dec 8, 2025 → Nov 30, 2026 | 3 bookings, 9 nights, €102.92 | P0: **DEACTIVATE**    |
+| 4   | Geo-targeted Europe  | **10%**  | Always active              | --                            | P0: **DEACTIVATE**    |
+| 5   | Geo-targeted Morocco | **10%**  | Always active              | --                            | P0: **DEACTIVATE**    |
+| 6   | Early Booker Deal    | **40%**  | Dec 8, 2025 → Nov 30, 2026 | --                            | P0: **DEACTIVATE**    |
+| 7   | Late Escape Deal     | **43%**  | Oct 1, 2025 → Jan 7, 2026  | --                            | P0: **DEACTIVATE**    |
+| 8   | Late Escape Deal     | **42%**  | Oct 1, 2025 → Jan 7, 2026  | --                            | P0: **DEACTIVATE**    |
 
 ---
 
 ## Impact Analysis (before correction)
 
-| Metric | Value | Problem |
-|--------|-------|---------|
-| Active promotions | **8** | Too many |
-| Maximum discount | **43%** | Destructive |
-| Promotions > 30% | **5** | Negative margins |
+| Metric              | Value    | Problem               |
+| ------------------- | -------- | --------------------- |
+| Active promotions   | **8**    | Too many              |
+| Maximum discount    | **43%**  | Destructive           |
+| Promotions > 30%    | **5**    | Negative margins      |
 | Max combined impact | **~58%** | Commission + discount |
 
 ---
 
 ## ROI Impact (Example: 200€ room)
 
-| Scenario | Client price | 25% Commission | Villa Net | vs Target 120€ |
-|----------|-------------|----------------|-----------|----------------|
-| No promo | 200€ | -50€ | **150€** | +30€ ✅ |
-| Basic Deal 38% | 124€ | -31€ | **93€** | **-27€** ❌ |
-| Early Booker 40% | 120€ | -30€ | **90€** | **-30€** ❌ |
-| Late Escape 43% | 114€ | -28.5€ | **85.5€** | **-34.5€** ❌ |
+| Scenario         | Client price | 25% Commission | Villa Net | vs Target 120€ |
+| ---------------- | ------------ | -------------- | --------- | -------------- |
+| No promo         | 200€         | -50€           | **150€**  | +30€ ✅        |
+| Basic Deal 38%   | 124€         | -31€           | **93€**   | **-27€** ❌    |
+| Early Booker 40% | 120€         | -30€           | **90€**   | **-30€** ❌    |
+| Late Escape 43%  | 114€         | -28.5€         | **85.5€** | **-34.5€** ❌  |
 
 ---
 

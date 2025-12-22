@@ -1,13 +1,12 @@
 # Slash Command Template
 
-> **Usage**: Copy this template to `.claude/commands/your-command.md`
-> **Reference**: https://code.claude.com/docs/en/slash-commands.md
+> **Usage**: Copy this template to `.claude/commands/your-command.md` > **Reference**: https://code.claude.com/docs/en/slash-commands.md
 
 ---
 
 ## Template
 
-```markdown
+````markdown
 ---
 description: [Verb] [what] [when/context] (max 80 chars)
 allowed-tools: Read, Write, Bash(git:*), Glob, Grep
@@ -38,6 +37,7 @@ If empty: [Describe default behavior when no arguments provided]
 # Example command if needed
 command --flag
 ```
+````
 
 ### Step 2: [Action Title]
 
@@ -65,6 +65,7 @@ command --flag
 ```
 
 → [Describe what happens]
+
 ```
 
 ---
@@ -100,3 +101,4 @@ command --flag
 - [ ] Variables section explains defaults
 - [ ] At least one example provided
 - [ ] Language is English (per project standards)
+```

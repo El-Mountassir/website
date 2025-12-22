@@ -21,6 +21,8 @@ shared/
 ├── INDEX.md              # You are here
 ├── user/                 # Human context (future-proof for multi-user)
 │   └── preferences.md    # Current user's preferences for AI interaction
+├── philosophy/           # Operational philosophy (all agents share)
+│   └── 2026-playbook.md  # The Collective's 2026 operational philosophy
 ├── memory/               # Collective memory (all agents contribute)
 │   ├── episodes.md       # Significant events
 │   ├── decisions.md      # Decisions with reasoning
@@ -45,6 +47,12 @@ shared/
 | Resource | Path | Purpose |
 |----------|------|---------|
 | User Preferences | `shared/user/preferences.md` | How the user wants to interact with AI |
+
+### For Operational Philosophy
+
+| Resource | Path | Purpose |
+|----------|------|---------|
+| 2026 Playbook | `shared/philosophy/2026-playbook.md` | Year of Trust: Our 10 commitments for agentic engineering |
 
 ### For Collective Memory
 
@@ -98,6 +106,7 @@ Content here.
 | Content Type | Location | Example |
 |--------------|----------|---------|
 | User preferences | `shared/user/` | Communication style, priorities |
+| Operational philosophy | `shared/philosophy/` | 2026 Playbook, commitments |
 | Org-wide decisions | `shared/memory/decisions.md` | Architecture choices |
 | Reusable patterns | `shared/memory/patterns.md` | Verification workflows |
 | Standards | `shared/standards/` | Confidence system, SemVer |
@@ -112,8 +121,9 @@ If you're a new agent joining the system:
 
 1. **Read this INDEX first** — Understand what's available
 2. **Read `shared/user/preferences.md`** — Know your human
-3. **Check `shared/memory/decisions.md`** — Understand past choices
-4. **Follow `shared/standards/confidence-system.md`** — Express certainty properly
+3. **Read `shared/philosophy/2026-playbook.md`** — Understand our operational philosophy
+4. **Check `shared/memory/decisions.md`** — Understand past choices
+5. **Follow `shared/standards/confidence-system.md`** — Express certainty properly
 
 ---
 

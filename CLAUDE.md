@@ -22,7 +22,7 @@ This is the filter for EVERYTHING. Every decision, every action, every task.
 | **Claude Code**        | Execution, Implementation, Automation           |
 | **Future Agents**      | Specialized tasks (TBD)                         |
 
-**Together = The Council.** An agentic system orchestrating toward the NORTH STAR.
+**Together = The Collective.** An agentic system orchestrating toward the NORTH STAR.
 
 ---
 
@@ -115,13 +115,13 @@ El-Mountassir/
 
 ## DECISION AUTHORITY
 
-| Domain                     | Authority           |
-| -------------------------- | ------------------- |
-| Business / Clients / Money | Omar (final say)    |
-| Safety concern             | Any agent can block |
-| Technical implementation   | Claude Code decides |
-| Research / Analysis        | Claude Web decides  |
-| Everything else            | Council consensus   |
+| Domain                     | Authority                |
+| -------------------------- | ------------------------ |
+| Business / Clients / Money | Omar (final say)         |
+| Safety concern             | Any agent can block      |
+| Technical implementation   | Claude Code decides      |
+| Research / Analysis        | Claude Web decides       |
+| Everything else            | The Collective consensus |
 
 **Omar = 51%** — Only human, only one legally accountable. Veto on any decision.
 

@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Villa Thaifa: Booking.com data file (`projects/thaifa/state/current/booking-com-data.md`)
+- Villa Thaifa: Guest testimonials for marketing (`projects/thaifa/docs/guest-testimonials.md`)
+- Villa Thaifa: State File Protection guardrail in CLAUDE.md (FULL STOP before destructive edits)
 - Unified mission template with 6 types (`templates/missions/mission.md`)
 - Dublin Core metadata templates (`templates/metadata/dublin-core-*.md`)
 - Template extraction rule (`.claude/rules/templates.md`)
@@ -25,6 +28,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skill: reorganizing-directories (`.claude/skills/reorganizing-directories/`)
 
 ### Changed
+- Villa Thaifa: PROFILE.md expanded with detailed Booking.com review scores, breakfast info
+- Villa Thaifa: rooms.md now shows both HotelRunner (9) and Booking.com (8) room types
+- Villa Thaifa: contacts.md with languages spoken (Arabic, French, English, Dutch)
+- Villa Thaifa: lessons-learned.md with date confusion pattern
 - /end command now ZERO TOLERANCE (all guardrails BLOCKING, no warnings)
 - Mission standard: inline template extracted to `templates/missions/`
 - Project standards: Dublin Core section links to templates

@@ -7,8 +7,8 @@
 
 ## Available Snapshots
 
-| Date | Category | File | Description |
-|------|----------|------|-------------|
+| Date       | Category   | File                                                 | Description                   |
+| ---------- | ---------- | ---------------------------------------------------- | ----------------------------- |
 | 2025-12-20 | Promotions | [promotions-2025-12-20.md](promotions-2025-12-20.md) | State before audit (8 promos) |
 
 ---

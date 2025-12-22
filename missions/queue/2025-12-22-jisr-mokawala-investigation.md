@@ -1,4 +1,4 @@
-# Mission: Jisr l'Mokawala Portal Investigation
+# Mission: Go Siyaha Eligibility & Jisr Portal Investigation
 
 ```yaml
 mission_id: 2025-12-22-jisr-mokawala-investigation
@@ -10,17 +10,45 @@ claimed_at:
 claimed_by:
 completed:
 archived:
-priority: P3
+priority: P2  # Elevated - potential 90% subsidy
 project: thaifa
 ```
 
 ---
 
+## 🔴 DÉCOUVERTE: Go Siyaha = Opportunité Business Majeure
+
+> **Recherche 2025-12-22** — Cette mission a gagné en importance.
+
+| Élément | Détail |
+|---------|--------|
+| **Programme** | Go Siyaha (MarocPME) |
+| **Budget total** | 720M DH |
+| **Cible** | 1700+ entreprises touristiques |
+| **Financement** | Jusqu'à **90%** des coûts digitalisation (plafonné 1M DH) |
+| **HotelRunner** | Partenaire officiel CNT Maroc (via HWS) |
+
+### Connexion découverte
+
+```
+Villa Thaifa → éligible Go Siyaha → candidature via Jisr → subvention 90% → finance HotelRunner/digitalisation
+```
+
+### Sources
+
+- [Go Siyaha - MarocPME](https://marocpme.gov.ma/gosiyaha/)
+- [Démarches Maroc - Go Siyaha](https://www.demarchesmaroc.com/go-siyaha/)
+- [HotelRunner Morocco Partnership](https://hoteltechreport.com/news/hotelrunner-morocco)
+
+---
+
 ## Context
 
-Villa Thaifa (client) seeks to reduce dependency on Booking.com (~40% commission) by increasing direct bookings. In parallel, we need to investigate the feasibility of automating administrative tasks via the Moroccan government portal **Jisr l'Mokawala** (Go Siyaha program).
+Villa Thaifa (client) seeks to reduce dependency on Booking.com (~40% commission) by increasing direct bookings.
 
-The portal appears to be built on **Atlassian Jira Service Management**. We have client credentials (stored securely, not in this file).
+**NEW**: Go Siyaha program could finance up to 90% of digitalization costs, including HotelRunner setup and operations.
+
+The portal **Jisr l'Mokawala** appears to be built on **Atlassian Jira Service Management**. We have client credentials (stored securely, not in this file).
 
 **Security**: Zero secrets in outputs. Use environment variables.
 
@@ -28,10 +56,17 @@ The portal appears to be built on **Atlassian Jira Service Management**. We have
 
 ## Objectives
 
+### 🔴 Priority 0: Go Siyaha Eligibility (NEW)
+- [ ] Confirm Villa Thaifa eligibility criteria for Go Siyaha
+- [ ] Identify required documents for application
+- [ ] Estimate potential subsidy amount (up to 90% of digitalization costs)
+- [ ] Determine application deadlines/windows
+
 ### Business Objectives
 - [ ] Reduce Booking.com dependency (increase direct bookings)
 - [ ] Improve net margin and ROI
 - [ ] Implement KPI tracking (conversion rate, acquisition cost, OTA vs direct)
+- [ ] **NEW**: Use Go Siyaha subsidy to finance HotelRunner & digitalization
 
 ### Technical Objectives
 - [ ] Verify if Jisr portal is API-integrable (Jira Service Management)

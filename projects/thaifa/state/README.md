@@ -7,13 +7,13 @@
 
 ## Quick Navigation
 
-| Category | Description | Link |
-|----------|-------------|------|
-| **Current** | WHAT IS NOW | [current/](current/) |
-| **Baseline** | WHAT WAS (before changes) | [baseline/](baseline/) |
-| **Planned** | WHAT WILL BE (objectives) | [planned/](planned/) |
-| **Execution** | WHAT WAS DONE (logs) | [execution/](execution/) |
-| **Historical** | CHANGES/CORRECTIONS | [historical/](historical/) |
+| Category       | Description               | Link                       |
+| -------------- | ------------------------- | -------------------------- |
+| **Current**    | WHAT IS NOW               | [current/](current/)       |
+| **Baseline**   | WHAT WAS (before changes) | [baseline/](baseline/)     |
+| **Planned**    | WHAT WILL BE (objectives) | [planned/](planned/)       |
+| **Execution**  | WHAT WAS DONE (logs)      | [execution/](execution/)   |
+| **Historical** | CHANGES/CORRECTIONS       | [historical/](historical/) |
 
 ---
 
@@ -21,22 +21,22 @@
 
 ### Booking.com Promotions
 
-| Metric | Value |
-|--------|-------|
-| Active promotions | **5** |
-| Maximum discount | **15%** |
+| Metric                   | Value       |
+| ------------------------ | ----------- |
+| Active promotions        | **5**       |
+| Maximum discount         | **15%**     |
 | All within optimal range | ✅ (10-15%) |
 
 → [Details](current/promotions.md)
 
 ### Reservations
 
-| Metric | Value |
-|--------|-------|
-| Confirmed reservations | **11** |
-| Rooms to assign | **10** |
-| Revenue forecast | **€8,008.85** |
-| Peak occupancy (Dec 29-31) | **50%** |
+| Metric                     | Value         |
+| -------------------------- | ------------- |
+| Confirmed reservations     | **11**        |
+| Rooms to assign            | **10**        |
+| Revenue forecast           | **€8,008.85** |
+| Peak occupancy (Dec 29-31) | **50%**       |
 
 → [Details](current/reservations.md)
 

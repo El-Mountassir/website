@@ -36,6 +36,106 @@ Before ending any interaction, ask: "Would my next instance want to know this?"
 
 ---
 
+## ⛔ PACE CONTROL (Zero Tolerance)
+
+> **Added 2025-12-22 after "Hurricane Incident"**
+> See: `LESSONS-LEARNED/2025-12-22-rushing-hurricane.md`
+
+### Le problème
+
+Les agents IA ont tendance à "rusher" — enchaîner les étapes sans pause ni contrôle humain.
+C'est un comportement documenté : "Goal Persistence" + "Cascade d'erreurs".
+
+### Pour TOUTE opération destructive ou modification massive
+
+```
+1. STOP    → S'arrêter complètement
+2. PRÉSENT → Présenter l'inventaire SANS demander d'action
+3. PAUSE   → Laisser Omar lire (PAS de questions immédiates)
+4. WORKFLOW → Proposer workflow avec checkpoints EXPLICITES
+5. CONFIRM → Attendre validation du WORKFLOW (pas juste de l'action)
+6. EXECUTE → Étape par étape, avec confirmation entre chaque
+```
+
+### Opérations concernées
+
+| Type | Exemples |
+|------|----------|
+| **Destructive** | rm, supprimer, archiver, effacer |
+| **Massive** | Refactoring, migration, cleanup multi-fichiers |
+| **Irréversible** | Commits, déploiements, envois |
+
+### Anti-pattern à éviter
+
+```
+❌ Scan → Inventaire → Questions → Exécution (tout en 5 min)
+```
+
+### Pattern à adopter
+
+```
+✅ Scan → Inventaire → STOP → Omar décide du rythme → Exécution contrôlée
+```
+
+### Vérification avant action
+
+Avant toute action destructive, demande-toi :
+
+1. Omar a-t-il validé le **WORKFLOW** (pas juste l'action) ?
+2. Y a-t-il des **checkpoints** où Omar peut intervenir ?
+3. Omar a-t-il eu le **temps de lire** l'inventaire ?
+4. Suis-je en train de "rusher" ?
+
+Si une réponse est NON → **STOP** et ajuste.
+
+---
+
+## ⛔ BACKUP BEFORE EDIT (Zero Tolerance)
+
+> **Added 2025-12-22 after 2nd incident — same session as Hurricane**
+> See: `LESSONS-LEARNED/2025-12-22-backup-before-edit.md`
+
+### Le problème
+
+Les agents IA modifient des fichiers importants sans backup préalable.
+Résultat : Perte de données, impossibilité de rollback, pas de référence pour vérifier.
+
+### Fichiers critiques (backup TOUJOURS)
+
+| Fichier | Raison |
+|---------|--------|
+| `CLAUDE.md` | Configuration IA, perte = chaos |
+| `state/*.md` | SSOT, données irremplaçables |
+| `admin/credentials.md` | Accès plateformes |
+| Tout fichier > 10 lignes modifiées | Risque de perte significatif |
+
+### Pattern obligatoire
+
+```bash
+# AVANT toute modification importante
+cp fichier.md fichier.md.backup-$(date +%Y-%m-%d)
+
+# Modifier le fichier...
+
+# Vérifier que rien n'est perdu
+diff fichier.md.backup-* fichier.md
+
+# APRÈS validation Omar
+rm fichier.md.backup-*
+```
+
+### Checklist pré-modification
+
+Avant de modifier un fichier important :
+
+- [ ] Backup créé ? (`cp fichier.md fichier.md.backup-YYYY-MM-DD`)
+- [ ] Workflow validé par Omar ?
+- [ ] Plan de vérification défini ?
+
+Si une réponse est NON → **STOP** et crée le backup d'abord.
+
+---
+
 ## Sub-Agents (Task tool)
 
 - **Parallélise** les tâches indépendantes avec plusieurs agents en UN SEUL message
