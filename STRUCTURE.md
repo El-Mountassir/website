@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 03:11:10 UTC
+**Last updated**: 2025-12-22 03:12:56 UTC
 
 ---
 
@@ -153,7 +153,10 @@
 │       │   ├── historical/
 │       │   ├── planned/
 │       │   └── README.md
-│       └── CLAUDE.md
+│       ├── tasks/
+│       │   └── TODOs.md
+│       ├── CLAUDE.md
+│       └── CLAUDE_older_to_be_merge.md
 ├── shared/
 │   ├── memory/
 │   │   ├── decisions.md
@@ -206,7 +209,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-87 directories, 109 files
+88 directories, 111 files
 ```
 
 ---
