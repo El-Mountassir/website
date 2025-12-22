@@ -1,95 +1,92 @@
-# /sync - Synchroniser les apprentissages de session vers CLAUDE.md
+---
+description: Synchronize session learnings to CLAUDE.md for future instances
+allowed-tools: Read, Write, Edit
+argument-hint: [learning-description]
+---
 
-Permet à chaque instance Claude de documenter ses apprentissages dans CLAUDE.md pour les futures instances.
+# Purpose
 
-## Input
+Document session learnings in CLAUDE.md so future Claude instances benefit from discoveries made in this session. Enables collective learning across instances.
 
-$ARGUMENTS
+## Variables
 
-Si vide: Analyser la session actuelle et proposer des ajouts.
+LEARNING: $ARGUMENTS
+
+If empty: Analyze the session and propose additions automatically.
 
 ---
 
-## Objectif
+## Instructions
 
-Enrichir `CLAUDE.md` avec:
+### Step 1: Analyze Session
 
-1. Nouvelles règles découvertes
-2. Workflows établis
-3. Erreurs à éviter
-4. Patterns réutilisables
+Identify in the conversation:
+- [ ] New rules/conventions established?
+- [ ] Errors made and corrected?
+- [ ] Workflows created?
+- [ ] Important decisions?
 
----
+### Step 2: Check Existing Content
 
-## Process
+Read `CLAUDE.md` and verify:
+- [ ] Info already exists? → Don't duplicate
+- [ ] Contradicts existing? → Flag for Omar
+- [ ] Appropriate section exists? → Add there
 
-### 1. Analyser la session
+### Step 3: Categorize
 
-Identifier dans la conversation:
+| Type | Destination |
+|------|-------------|
+| Global rule (all projects) | `~/Documents/claude/memory/patterns.md` |
+| Project rule | `CLAUDE.md` appropriate section |
+| Workflow | `CLAUDE.md` or `docs/workflows/` |
+| Error/Lesson | `LESSONS-LEARNED/` |
 
-- [ ] Nouvelles règles/conventions établies?
-- [ ] Erreurs commises et corrigées?
-- [ ] Workflows créés?
-- [ ] Décisions importantes?
+### Step 4: Update
 
-### 2. Vérifier l'existant
-
-Lire `CLAUDE.md` et vérifier:
-
-- [ ] L'info existe déjà? → Ne pas dupliquer
-- [ ] Contradiction avec l'existant? → Signaler à Omar
-- [ ] Section appropriée existe? → Y ajouter
-
-### 3. Catégoriser
-
-| Type                         | Destination                             |
-| ---------------------------- | --------------------------------------- |
-| Règle globale (tous projets) | `~/Documents/claude/memory/patterns.md` |
-| Règle projet (Villa Thaifa)  | `CLAUDE.md` section "Règles Clés"       |
-| Workflow                     | `CLAUDE.md` ou `docs/workflows/`        |
-| Erreur ponctuelle            | `docs/lessons-learned.md`               |
-
-### 4. Mettre à jour
-
-Ajouter au fichier approprié avec:
-
+Add to appropriate file with:
 - Date (YYYY-MM-DD)
-- Description concise
-- Impact/raison
+- Concise description
+- Impact/rationale
 
 ---
 
-## Template d'ajout (CLAUDE.md)
+## Output
 
-```markdown
-## Règles Clés (Session YYYY-MM-DD)
+```
+## Sync Complete
 
-| Règle     | Description          |
-| --------- | -------------------- |
-| **[Nom]** | [Description courte] |
+**Added to CLAUDE.md**:
+- [Section]: [Description]
+
+**Added to memory**:
+- [File]: [Description]
+
+**Skipped (already exists)**:
+- [Item]
 ```
 
 ---
 
-## Checklist avant commit
+## Checklist Before Commit
 
-- [ ] Pas de duplication avec l'existant
-- [ ] Scoping correct (global vs projet)
-- [ ] Concis et actionable
-- [ ] Date incluse
+- [ ] No duplication with existing content
+- [ ] Correct scoping (global vs project)
+- [ ] Concise and actionable
+- [ ] Date included
 
 ---
 
-## Exemple d'usage
+## Example
 
 ```
-/sync "Ajout règle: toujours utiliser Chrome comme fallback quand WebFetch échoue"
+/sync "Always use YAML frontmatter in slash commands"
 ```
 
-Ou simplement:
+→ Adds the rule to appropriate location
 
 ```
 /sync
 ```
 
-→ L'agent analyse la session et propose des ajouts.
+→ Analyzes session and proposes additions

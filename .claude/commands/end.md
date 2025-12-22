@@ -1,24 +1,30 @@
-# /end - Session Closure with Guardrails
-
-Safely close a session. **Enforces HARD STOP #6**: No premature closure.
-
-## Input
-
-$ARGUMENTS
-
-If empty: Run full guardrail check.
-
+---
+description: Close session safely with guardrails preventing premature closure
+allowed-tools: Read, Bash(git status:*), Glob
+argument-hint: [--force]
 ---
 
-## HARD RULE
+# Purpose
 
-> **NEVER authorize closure if ANY guardrail fails.**
+Safely close a work session by enforcing HARD STOP #6: No premature closure. Checks for uncaptured items, uncommitted changes, and CHANGELOG updates before authorizing session end.
 
+**Background**: Prevents repeat of 2025-12-21 incident.
 See: `LESSONS-LEARNED/2025-12-21-premature-closure.md`
 
+## Variables
+
+FORCE_FLAG: $1
+
+If `--force`: Skip guardrails (requires explicit user acknowledgment of risk).
+If empty: Run full guardrail sequence.
+
 ---
 
-## Guardrails
+## Instructions
+
+### HARD RULE
+
+> **NEVER authorize closure if ANY guardrail fails.**
 
 ### Guardrail 1: Uncaptured Items (BLOCKING)
 
@@ -28,18 +34,7 @@ Scan the conversation for:
 - User requests not fully addressed
 - Questions asked but not resolved
 
-**If found → BLOCK:**
-
-```
-## BLOCKED: Uncaptured Items
-
-The following items were mentioned but not captured:
-
-1. [Item]
-2. [Item]
-
-Create missions for these before closing?
-```
+**If found → BLOCK and list items.**
 
 ### Guardrail 2: Git Status (BLOCKING)
 
@@ -47,29 +42,37 @@ Create missions for these before closing?
 git status --porcelain
 ```
 
-**If NOT empty → BLOCK:**
-
-```
-## BLOCKED: Uncommitted Changes
-
-[git status output]
-
-Commit these changes before closing?
-```
+**If NOT empty → BLOCK and show changes.**
 
 ### Guardrail 3: CHANGELOG (WARNING)
 
 If significant changes were made this session, warn if CHANGELOG.md wasn't updated.
 
-```
-## WARNING: CHANGELOG Not Updated
-
-Consider updating before next session.
-```
-
 ---
 
-## If All Guardrails Pass
+## Output
+
+### If Blocked
+
+```
+## BLOCKED: Cannot Close Session
+
+### Issue 1: Uncaptured Items
+- [Item 1]
+- [Item 2]
+
+### Issue 2: Uncommitted Changes
+- [File 1]
+- [File 2]
+
+**Required Actions**:
+1. Create missions for uncaptured items
+2. Commit pending changes
+
+Proceed with these actions?
+```
+
+### If Passed
 
 ```
 ## Session Closure Authorized
@@ -95,10 +98,26 @@ Session may be safely closed.
 
 ## Override Protocol
 
-If user insists despite blocks:
+If user provides `--force`:
 
-1. Require explicit: "I understand items will be lost. Close anyway."
+1. Require explicit confirmation: "I understand items may be lost."
 2. Log the override
 3. Still attempt to capture what's possible
 
 **Never silently allow premature closure.**
+
+---
+
+## Example
+
+```
+/end
+```
+
+→ Runs full guardrail check, blocks or authorizes closure
+
+```
+/end --force
+```
+
+→ Skips guardrails with explicit acknowledgment (use with caution)
