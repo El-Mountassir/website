@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 03:13:46 UTC
+**Last updated**: 2025-12-22 03:14:18 UTC
 
 ---
 
@@ -99,8 +99,7 @@
 │   ├── active/
 │   │   └── .gitkeep
 │   ├── drafts/
-│   │   ├── claude-web-sync.md
-│   │   └── multi-instance-coordination.md
+│   │   └── claude-web-sync.md
 │   ├── queue/
 │   │   ├── 2025-12-22-claude-audit-deduplication.md
 │   │   ├── 2025-12-22-claude-permissions-fix.md
@@ -113,6 +112,7 @@
 │   │   ├── 2025-12-22-M3-orchestrator-pattern.md
 │   │   ├── 2025-12-22-M4-subagent-architecture.md
 │   │   ├── 2025-12-22-M5-hierarchical-claude-md.md
+│   │   ├── 2025-12-22-multi-instance-coordination.md
 │   │   ├── 2025-12-22-thaifa-migration-cleanup.md
 │   │   ├── 2025-12-22-thaifa-migration-critical.md
 │   │   ├── 2025-12-22-thaifa-migration-operational.md
