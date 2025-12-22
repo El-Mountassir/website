@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 02:44:26 UTC
+**Last updated**: 2025-12-22 02:49:01 UTC
 
 ---
 
@@ -114,6 +114,7 @@
 │   │   ├── 2025-12-22-docs-base-alignment.md
 │   │   ├── 2025-12-22-jisr-mokawala-investigation.md
 │   │   ├── 2025-12-22-M1-rule-deduplication.md
+│   │   ├── 2025-12-22-M2-controlled-execution-failure.md
 │   │   ├── 2025-12-22-M2-mcp-on-demand.md
 │   │   ├── 2025-12-22-M3-orchestrator-pattern.md
 │   │   ├── 2025-12-22-M4-subagent-architecture.md
@@ -205,7 +206,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-88 directories, 107 files
+88 directories, 108 files
 ```
 
 ---

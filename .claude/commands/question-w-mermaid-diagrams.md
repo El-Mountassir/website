@@ -7,7 +7,7 @@ model: opus
 
 # Purpose
 
-Answer the user's question by analyzing the project structure and documentation, then enhance the response with relevant Mermaid diagrams that visualize key concepts, relationships, or flows. This prompt provides comprehensive answers with visual aids while following the `Instructions` section guidelines.
+Answer the user and AI Agents's question by analyzing the project structure and documentation, then enhance the response with relevant Mermaid diagrams that visualize key concepts, relationships, or flows. This prompt provides comprehensive answers with visual aids while following the `Instructions` section guidelines.
 
 ## Variables
 

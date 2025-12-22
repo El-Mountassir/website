@@ -1,0 +1,56 @@
+Bonjour Monsieur Thaifa,
+
+J'espère que vous allez bien.
+
+Suite à notre travail sur la plateforme HotelRunner, j'ai pu accéder à votre compte et assigner les chambres pour la réservation d'Arne Cordes (chambres 4 et 5, du 20 au 25 décembre).
+
+Cependant, j'ai constaté un point important : les tarifs sur le canal Booking.com ne sont pas configurés (ils affichent "N/A"). Cela pourrait créer des problèmes de synchronisation avec vos réservations.
+
+Pour corriger cela, j'aurais besoin des informations suivantes :
+
+---
+
+1. TARIFS PAR TYPE DE CHAMBRE
+
+Pourriez-vous me confirmer le prix par nuit pour chaque type de chambre ?
+
+• Double Room Superior : _____ €/nuit
+• Deluxe Double Room : _____ €/nuit
+• Deluxe Triple Room : _____ €/nuit
+• Suite : _____ €/nuit
+• Deluxe King Suite : _____ €/nuit
+• Family Suite : _____ €/nuit
+• Executive Suite : _____ €/nuit
+• Presidential Suite : _____ €/nuit
+
+---
+
+2. ALIGNEMENT DES PRIX
+
+Souhaitez-vous que les prix Booking.com soient :
+□ Identiques aux prix du canal "Online" (actuellement €289 pour Double Room Superior)
+□ Différents (précisez)
+
+---
+
+3. PÉRIODES TARIFAIRES (optionnel)
+
+Avez-vous des tarifs différents selon les périodes ?
+• Haute saison (dates : _____________) : + _____ %
+• Basse saison (dates : _____________) : - _____ %
+• Fêtes/Événements spéciaux : _____________
+
+---
+
+4. RESTRICTIONS (optionnel)
+
+• Séjour minimum : _____ nuit(s)
+• Dates de fermeture : _____________
+
+---
+
+Dès réception de ces informations, je pourrai configurer les tarifs sur Booking.com immédiatement.
+
+Bien cordialement,
+
+Omar El Mountassir
