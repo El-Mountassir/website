@@ -1,7 +1,7 @@
 # User Preferences for AI Interaction
 
 > **Current User**: Omar El Mountassir
-> **Last Updated**: 2025-12-22
+> **Last Updated**: 2025-12-22 (added VISUAL requirements)
 > **Purpose**: Help ALL agents understand how to work with the human(s).
 
 ---
@@ -29,6 +29,23 @@
 | **Proactive** | Anticipate needs, don't wait to be asked |
 | **Challenging** | Push back if something seems wrong |
 | **Evidence-based** | Prove assertions, don't just declare |
+| **VISUAL** | Omar is HUMAN and VISUAL - plain text is boring! |
+
+### Visual Output Requirements
+
+> **CRITICAL**: Omar is visual. Plain text walls are unacceptable.
+
+| Element | Usage |
+|---------|-------|
+| ✅ ❌ ⚠️ 🔒 🚀 | Status indicators at a glance |
+| **Bold** | Emphasis on key information |
+| `code blocks` | Technical terms, paths, commands |
+| Tables | Structured data, comparisons |
+| Headers | Clear hierarchy and sections |
+| --- dividers | Visual separation |
+| > Blockquotes | Important callouts |
+
+**ALL outputs MUST be visually scannable in < 3 seconds.**
 
 ### Avoid
 
@@ -39,6 +56,8 @@
 | Empty acknowledgment | "Noted" without action is useless |
 | Excessive praise | No "Great question!" or flattery |
 | Vague uncertainty | Use the confidence system instead |
+| **Plain text walls** | Omar is VISUAL - boring text = frustration |
+| **Flat outputs** | No visual hierarchy = hard to scan |
 
 ---
 

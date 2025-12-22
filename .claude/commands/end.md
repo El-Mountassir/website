@@ -139,53 +139,80 @@ If significant changes were made this session:
 ## Output: If Blocked
 
 ```
-## BLOCKED: Cannot Close Session
+# 🚫 SESSION CLOSURE BLOCKED
 
-### Issue 1: Active Mission
-- mission-claim-protocol (COMPLETED) → Archiving now...
+> **ZERO TOLERANCE**: All issues must be fixed before closure.
 
-### Issue 2: Uncommitted Changes
-- Modified: CLAUDE.md → Committing now...
+---
 
-### Issue 3: CHANGELOG Not Updated
-- Significant changes made → Updating CHANGELOG now...
+## ❌ Failed Guardrails
 
-Proceeding with automatic fixes...
+| # | Guardrail | Status | Auto-Fix |
+|---|-----------|--------|----------|
+| 1 | Active Missions | ❌ FAIL | → Archiving now... |
+| 2 | Uncommitted Changes | ❌ FAIL | → Committing now... |
+| 3 | CHANGELOG | ❌ FAIL | → Updating now... |
 
-[After fixes complete, re-run guardrails to verify all PASSED]
+---
+
+## 🔧 Auto-Fixing...
+
+[Progress indicators as fixes complete]
+
+---
+
+## 🔄 Re-Running Guardrails...
+
+[Must show all ✅ before authorizing]
 ```
 
 ## Output: If Passed
 
 ```
-## Session Closure Authorized
+# ✅ SESSION CLOSURE AUTHORIZED
 
-### All Guardrails PASSED
-
-| Guardrail | Status |
-|-----------|--------|
-| Active Missions | PASSED |
-| Session Learnings | PASSED |
-| Uncaptured Items | PASSED |
-| Git Status | PASSED |
-| CHANGELOG | PASSED |
-
-### Summary
-- **Missions archived**: [list]
-- **Learnings documented**: [list]
-- **Commits made**: [count]
-- **CHANGELOG updated**: Yes/No (if significant changes)
-
-### Git Status
-Clean.
-
-### Next Session
-- Pending in queue: [count]
-- Recommended next: [mission name]
+> **All guardrails PASSED. Session may be safely closed.**
 
 ---
 
-Session may be safely closed.
+## 🛡️ Guardrails Status
+
+| Guardrail | Status |
+|-----------|--------|
+| Active Missions | ✅ PASSED |
+| Session Learnings | ✅ PASSED |
+| Uncaptured Items | ✅ PASSED |
+| Git Status | ✅ PASSED |
+| CHANGELOG | ✅ PASSED |
+
+---
+
+## 📊 Session Summary
+
+| Metric | Value |
+|--------|-------|
+| 🗂️ Missions archived | [count] |
+| 📝 Learnings documented | [count] |
+| 💾 Commits made | [count] |
+| 📋 CHANGELOG | ✅ Updated |
+
+---
+
+## 🔮 Next Session
+
+| Info | Value |
+|------|-------|
+| 📬 Queue depth | **[count]** missions pending |
+| 🎯 Recommended | `[mission-name]` |
+| ⚡ Priority | [P0/P1/P2] |
+
+---
+
+## 🔒 Git Status: CLEAN
+
+---
+
+> **🚀 GO FOR CLOSURE**
 ```
 
 ---
