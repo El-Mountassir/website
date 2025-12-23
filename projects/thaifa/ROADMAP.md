@@ -92,11 +92,11 @@
 
 ### 2.3 Stratégie pricing
 
-| Élément                    | Status                           |
-| -------------------------- | -------------------------------- |
-| Baseline prices documentés | ✅ Dans `state/current/rooms.md` |
-| Seasonal adjustments       | 🟡 À définir                     |
-| Promotions strategy        | 🟡 En cours                      |
+| Élément                    | Status                               |
+| -------------------------- | ------------------------------------ |
+| Baseline prices documentés | ✅ Dans `data/specs/hotel/rooms.md`  |
+| Seasonal adjustments       | 🟡 À définir                         |
+| Promotions strategy        | 🟡 En cours                          |
 
 ### 2.4 Go Siyaha Application
 
@@ -212,7 +212,7 @@ Inspirer des clients HWS existants :
 ```
 Template "Villa Thaifa"
     → Clone pour nouvel établissement
-    → Personnaliser state/
+    → Personnaliser data/specs/
     → Connecter aux plateformes
     → Agent IA opérationnel en 1 semaine
 ```
@@ -256,12 +256,12 @@ Template "Villa Thaifa"
 
 ## 📚 RÉFÉRENCES
 
-| Document                  | Purpose                  |
-| ------------------------- | ------------------------ |
-| `CLAUDE.md`               | Context IA               |
-| `state/current/`          | État actuel (SSOT)       |
-| `docs/lessons-learned.md` | Erreurs & apprentissages |
-| `admin/credentials.md`    | Accès plateformes        |
+| Document                       | Purpose                  |
+| ------------------------------ | ------------------------ |
+| `CLAUDE.md`                    | Context IA               |
+| `data/specs/`                  | Specs métier (SSOT)      |
+| `docs/lessons-learned.md`      | Erreurs & apprentissages |
+| `data/admin/client/CREDENTIALS.md` | Accès plateformes    |
 
 ---
 

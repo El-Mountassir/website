@@ -3,22 +3,22 @@
 ```yaml
 # Core Metadata
 mission_id: YYYY-MM-DD-{slug}
-type: STANDARD  # STANDARD | ELEVATE | FIX | FEATURE | RESEARCH | MIGRATION
-status: DRAFT   # DRAFT | QUEUED | ACTIVE | COMPLETED | ARCHIVED
-priority: P2    # P0 (critical) | P1 (high) | P2 (normal) | P3 (low)
+type: STANDARD # STANDARD | ELEVATE | FIX | FEATURE | RESEARCH | MIGRATION
+status: DRAFT # DRAFT | QUEUED | ACTIVE | COMPLETED | ARCHIVED
+priority: P2 # P0 (critical) | P1 (high) | P2 (normal) | P3 (low)
 
 # Assignment
-assigned_to: Unassigned  # Claude Code | Claude Web | Omar | Unassigned
+assigned_to: Unassigned # Claude Code | Claude Web | Omar | Unassigned
 created: YYYY-MM-DD
 assigned:
-claimed_at:      # ISO timestamp when instance started (e.g., 2025-12-22T03:45:00+01:00)
-claimed_by:      # Session description (e.g., "Thaifa P0 migration session")
+claimed_at: # ISO timestamp when instance started (e.g., 2025-12-22T03:45:00+01:00)
+claimed_by: # Session description (e.g., "Thaifa P0 migration session")
 completed:
 archived:
 
 # Optional: Source tracking (for ELEVATE/FIX types)
-source_session:  # Description of originating session
-source_insight:  # The insight or issue that triggered this mission
+source_session: # Description of originating session
+source_insight: # The insight or issue that triggered this mission
 ```
 
 ---
@@ -41,9 +41,9 @@ source_insight:  # The insight or issue that triggered this mission
 
 | #   | Criterion            | Status | Evidence |
 | --- | -------------------- | ------ | -------- |
-| 1   | [Measurable outcome] | ⬜      |          |
-| 2   | [Measurable outcome] | ⬜      |          |
-| 3   | [Measurable outcome] | ⬜      |          |
+| 1   | [Measurable outcome] | ⬜     |          |
+| 2   | [Measurable outcome] | ⬜     |          |
+| 3   | [Measurable outcome] | ⬜     |          |
 
 ---
 
@@ -140,4 +140,4 @@ source_insight:  # The insight or issue that triggered this mission
 
 ---
 
-_Mission created from template v1.0.0_
+_Mission created from template v0.1.0-alpha.0_

@@ -34,25 +34,26 @@ wkhtmltopdf --enable-local-file-access --page-size A4 --margin-top 12mm --margin
 
 ---
 
-## Project Structure
+## Project Structure (v5)
 
 ```
 thaifa/
-├── CLAUDE.md          # Claude-specific context
-├── AGENTS.md          # This file (multi-agent standard)
-├── ROADMAP.md         # Strategic phases (4 phases, 2 months)
-├── state/             # SSOT (Single Source of Truth)
-│   ├── current/       # Current state (rooms, reservations, promotions)
-│   ├── baseline/      # Snapshots before changes
-│   ├── planned/       # Planned changes
-│   ├── execution/     # Execution logs
-│   └── historical/    # Changelogs, decisions
-├── admin/             # Credentials, contacts, client profile
-├── docs/              # Documentation, templates
-├── briefs/            # Mission briefs for AI agents
-├── communication/     # WhatsApp messages, client comms
-├── history/           # Archived content (YYYY/QQ/)
-└── .claude/           # Claude config, rules, outputs
+├── .claude/              # 🎭 Orchestrator config
+├── ai/                   # 🤖 AI systems
+│   ├── agentic/core/     # Contexts, models, prompts, tools
+│   ├── rag/              # Retrieval pipelines
+│   ├── knowledge/        # Knowledge graphs
+│   ├── memory/           # Vector stores
+│   └── analytics/        # Business dashboards
+├── archive/              # 📦 Historical data (YYYY/QQ/)
+├── data/                 # 📊 All data
+│   ├── admin/client/     # Credentials, contacts, profile
+│   ├── specs/            # Business specs (hotel, promotions, platform)
+│   └── communication/    # WhatsApp messages
+├── docs/                 # 📚 Documentation, workflows
+├── infra/                # 🏗️ Docker, environments
+├── project/              # 🎯 TODOs, milestones
+└── src/                  # 💻 Source code (apps, packages, tools)
 ```
 
 ---
@@ -113,7 +114,7 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 
 ### ⚠️ Ask First
 
-- Modifying `state/` files destructively
+- Modifying `data/specs/` files destructively
 - Deleting any file
 - Sending messages to client
 - Platform operations (HotelRunner, Booking.com)
@@ -131,13 +132,12 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 
 ## Key References
 
-| File                                   | Purpose                                  |
-| -------------------------------------- | ---------------------------------------- |
-| `CLAUDE.md`                            | Claude-specific rules and context        |
-| `.claude/rules/platform-operations.md` | Platform safety rules (4 CRITICAL)       |
-| `state/README.md`                      | State management guide                   |
-| `admin/credentials.md`                 | Platform access (READ BEFORE USE)        |
-| `docs/lessons-learned.md`              | Past errors (READ BEFORE CLIENT ACTIONS) |
+| File                               | Purpose                                  |
+| ---------------------------------- | ---------------------------------------- |
+| `CLAUDE.md`                        | Claude-specific rules and context        |
+| `data/specs/platform/rules.md`     | Platform safety rules (4 CRITICAL)       |
+| `data/admin/client/CREDENTIALS.md` | Platform access (READ BEFORE USE)        |
+| `docs/lessons-learned.md`          | Past errors (READ BEFORE CLIENT ACTIONS) |
 
 ---
 
@@ -146,7 +146,7 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 ### HotelRunner
 
 - Channel manager for OTA distribution
-- Contact: Ikram (HWS Support) — see `admin/client/CONTACT.md`
+- Contact: Ikram (HWS Support) — see `data/admin/client/CONTACT.md`
 - API status: Pending (Ikram checking with technical team)
 
 ### Booking.com
@@ -157,4 +157,4 @@ Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 
 ---
 
-_AGENTS.md v1.0.0 — Multi-agent standard based on GitHub 2025 best practices_
+_AGENTS.md v2.0.0 — Updated for v5 structure (EaC + Agentic AI)_

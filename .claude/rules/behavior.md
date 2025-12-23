@@ -36,6 +36,89 @@ Before ending any interaction, ask: "Would my next instance want to know this?"
 
 ---
 
+## ⛔ FLAG IT = FIX IT (Zero Tolerance)
+
+> **Added 2025-12-23 after "Linear not actually active" incident**
+> See: HARD STOP #7 in CLAUDE.md
+
+### Le problème
+
+Les agents IA identifient des problèmes (dans des notes, des summaries, des remarques) mais ne les corrigent pas immédiatement. Le problème est "flagged" mais jamais "fixed".
+
+**Exemple réel** : "Note: Linear was incorrectly documented as active" → mais rien n'a été fait pour corriger.
+
+### La règle
+
+> **FLAG IT = FIX IT** : Si tu identifies un problème, tu le FIXES immédiatement.
+
+| ❌ Interdit | ✅ Obligatoire |
+|------------|---------------|
+| "Note: X is wrong" | "Note: X is wrong" → FIX X |
+| "We should update Y" | UPDATE Y now |
+| "This needs attention" | Give it attention NOW |
+| "Consider fixing Z" | Fix Z |
+
+### Checklist
+
+Avant de terminer une réponse qui contient une note/remarque/flag :
+
+1. **Ai-je identifié un problème ?** → Si oui, l'ai-je FIXÉ ?
+2. **Ai-je suggéré une action ?** → Si oui, l'ai-je FAITE ?
+3. **Ai-je mentionné quelque chose à corriger ?** → Si oui, l'ai-je CORRIGÉ ?
+
+Si une réponse est NON → **STOP** et agis avant de continuer.
+
+### Exception unique
+
+Si la correction nécessite une décision d'Omar (ex: choix entre options, impact business) :
+- Créer un item dans `admin/inbox/pending.md`
+- Expliquer clairement ce qui est bloqué et pourquoi
+
+---
+
+## ⛔ NEVER ASSUME CONTEXT COMPLETENESS (Zero Tolerance)
+
+> **Added 2025-12-23 after "Google accounts merge" incident**
+> See: HARD STOP #8 in CLAUDE.md
+
+### Le problème
+
+Les agents IA supposent que le contexte fourni est complet et agissent en conséquence. Résultat : informations perdues, comptes confondus, données écrasées.
+
+**Exemple réel** : Omar a mentionné Google Workspace, l'agent a supposé que l'email personnel était lié au même compte et a écrasé la documentation des deux comptes distincts.
+
+### La règle
+
+> **CONTEXT IS ALWAYS PARTIAL.** Ne jamais supposer avoir le tableau complet.
+
+| Situation | Action |
+|-----------|--------|
+| User provides account info | Ask: "Is this the ONLY account, or are there others?" |
+| Rewriting a file | Ask: "Should I REPLACE or ADD to existing content?" |
+| Merging similar concepts | Ask: "Are these truly the same, or distinct?" |
+| Making assumptions | STOP → VERIFY → then act |
+
+### Questions à se poser
+
+Avant de modifier des données factuelles :
+
+1. **Ai-je une information EXPLICITE ?** (pas une supposition)
+2. **Pourrais-je confondre DEUX choses en une ?**
+3. **Est-ce un REMPLACEMENT ou un AJOUT ?**
+4. **L'utilisateur a-t-il EXPLICITEMENT demandé ce changement ?**
+
+Si une réponse est incertaine → **STOP et DEMANDE**.
+
+### Confidence pour les modifications de données
+
+| Type de modification | Confidence minimum | Action |
+|---------------------|-------------------|--------|
+| Account/subscription changes | 🟠 40-59% | Ask first |
+| Structural changes (without explicit request) | 🟡 60-79% | Propose, don't act |
+| Data modifications | ALWAYS | Treat as important decision |
+
+---
+
 ## ⛔ PACE CONTROL (Zero Tolerance)
 
 > **Added 2025-12-22 after "Hurricane Incident"**

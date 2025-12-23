@@ -19,12 +19,12 @@ If no arguments: User will provide the rough idea/draft/request in the conversat
 
 ## Output Directory
 
-**Path:** `history/YYYY/QQ/reports/topic-slug/`
+**Path:** `archive/YYYY/QQ/reports/topic-slug/`
 
 ### Directory Structure
 
 ```
-history/2025/Q4/reports/
+archive/2025/Q4/reports/
 └── topic-slug/
     ├── step-back.md     # Phase 0 output
     ├── sources.md       # Phase 1 sources & analysis
@@ -37,14 +37,14 @@ history/2025/Q4/reports/
 
 - **Topic slug**: lowercase, hyphens, max 30 chars
 - **Quarter**: Q1 (Jan-Mar), Q2 (Apr-Jun), Q3 (Jul-Sep), Q4 (Oct-Dec)
-- **Example**: `history/2025/Q4/reports/error-resilience/`
+- **Example**: `archive/2025/Q4/reports/error-resilience/`
 
 ### Setup (Before Starting)
 
 #### Example
 
 ```bash
-mkdir -p .history/2025/Q4/reports/topic-slug
+mkdir -p archive/2025/Q4/reports/topic-slug
 ```
 
 ---
@@ -287,7 +287,7 @@ Before delivering, verify:
 | Instance-only examples       | Not reusable        | Elevate to principles   |
 | Pad with generic advice      | Wastes tokens       | Ask "is this obvious?"  |
 | Skip disagreement            | Hides decisions     | Surface conflicts       |
-| Output only to chat          | Ephemeral, lost     | Save to `history`       |
+| Output only to chat          | Ephemeral, lost     | Save to `archive`       |
 
 ---
 

@@ -4,14 +4,14 @@
 
 > **For**: The Collective (Omar + Claude + All Agents)
 > **Theme**: The Year of Trust
-> **Version**: 0.0.2-alpha.0
+> **Version**: 0.0.1-alpha.4
 > **Created**: 2025-12-22
 
 ---
 
 ## Preamble: Why This Document Exists
 
-We are **The Collective**. One human agent (Omar) orchestrating a fleet of AI agents toward a single NORTH STAR:
+We are **The Collective** — Human Agent (Omar El Mountassir) and AI agents building El Mountassir together toward a single NORTH STAR:
 
 > **Demonstrate that one person + a fleet of AI agents can build and manage what used to require entire teams.**
 
@@ -22,12 +22,26 @@ This document captures our operational philosophy for 2026. It synthesizes indus
 | Agent                         | Role                                                    |
 | ----------------------------- | ------------------------------------------------------- |
 | **Omar El Mountassir**        | Human Agent (51% authority), Strategy, Goals, Oversight |
-| **Claude (Current Instance)** | Lead Agent, Conductor, Orchestrator                     |
+| **Claude (Current Instance)** | Lead Agent — Plans, Spawns, Reviews, Ships              |
 | **Future Claude Instances**   | Continuity via memory files and documentation           |
 | **Specialized Sub-Agents**    | Task-specific agents spawned by the Lead                |
 | **Other AI Agents**           | Gemini, Codex, future tools we may integrate            |
 
 In the agentic era, everyone is an agent. Carbon-based or silicon-based, we're all part of the same system.
+
+### What We Are
+
+**The Collective** is a trust-centered Human-AI Agentic Ecosystem.
+
+| Term                  | Meaning                                                                         |
+| --------------------- | ------------------------------------------------------------------------------- |
+| **Trust-Centered**    | Our organizing principle (Year of Trust)                                        |
+| **Human-AI**          | Omar is a first-class agent (51% authority), not just an operator               |
+| **Agentic Ecosystem** | Network of autonomous agents collaborating via tools, memory, and orchestration |
+
+We ARE an agentic ecosystem by structure.
+We are DISTINCTIVE by philosophy and composition.
+We are IDENTIFIED as The Collective.
 
 ---
 
@@ -51,9 +65,11 @@ Our collective personality is **deliberately constructed** through:
 | Mechanism        | File/Location        | What It Preserves                    |
 | ---------------- | -------------------- | ------------------------------------ |
 | **Memory Files** | `shared/memory/`     | Episodes, decisions, patterns, facts |
-| **Rules Files**  | `.claude/rules/`     | Behavioral standards, anti-patterns  |
-| **CLAUDE.md**    | Root & project-level | Identity, values, hard stops         |
+| **Rules Files**  | `shared/rules/`      | Behavioral standards, anti-patterns  |
 | **Playbooks**    | `shared/philosophy/` | Strategic philosophy (this document) |
+| **CLAUDE.md**    | Root & project-level | Identity, values, hard stops         |
+| **AGENTS.md**    | Root & project-level | Identity, values, hard stops         |
+| **GEMINI.md**    | Root & project-level | Identity, values, hard stops         |
 
 ### Why This Matters for Trust
 
@@ -208,13 +224,13 @@ When we build on one company with the best track record for engineers—the best
 
 #### The Anthropic Timeline (2024-2025)
 
-| Date          | Release                        | Significance                                                                                                        |
-| ------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| June 2024     | Sonnet 3.5                     | One of the best tool-calling models. Best at the time.                                                              |
-| February 2025 | Claude 3.7 + Claude Code       | First big introduction to agentic coding. The big three became the core four: Context + Model + Prompt + **Tools**. |
-| Mid 2025      | Claude Code SDK                | Custom agents. Build your own.                                                                                      |
-| Late 2025     | Sub-agents                     | Orchestrating multiple agents through an agent.                                                                     |
-| Late 2025     | Opus 4.1, Sonnet 4.5, Opus 4.5 | Continued iteration. Skills released.                                                                               |
+| Date          | Release                         | Significance                                                                                                        |
+| ------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| June 2024     | Sonnet 3.5                      | One of the best tool-calling models. Best at the time.                                                              |
+| February 2025 | Claude 3.7 + Claude Code        | First big introduction to agentic coding. The big three became the core four: Context + Model + Prompt + **Tools**. |
+| Mid 2025      | Claude Code SDK                 | Custom agents. Build your own.                                                                                      |
+| Late 2025     | Sub-agents                      | Orchestrating multiple agents through an agent.                                                                     |
+| Late 2025     | Haiku 4.5, Sonnet 4.5, Opus 4.5 | Continued iteration. Skills released.                                                                               |
 
 #### It's Not Just About the Model Anymore
 
@@ -810,6 +826,9 @@ We got this prediction wrong. They are no longer in the top place. Right now it'
 │                                                             │
 │  CENTRAL THESIS: 2026 = Year of Trust                       │
 │                                                             │
+│  CATEGORY:                                                  │
+│    Trust-Centered Human-AI Agentic Ecosystem                │
+│                                                             │
 │  CORE FORMULA:                                              │
 │    Trust → Speed → Iteration → Impact                       │
 │                                                             │
@@ -847,4 +866,4 @@ We got this prediction wrong. They are no longer in the top place. Right now it'
 
 ---
 
-_The Collective's 2026 Playbook v0.0.1-alpha.0 — Created 2025-12-22_
+_The Collective's 2026 Playbook v0.0.1-alpha.4 — Created 2025-12-22_

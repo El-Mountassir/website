@@ -1,4 +1,4 @@
-# INDEX.md — Villa Thaifa
+# README — Villa Thaifa
 
 > **Hub central** — Point d'entrée pour naviguer le projet.
 
@@ -15,27 +15,31 @@
 
 ---
 
-## State (SSOT)
+## Data (SSOT)
 
-> **Source of Truth** : Tout état dans `state/`
+> **Source of Truth** : Toutes les données dans `data/`
 
-| Dossier | Contenu |
-|---------|---------|
-| [state/current/](state/current/) | État actuel (chambres, réservations, promotions) |
-| [state/baseline/](state/baseline/) | Snapshots avant changements |
-| [state/planned/](state/planned/) | Changements planifiés |
-| [state/execution/](state/execution/) | Logs d'exécution |
-| [state/historical/](state/historical/) | Changelogs, décisions |
-
----
-
-## Admin
+### Specs (Configuration Métier)
 
 | Fichier | Contenu |
 |---------|---------|
-| [admin/client/CREDENTIALS.md](admin/client/CREDENTIALS.md) | Accès plateformes ⚠️ |
-| [admin/client/CONTACT.md](admin/client/CONTACT.md) | Contacts (M. Thaifa, Ikram) |
-| [admin/client/PROFILE.md](admin/client/PROFILE.md) | Profil client complet |
+| [data/specs/hotel/rooms.md](data/specs/hotel/rooms.md) | Chambres, tarifs, capacités |
+| [data/specs/promotions/](data/specs/promotions/) | Promotions actives |
+| [data/specs/platform/](data/specs/platform/) | Règles plateformes |
+
+### Admin
+
+| Fichier | Contenu |
+|---------|---------|
+| [data/admin/client/CREDENTIALS.md](data/admin/client/CREDENTIALS.md) | Accès plateformes ⚠️ |
+| [data/admin/client/CONTACT.md](data/admin/client/CONTACT.md) | Contacts (M. Thaifa, Ikram) |
+| [data/admin/client/PROFILE.md](data/admin/client/PROFILE.md) | Profil client complet |
+
+### Communication
+
+| Dossier | Contenu |
+|---------|---------|
+| [data/communication/whatsapp/](data/communication/whatsapp/) | Messages WhatsApp |
 
 ---
 
@@ -46,6 +50,7 @@
 | [docs/INDEX.md](docs/INDEX.md) | Index documentation |
 | [docs/lessons-learned.md](docs/lessons-learned.md) | Erreurs passées ⚠️ LIRE AVANT ACTION |
 | [docs/templates/](docs/templates/) | Templates PDF, rapports |
+| [docs/briefs/](docs/briefs/) | Mission briefs pour agents IA |
 
 ---
 
@@ -53,9 +58,9 @@
 
 | Workflow | Description |
 |----------|-------------|
-| [workflows/reservation.md](workflows/reservation.md) | Process réservation HotelRunner |
-| [workflows/pricing.md](workflows/pricing.md) | Mise à jour tarifs |
-| [workflows/guest-communication.md](workflows/guest-communication.md) | Communication invités |
+| [docs/workflows/reservation.md](docs/workflows/reservation.md) | Process réservation HotelRunner |
+| [docs/workflows/pricing.md](docs/workflows/pricing.md) | Mise à jour tarifs |
+| [docs/workflows/guest-communication.md](docs/workflows/guest-communication.md) | Communication invités |
 
 ---
 
@@ -63,10 +68,12 @@
 
 | Dossier | Contenu |
 |---------|---------|
-| [briefs/](briefs/) | Mission briefs pour agents IA |
-| [communication/whatsapp/](communication/whatsapp/) | Messages WhatsApp |
-| [history/](history/) | Archives (YYYY/QQ/) |
-| [.claude/](/.claude/) | Config Claude (commands, rules, output) |
+| [archive/](archive/) | Archives (YYYY/QQ/) |
+| [ai/](ai/) | Systèmes IA (agentic, rag, knowledge, memory) |
+| [src/](src/) | Code source (apps, packages, tools) |
+| [infra/](infra/) | Infrastructure (docker, envs) |
+| [project/](project/) | Gestion projet (TODOs) |
+| [.claude/](.claude/) | Config Claude (commands, rules) |
 
 ---
 
@@ -74,11 +81,11 @@
 
 | Règle | Fichier |
 |-------|---------|
-| Platform Operations | [.claude/rules/platform-operations.md](.claude/rules/platform-operations.md) |
+| Platform Operations | [.claude/rules/ops/platform/platform-operations.md](.claude/rules/ops/platform/platform-operations.md) |
 | Lessons Learned | [docs/lessons-learned.md](docs/lessons-learned.md) |
 
 > **AVANT toute action client** : Lire `docs/lessons-learned.md`
 
 ---
 
-_INDEX.md v1.0.0 — Hub central Villa Thaifa_
+_README v2.0.0 — Hub central Villa Thaifa (v5 structure)_

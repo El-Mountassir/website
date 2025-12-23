@@ -1,8 +1,7 @@
 # Villa Thaifa — Project Context
 
-# Claude & Omar El Mountassir -> Villa Thaifa
-
 > **Project-specific context for Villa Thaifa management.**
+> **Structure**: EaC + Agentic AI (v5)
 
 ---
 
@@ -42,19 +41,35 @@
 
 ---
 
-## State Management
+## Folder Structure (v5)
 
-**Source of Truth**: `state/`
+```
+thaifa/
+├── ai/                   # 🤖 AI systems (agentic, rag, knowledge, memory, analytics)
+├── archive/              # 📦 Historical data (YYYY/QQ/)
+├── data/                 # 📊 All data
+│   ├── admin/client/     # 🔒 Credentials, contacts, profile
+│   ├── specs/            # 📋 Business specs (hotel, promotions, platform)
+│   └── communication/    # 💬 WhatsApp messages
+├── docs/                 # 📚 Documentation, workflows, lessons-learned
+├── infra/                # 🏗️ Infrastructure (docker, envs)
+├── project/              # 🎯 Project management (TODOs, milestones)
+├── src/                  # 💻 Source code (apps, packages, tools)
+└── .claude/              # 🎭 Orchestrator config
+```
 
-| State      | Location            |
-| ---------- | ------------------- |
-| Current    | `state/current/`    |
-| Baseline   | `state/baseline/`   |
-| Planned    | `state/planned/`    |
-| Execution  | `state/execution/`  |
-| Historical | `state/historical/` |
+---
 
-> **Structure complète**: Voir `state/README.md`
+## Data Locations
+
+| Data Type       | Location                          |
+| --------------- | --------------------------------- |
+| **Hotel specs** | `data/specs/hotel/`               |
+| **Promotions**  | `data/specs/promotions/`          |
+| **Platform**    | `data/specs/platform/`            |
+| **Credentials** | `data/admin/client/CREDENTIALS.md`|
+| **Profile**     | `data/admin/client/PROFILE.md`    |
+| **Contacts**    | `data/admin/client/CONTACT.md`    |
 
 ---
 
@@ -65,7 +80,7 @@
 | HotelRunner          | Channel management, pricing | app.hotelrunner.com |
 | Booking.com Extranet | Promotions, reservations    | admin.booking.com   |
 
-> **CRITICAL**: Lire `admin/credentials.md` AVANT d'accéder aux plateformes.
+> **CRITICAL**: Lire `data/admin/client/CREDENTIALS.md` AVANT d'accéder aux plateformes.
 
 | Rule                | Description                                   |
 | ------------------- | --------------------------------------------- |
@@ -74,30 +89,19 @@
 
 ---
 
-## Folder Structure
-
-| Folder           | Content                               |
-| ---------------- | ------------------------------------- |
-| `admin/`         | Credentials, client profile, contacts |
-| `state/`         | **Centralized states (SSOT)**         |
-| `docs/`          | Documentation, lessons-learned        |
-| `.claude/rules/` | Platform operation rules              |
-
----
-
 ## Key Rules
 
-| Rule            | Description                                   |
-| --------------- | --------------------------------------------- |
-| **Resilience**  | Never abandon silently. Fallback → Escalate.  |
-| **Anti-Dodge**  | Install/resolve, don't work around.           |
-| **SSOT**        | All state data in `state/`, never duplicate.  |
-| **Formal tone** | Vouvoiement mandatory with M. Thaifa          |
-| **STOP & ASK**  | When not highly confident → STOP and ASK Omar |
+| Rule            | Description                                        |
+| --------------- | -------------------------------------------------- |
+| **Resilience**  | Never abandon silently. Fallback → Escalate.       |
+| **Anti-Dodge**  | Install/resolve, don't work around.                |
+| **SSOT**        | All state data in `data/specs/`, never duplicate.  |
+| **Formal tone** | Vouvoiement mandatory with M. Thaifa               |
+| **STOP & ASK**  | When not highly confident → STOP and ASK Omar      |
 
 ### ⚠️ Platform Operations
 
-> **CRITICAL**: Voir `.claude/rules/platform-operations.md`
+> **CRITICAL**: Voir `data/specs/platform/rules.md`
 
 4 règles obligatoires:
 
@@ -110,12 +114,12 @@
 
 ## Important References
 
-| Document                               | Purpose                       |
-| -------------------------------------- | ----------------------------- |
-| `docs/lessons-learned.md`              | Past errors and corrections   |
-| `admin/client/PROFILE.md`              | Full client profile           |
-| `ROADMAP.md`                           | Strategic phases & milestones |
-| `.claude/rules/platform-operations.md` | Platform operation rules      |
+| Document                           | Purpose                       |
+| ---------------------------------- | ----------------------------- |
+| `docs/lessons-learned.md`          | Past errors and corrections   |
+| `data/admin/client/PROFILE.md`     | Full client profile           |
+| `ROADMAP.md`                       | Strategic phases & milestones |
+| `data/specs/platform/rules.md`     | Platform operation rules      |
 
 > **READ `docs/lessons-learned.md` BEFORE any client action**
 
@@ -123,11 +127,11 @@
 
 ## Contacts
 
-| Role        | Name               | Contact                 |
-| ----------- | ------------------ | ----------------------- |
-| Owner       | M. Said Thaifa     | See `admin/contacts.md` |
-| Admin       | Omar El Mountassir | omar@el-mountassir.com  |
-| HWS Support | Ikram              | See `admin/contacts.md` |
+| Role        | Name               | Contact                          |
+| ----------- | ------------------ | -------------------------------- |
+| Owner       | M. Said Thaifa     | See `data/admin/client/CONTACT.md` |
+| Admin       | Omar El Mountassir | omar@el-mountassir.com           |
+| HWS Support | Ikram              | See `data/admin/client/CONTACT.md` |
 
 ---
 

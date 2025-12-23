@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-22 21:17:04 UTC
+**Last updated**: 2025-12-23 02:27:02 UTC
 
 ---
 
@@ -11,10 +11,23 @@
 ./
 ├── admin/
 │   ├── finance/
+│   │   ├── subscriptions/
+│   │   │   ├── anthropic.md
+│   │   │   ├── cloudflare.md
+│   │   │   ├── docker.md
+│   │   │   ├── github.md
+│   │   │   ├── google.md
+│   │   │   ├── linear.md
+│   │   │   ├── README.md
+│   │   │   └── vercel.md
 │   │   └── .gitkeep
+│   ├── inbox/
+│   │   ├── pending.md
+│   │   └── README.md
 │   ├── legal/
 │   │   └── .gitkeep
 │   └── time/
+│       ├── booking-pages.md
 │       └── .gitkeep
 ├── archive/
 │   └── settings.local.json.backup
@@ -72,12 +85,18 @@
 │       │   ├── linear.md
 │       │   ├── notion.md
 │       │   └── README.md
+│       ├── platforms/
+│       │   ├── cloudflare.md
+│       │   ├── docker.md
+│       │   ├── github.md
+│       │   └── vercel.md
 │       └── prompts/
 ├── docs/
 │   └── reference/
 │       ├── guides/
 │       │   ├── claude-code-chrome.md
-│       │   └── claude-code-permissions.md
+│       │   ├── claude-code-permissions.md
+│       │   └── client-communication-best-practices.md
 │       └── INDEX.md
 ├── history/
 │   └── 2025/
@@ -127,45 +146,44 @@
 │       └── README.md
 ├── projects/
 │   ├── gagliano/
+│   │   ├── communication/
+│   │   │   └── 2025-12-cash-depot-demo-thread.md
 │   │   └── CLAUDE.md
 │   └── thaifa/
-│       ├── admin/
-│       │   └── client/
-│       ├── base/
-│       ├── briefs/
-│       │   └── 2025-12-22-hws-introduction.md
+│       ├── ai/
+│       │   ├── agentic/
+│       │   ├── analytics/
+│       │   ├── knowledge/
+│       │   ├── memory/
+│       │   └── rag/
+│       ├── archive/
+│       │   └── 2025/
 │       ├── .claude/
 │       │   ├── commands/
 │       │   ├── input/
-│       │   ├── output/
 │       │   ├── rules/
 │       │   └── settings.local.json
-│       ├── communication/
-│       │   └── whatsapp/
 │       ├── data/
+│       │   ├── admin/
+│       │   ├── communication/
+│       │   └── specs/
 │       ├── docs/
+│       │   ├── briefs/
 │       │   ├── templates/
+│       │   ├── workflows/
 │       │   ├── guest-testimonials.md
 │       │   ├── INDEX.md
 │       │   ├── lessons-learned.md
 │       │   └── services-transport.md
-│       ├── export/
-│       │   └── constants/
-│       ├── history/
-│       │   └── 2025/
-│       ├── state/
-│       │   ├── baseline/
-│       │   ├── current/
-│       │   ├── execution/
-│       │   ├── historical/
-│       │   ├── planned/
-│       │   └── README.md
-│       ├── tasks/
+│       ├── infra/
+│       │   ├── docker/
+│       │   └── envs/
+│       ├── project/
 │       │   └── TODOs.md
-│       ├── workflows/
-│       │   ├── guest-communication.md
-│       │   ├── pricing.md
-│       │   └── reservation.md
+│       ├── src/
+│       │   ├── apps/
+│       │   ├── packages/
+│       │   └── tools/
 │       ├── AGENTS.md
 │       ├── CLAUDE.md
 │       ├── .gitignore
@@ -180,6 +198,10 @@
 │       └── video/
 │           └── get_transcript.py
 ├── shared/
+│   ├── books/
+│   ├── drafts/
+│   │   ├── 2026-tech-stack.md
+│   │   └── .md
 │   ├── memory/
 │   │   ├── decisions.md
 │   │   ├── episodes.md
@@ -198,7 +220,10 @@
 │   │   └── state-management.md
 │   ├── user/
 │   │   └── preferences.md
-│   └── INDEX.md
+│   ├── 52c6a6d8-39f0-5442-aba1-cc7d7174b268.pdf
+│   ├── account_activities_202512.csv
+│   ├── INDEX.md
+│   └── Invoice-QYCPRZIA-0001.pdf
 ├── templates/
 │   ├── commands/
 │   │   └── slash-command.md
@@ -233,7 +258,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-100 directories, 123 files
+108 directories, 140 files
 ```
 
 ---
