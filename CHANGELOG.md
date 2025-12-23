@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Time Management: Google Calendar booking pages documentation (`admin/time/booking-pages.md`)
+- Time Management: Client Meeting booking URLs (30 min + 60 min)
+- Pattern: "Client Booking Page Setup" in `shared/memory/patterns.md`
+- Pattern: "Evaluate Client Strategic Value" in `shared/memory/patterns.md`
+- User Preferences: Time Management section with booking config
+- Subscriptions documentation (`admin/finance/subscriptions/`)
+- Platform configs (`configs/system/platforms/`)
+- Gagliano: Cash Depot email thread documentation
+
+### Changed
+- Thaifa project: Major restructure (archive/, data/, docs/, src/, ai/)
+- User preferences updated to v1.1.0 with booking pages
+
+### Added (previous)
 - Villa Thaifa: Booking.com data file (`projects/thaifa/state/current/booking-com-data.md`)
 - Villa Thaifa: Guest testimonials for marketing (`projects/thaifa/docs/guest-testimonials.md`)
 - Villa Thaifa: State File Protection guardrail in CLAUDE.md (FULL STOP before destructive edits)
