@@ -1,6 +1,7 @@
 # Architecture Reference — Backlog
 
-> **Tracks remaining improvements identified in [architecture-evaluation.md](architecture-evaluation.md)** > **Source**: Comprehensive evaluation (2025-12-24), Score: 4.55/5 → 4.65/5
+> **Tracks remaining improvements identified in [evaluation.md](evaluation.md)**
+> **Source**: Comprehensive evaluation (2025-12-24), Score: 4.65/5
 
 ---
 

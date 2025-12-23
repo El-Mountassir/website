@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-23 11:46:31 UTC
+**Last updated**: 2025-12-23 12:00:26 UTC
 
 ---
 
@@ -94,10 +94,10 @@
 ├── docs/
 │   └── reference/
 │       ├── architecture/
+│       │   ├── architecture.md
 │       │   ├── backlog.md
 │       │   ├── evaluation.md
-│       │   ├── README.md
-│       │   └── reference.md
+│       │   └── README.md
 │       ├── guides/
 │       │   ├── claude-code-chrome.md
 │       │   ├── claude-code-permissions.md
