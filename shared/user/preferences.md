@@ -1,7 +1,7 @@
 # User Preferences for AI Interaction
 
 > **Current User**: Omar El Mountassir
-> **Last Updated**: 2025-12-22 (added VISUAL requirements)
+> **Last Updated**: 2025-12-23 (added Time Management + Booking Pages)
 > **Purpose**: Help ALL agents understand how to work with the human(s).
 
 ---
@@ -98,6 +98,38 @@
 | Current pattern   | Night owl (transitioning to early bird) |
 | Peak productivity | Late evening / night                    |
 | Respect           | Don't judge scheduling preferences      |
+
+---
+
+## Time Management
+
+> **Added 2025-12-23** — Booking pages for client meetings
+
+### Client Meeting Booking
+
+| Duration | URL | Use Case |
+|----------|-----|----------|
+| **30 min** | https://calendar.app.google/i1Q4t8G8Zg328caE8 | Quick sync, follow-up |
+| **60 min** | https://calendar.app.google/B9jKSicLyqcD8zkw5 | Deep dive, discovery |
+
+### Availability for Client Meetings
+
+| Setting | Value |
+|---------|-------|
+| Days | Monday - Friday |
+| Hours | 1:30pm - 7:30pm (Morocco Time) |
+| Buffer | 15 min between meetings |
+| Min notice | 24 hours |
+| Max advance | 28 days |
+
+### Calendar Blocks (Protect Focus Time)
+
+| Block | Time | Purpose |
+|-------|------|---------|
+| FOCUS - Deep Work Block | 9:30am - 1:30pm | Morning deep work |
+| FOCUS - Night Deep Work | 7:30pm - 11:20pm | Evening deep work |
+
+> **SSOT**: Full booking configuration in `admin/time/booking-pages.md`
 
 ---
 
@@ -224,4 +256,4 @@ shared/user/
 
 ---
 
-_v1.0.0 — Extracted from omar/context/ and conversation history_
+_v1.1.0 — Added Time Management section with booking pages (2025-12-23)_
