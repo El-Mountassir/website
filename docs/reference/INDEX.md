@@ -10,22 +10,32 @@ When working on a topic, check if a guide exists below. **Read the guide BEFORE 
 
 ---
 
+## Architecture
+
+| Document | Purpose | Link |
+|----------|---------|------|
+| **Reference** | Main architecture (7 sections) | [architecture/](architecture/) |
+| **Evaluation** | Scoring report (4.65/5) | [architecture/evaluation.md](architecture/evaluation.md) |
+| **Backlog** | Improvement tracker | [architecture/backlog.md](architecture/backlog.md) |
+
+---
+
 ## Available Guides
 
-| Topic | Guide | When to Use | Status |
-|-------|-------|-------------|--------|
-| **Chrome/Browser** | [claude-code-chrome](guides/claude-code-chrome.md) | Browser automation, calendar, web apps | REFERENCE |
-| **Client Communication** | [client-communication-best-practices](guides/client-communication-best-practices.md) | Emails, scheduling, follow-ups | REFERENCE |
-| **Permissions** | [claude-code-permissions](guides/claude-code-permissions.md) | Settings config, allow/deny patterns | REFERENCE |
+| Topic                    | Guide                                                                                | When to Use                            | Status    |
+| ------------------------ | ------------------------------------------------------------------------------------ | -------------------------------------- | --------- |
+| **Chrome/Browser**       | [claude-code-chrome](guides/claude-code-chrome.md)                                   | Browser automation, calendar, web apps | REFERENCE |
+| **Client Communication** | [client-communication-best-practices](guides/client-communication-best-practices.md) | Emails, scheduling, follow-ups         | REFERENCE |
+| **Permissions**          | [claude-code-permissions](guides/claude-code-permissions.md)                         | Settings config, allow/deny patterns   | REFERENCE |
 
 ---
 
 ## Guide Status Legend
 
-| Status | Meaning |
-|--------|---------|
+| Status    | Meaning                      |
+| --------- | ---------------------------- |
 | REFERENCE | Validated, stable, use as-is |
-| DRAFT | Work in progress, may change |
+| DRAFT     | Work in progress, may change |
 
 ---
 
@@ -39,4 +49,4 @@ When working on a topic, check if a guide exists below. **Read the guide BEFORE 
 
 ---
 
-_Last updated: 2025-12-22_
+_Last updated: 2025-12-24_

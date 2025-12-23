@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-23 11:35:43 UTC
+**Last updated**: 2025-12-23 11:46:31 UTC
 
 ---
 
@@ -93,11 +93,15 @@
 │       └── prompts/
 ├── docs/
 │   └── reference/
+│       ├── architecture/
+│       │   ├── backlog.md
+│       │   ├── evaluation.md
+│       │   ├── README.md
+│       │   └── reference.md
 │       ├── guides/
 │       │   ├── claude-code-chrome.md
 │       │   ├── claude-code-permissions.md
 │       │   └── client-communication-best-practices.md
-│       ├── architecture.md
 │       └── INDEX.md
 ├── history/
 │   └── 2025/
@@ -263,7 +267,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-108 directories, 145 files
+109 directories, 148 files
 ```
 
 ---
