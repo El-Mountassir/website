@@ -15,6 +15,7 @@ When working on a topic, check if a guide exists below. **Read the guide BEFORE 
 | Topic | Guide | When to Use | Status |
 |-------|-------|-------------|--------|
 | **Chrome/Browser** | [claude-code-chrome](guides/claude-code-chrome.md) | Browser automation, calendar, web apps | REFERENCE |
+| **Client Communication** | [client-communication-best-practices](guides/client-communication-best-practices.md) | Emails, scheduling, follow-ups | REFERENCE |
 | **Permissions** | [claude-code-permissions](guides/claude-code-permissions.md) | Settings config, allow/deny patterns | REFERENCE |
 
 ---
