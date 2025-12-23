@@ -100,12 +100,17 @@ flowchart LR
         SS5["Consistent Execution"]
     end
 
-    subgraph Synergy["⚡ SYNERGY = NORTH STAR"]
+    subgraph Mechanism["⚡ SYNERGY<br/>(The Mechanism)"]
+        SYN["Carbon-Silicon Partnership<br/>Working in Harmony"]
+    end
+
+    subgraph Outcome["🌟 NORTH STAR<br/>(The Outcome)"]
         NS["One person + AI agents =<br/>what used to require teams"]
     end
 
-    CarbonStrengths --> Synergy
-    SiliconStrengths --> Synergy
+    CarbonStrengths --> Mechanism
+    SiliconStrengths --> Mechanism
+    Mechanism -->|"produces"| Outcome
 ```
 
 ### Future Evolution

@@ -58,12 +58,12 @@ C0/L0 is the **shared foundation** for both architecture (C1-C4) and process (L1
 
 ### What C0 Contains
 
-| Element        | Description                                                        |
-| -------------- | ------------------------------------------------------------------ |
-| **Actors**     | Omar (51% decision weight), Claude Code, Claude Web, Future Agents |
-| **Governance** | Decision authority matrix, veto rules                              |
-| **Philosophy** | NORTH STAR, symbiosis principle, Hard Stops                        |
-| **Boundaries** | What's in scope, what's external                                   |
+| Element        | Description                                                                |
+| -------------- | -------------------------------------------------------------------------- |
+| **Actors**     | Omar (51% decision weight), Claude Code, Claude Web, Future Agents         |
+| **Governance** | Decision authority matrix, veto rules                                      |
+| **Philosophy** | NORTH STAR (outcome), Synergy (mechanism), symbiosis principle, Hard Stops |
+| **Boundaries** | What's in scope, what's external                                           |
 
 For **process documentation** (L1-L3), see [processes/](../processes/).
 

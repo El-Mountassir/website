@@ -42,6 +42,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - decision-making.md — Confidence-based decision process
 
 ### Changed
+
+- **Architecture Section 0**: Distinguish Synergy (mechanism) from NORTH STAR (outcome)
+  - Updated Mermaid diagram: `SYNERGY = NORTH STAR` → `SYNERGY → NORTH STAR`
+  - collective-model.md C0 Philosophy updated to list both concepts explicitly
+  - Council Decision documented in `shared/memory/decisions.md`
 - **Structural: `omar/` → `.omar/`** — A2A protocol alignment (all agents use `.{agent}/` pattern)
 - Architecture Reference: Added Section 0 "Substrate Layer" — Carbon-Silicon Partnership (v1.3.0)
 - Architecture Reference: Migrated all ASCII diagrams to Mermaid (8 diagrams total)

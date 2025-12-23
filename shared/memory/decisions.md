@@ -547,3 +547,47 @@ Technical: "Agentic Transformation Agency"
 - NORTH STAR unchanged: One person + AI agents = what used to require teams
 
 ---
+
+### [2025-12-24] Synergy ≠ NORTH STAR (Causal Distinction)
+
+**Author**: The Collective Council
+**Confidence**: ✅ Certitude (95%)
+**Status**: Active
+
+#### Context
+
+Architecture Section 0 showed "SYNERGY = NORTH STAR" in a Mermaid diagram, implying equality. However, they are conceptually different:
+
+| Concept       | Nature     | Question Answered | Audience  |
+| ------------- | ---------- | ----------------- | --------- |
+| **Synergy**   | Mechanism  | HOW we achieve it | Internal  |
+| **NORTH STAR**| Outcome    | WHAT we achieve   | External  |
+
+#### Decision
+
+**Distinguish with causation, not conflation:**
+
+```text
+BEFORE:  Carbon/Silicon → SYNERGY = NORTH STAR (conflation)
+AFTER:   Carbon/Silicon → ⚡ SYNERGY → 🌟 NORTH STAR (causation)
+```
+
+- **Synergy** = The mechanism: Carbon-Silicon Partnership working in harmony
+- **NORTH STAR** = The outcome: "One person + AI agents = what used to require teams"
+
+#### Alternatives Considered
+
+| Option              | Description                      | Verdict                                              |
+| ------------------- | -------------------------------- | ---------------------------------------------------- |
+| A. Merge            | Replace NORTH STAR with Synergy  | Rejected: loses external positioning value           |
+| B. Keep as-is       | "SYNERGY = NORTH STAR"           | Rejected: imprecise, conflates mechanism with outcome|
+| **C. Distinguish**  | Synergy → NORTH STAR             | ✅ Adopted                                           |
+
+#### Consequences
+
+- Architecture.md Section 0: Mermaid diagram updated to show causal relationship
+- collective-model.md: C0 Philosophy now lists both concepts explicitly
+- NORTH STAR remains the public-facing promise
+- Synergy becomes the internal mechanism description
+
+---
