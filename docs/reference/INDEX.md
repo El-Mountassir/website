@@ -14,9 +14,20 @@ When working on a topic, check if a guide exists below. **Read the guide BEFORE 
 
 | Document       | Purpose                        | Link                                                     |
 | -------------- | ------------------------------ | -------------------------------------------------------- |
-| **Reference**  | Main architecture (7 sections) | [architecture/](architecture/)                           |
+| **Reference**  | Main architecture (8 sections) | [architecture/](architecture/)                           |
 | **Evaluation** | Scoring report (4.65/5)        | [architecture/evaluation.md](architecture/evaluation.md) |
 | **Backlog**    | Improvement tracker            | [architecture/backlog.md](architecture/backlog.md)       |
+
+---
+
+## Processes
+
+| Document              | Purpose                    | Link                                                     |
+| --------------------- | -------------------------- | -------------------------------------------------------- |
+| **Process Index**     | Operational flows (HOW)    | [processes/](processes/)                                 |
+| **Mission Lifecycle** | SIPOC for missions         | [mission-lifecycle.md](processes/mission-lifecycle.md)   |
+| **Session Flow**      | /start → /end flow         | [session-flow.md](processes/session-flow.md)             |
+| **Decision Making**   | Confidence-based decisions | [decision-making.md](processes/decision-making.md)       |
 
 ---
 

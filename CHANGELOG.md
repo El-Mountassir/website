@@ -35,6 +35,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Subscriptions documentation (`admin/finance/subscriptions/`)
 - Platform configs (`configs/system/platforms/`)
 - Gagliano: Cash Depot email thread documentation
+- Process documentation system (`docs/reference/processes/`) — Leeds Framework + SIPOC:
+  - README.md with methodology explanation
+  - mission-lifecycle.md — Complete SIPOC for mission management
+  - session-flow.md — /start → /end process documentation
+  - decision-making.md — Confidence-based decision process
 
 ### Changed
 - **Structural: `omar/` → `.omar/`** — A2A protocol alignment (all agents use `.{agent}/` pattern)
