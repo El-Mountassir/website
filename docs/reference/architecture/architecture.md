@@ -168,6 +168,70 @@ flowchart TB
 | **Agent Harness**          | Technical infrastructure | Claude Code SDK, MCP, tools          |
 | **Conventions**            | Shared norms             | CLAUDE.md, rules/, memory/           |
 
+### Escalation Rules
+
+> **When does an agent escalate to Human Control Plane?**
+
+| Condition                   | Confidence | Action                        |
+| --------------------------- | ---------- | ----------------------------- |
+| **Uncertainty**             | < 60% 🟡🟠⚠️ | Escalate to Omar              |
+| **Business/Client Impact**  | Any        | Always escalate               |
+| **Irreversible Action**     | Any        | Confirm before executing      |
+| **Safety Concern**          | Any        | Immediate escalation          |
+| **Ambiguous Intent**        | Any        | Ask, don't assume             |
+| **Financial Decision**      | Any        | Omar approval required        |
+| **External Communication**  | Any        | Omar review before sending    |
+
+**Anti-pattern**: Acting on 🟠 40-59% confidence without asking = trust erosion.
+
+### Trust Calibration (Autonomy Dial)
+
+> **How trust evolves over time based on performance.**
+
+#### Autonomy Levels
+
+| Level | Name         | Agent Behavior                          | Human Involvement           |
+| ----- | ------------ | --------------------------------------- | --------------------------- |
+| **1** | Supervised   | Explain before acting                   | Approve every action        |
+| **2** | Guided       | Propose then act                        | Confirm important decisions |
+| **3** | Collaborative| Act then inform                         | Review periodically         |
+| **4** | Delegated    | Act autonomously within scope           | Exception handling only     |
+| **5** | Autonomous   | Full autonomy in defined domain         | Strategic oversight only    |
+
+#### Current Calibration
+
+| Domain               | Level | Notes                                      |
+| -------------------- | ----- | ------------------------------------------ |
+| Code execution       | 4     | Delegated, Omar trusts technical decisions |
+| File operations      | 3     | Collaborative, inform after major changes  |
+| Git operations       | 4     | Delegated, autonomous commits              |
+| Client communication | 2     | Guided, requires approval                  |
+| Business decisions   | 1     | Supervised, Omar always decides            |
+
+#### Trust Evolution
+
+```mermaid
+flowchart LR
+    subgraph TrustBuild["📈 TRUST BUILDING"]
+        TB1["Accurate execution"]
+        TB2["Proactive verification"]
+        TB3["Transparent uncertainty"]
+        TB4["Acknowledging errors"]
+    end
+
+    subgraph TrustErosion["📉 TRUST EROSION"]
+        TE1["Acting on low confidence"]
+        TE2["Empty promises"]
+        TE3["Hiding uncertainty"]
+        TE4["Repeated mistakes"]
+    end
+
+    TB1 --> |"+1 Level"| Higher["⬆️ Higher Autonomy"]
+    TE1 --> |"-1 Level"| Lower["⬇️ Lower Autonomy"]
+```
+
+**Current Trust Status**: Rebuilding (as of 2025-12-19) — See `shared/user/preferences.md`
+
 ---
 
 ## 2. Everything-as-Code (EaC)

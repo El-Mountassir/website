@@ -26,37 +26,17 @@
 
 ---
 
-## Priority 2: Three-Layer Model Gaps
+## Priority 2: Three-Layer Model Gaps ✅
 
-### [ ] Escalation Rules
-
-**Section**: 1 (Three-Layer Model)
-**Gap**: When exactly does an agent escalate to Human Control Plane?
-
-**Proposed content**:
-
-```markdown
-### Escalation Triggers
-
-| Condition                 | Action                   |
-| ------------------------- | ------------------------ |
-| Confidence < 60% (🟡🟠⚠️) | Escalate to Omar         |
-| Business/client decision  | Always escalate          |
-| Irreversible action       | Confirm before executing |
-| Safety concern            | Immediate escalation     |
-| Ambiguous intent          | Ask, don't assume        |
-```
-
-### [ ] Trust Calibration Details
+### [x] Escalation Rules
 
 **Section**: 1 (Three-Layer Model)
-**Gap**: "Trust Calibration" mentioned but not detailed
+**Completed**: 2025-12-24 — Added escalation table with 7 conditions, anti-pattern note.
 
-**Proposed content**:
+### [x] Trust Calibration Details
 
-- Define autonomy levels (1-5)
-- Map confidence to autonomy
-- Show how trust changes over time
+**Section**: 1 (Three-Layer Model)
+**Completed**: 2025-12-24 — Added 5 autonomy levels, current calibration per domain, trust evolution Mermaid diagram.
 
 ---
 
@@ -156,9 +136,9 @@
 | Metric          | Value   |
 | --------------- | ------- |
 | **Total items** | 9       |
-| **Completed**   | 5       |
-| **Remaining**   | 9       |
-| **Priority 2**  | 2 items |
+| **Completed**   | 2       |
+| **Remaining**   | 7       |
+| **Priority 2**  | ✅ Done |
 | **Priority 3**  | 2 items |
 | **Priority 4**  | 2 items |
 | **Priority 5**  | 3 items |
@@ -167,9 +147,10 @@
 
 ## Next Actions
 
-1. **Immediate**: Commit this tracking file + evaluation report
-2. **Next session**: Tackle P2 (Escalation Rules, Trust Calibration)
-3. **Future**: P3-P5 as time permits
+1. ~~**Immediate**: Commit this tracking file + evaluation report~~ ✅
+2. ~~**Next session**: Tackle P2 (Escalation Rules, Trust Calibration)~~ ✅
+3. **Next**: P3 (Migration Trigger, Migration Checklist)
+4. **Future**: P4-P5 as time permits
 
 ---
 
