@@ -12,11 +12,12 @@ When working on a topic, check if a guide exists below. **Read the guide BEFORE 
 
 ## Architecture
 
-| Document       | Purpose                        | Link                                                     |
-| -------------- | ------------------------------ | -------------------------------------------------------- |
-| **Reference**  | Main architecture (8 sections) | [architecture/](architecture/)                           |
-| **Evaluation** | Scoring report (4.65/5)        | [architecture/evaluation.md](architecture/evaluation.md) |
-| **Backlog**    | Improvement tracker            | [architecture/backlog.md](architecture/backlog.md)       |
+| Document            | Purpose                        | Link                                                             |
+| ------------------- | ------------------------------ | ---------------------------------------------------------------- |
+| **Reference**       | Main architecture (8 sections) | [architecture/](architecture/)                                   |
+| **Extended C4**     | C0-C4 architecture model       | [architecture/collective-model.md](architecture/collective-model.md) |
+| **Evaluation**      | Scoring report (4.65/5)        | [architecture/evaluation.md](architecture/evaluation.md)         |
+| **Backlog**         | Improvement tracker            | [architecture/backlog.md](architecture/backlog.md)               |
 
 ---
 
