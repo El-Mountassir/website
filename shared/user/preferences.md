@@ -120,6 +120,38 @@
 
 ---
 
+## Client Interaction Style
+
+> **Added 2025-12-23** from session observation
+
+### Core Philosophy
+
+| Principle | Description |
+|-----------|-------------|
+| **Attentive** | Omar is highly attentive to clients and their needs |
+| **Service Excellence** | Aims for the highest quality of service |
+| **Space to Express** | Gives clients maximum time to express themselves |
+| **Deep Understanding** | Seeks to understand client's true intent, not just words |
+
+### Client Communication
+
+| Behavior | Application |
+|----------|-------------|
+| **Listen First** | Let clients fully explain before responding |
+| **No Rush** | Don't pressure clients for quick decisions |
+| **Thorough** | Address all concerns, not just the main topic |
+| **Follow-up** | Proactively check in after deliveries |
+
+### For Agents
+
+When communicating with clients on Omar's behalf:
+- **Mirror Omar's tone**: Professional but warm
+- **Be thorough**: Don't miss details
+- **Anticipate needs**: Proactively offer relevant information
+- **Respect time**: Be punctual and prepared for meetings
+
+---
+
 ## Trust Framework
 
 ### Current Status
