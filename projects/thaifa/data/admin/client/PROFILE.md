@@ -46,7 +46,7 @@
 | **Prix configurés HotelRunner** | 0/9 types  |
 | **Promotions actives Booking**  | 5 (10-15%) |
 
-→ Voir `state/current/` pour détails opérationnels
+→ Voir `data/specs/` pour détails opérationnels
 
 ---
 
@@ -138,7 +138,7 @@
 | **Points forts**       | Calme, jardins, piscine infinity, accueil chaleureux ("comme chez soi") |
 | **Atout localisation** | Calme et paisible, loin du bruit de la ville (14 km du centre)          |
 
-→ Voir `state/current/rooms.md` pour le détail des chambres et pricing
+→ Voir `data/specs/hotel/rooms.md` pour le détail des chambres et pricing
 
 ---
 

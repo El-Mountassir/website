@@ -22,7 +22,7 @@
 
 ```
 1. PAUSE before clicking/submitting
-2. VERIFY against documentation (state/current/rooms.md, etc.)
+2. VERIFY against documentation (data/specs/hotel/rooms.md, etc.)
 3. If unsure → STOP → ASK → Wait for confirmation
 4. NEVER guess or assume on platform operations
 ```
@@ -68,9 +68,9 @@
 
 ---
 
-## ⛔ State File Protection
+## ⛔ Data File Protection
 
-> **FULL STOP requis avant toute modification destructive des fichiers state.**
+> **FULL STOP requis avant toute modification destructive des fichiers data/specs.**
 
 | Type d'action                    | Confirmation requise |
 | -------------------------------- | -------------------- |
@@ -80,10 +80,10 @@
 | Changer compteurs/métriques      | ✅ MUST ASK          |
 | Ajouter NOUVELLES données à côté | ❌ OK to proceed     |
 
-### Pattern pour updates state
+### Pattern pour updates data
 
 ```
-1. READ current state carefully
+1. READ current data carefully
 2. IDENTIFY what exists vs what's new
 3. ADD new data WITHOUT removing existing
 4. If modification needed → STOP → ASK OMAR
@@ -94,7 +94,7 @@
 - ❌ BAD: "Room types: 9" → "Room types: 8" (destroyed data)
 - ✅ GOOD: Add "Room types (Booking.com): 8" alongside existing
 
-> **Rationale**: State files = SSOT. Différentes plateformes peuvent avoir différentes données.
+> **Rationale**: Data files = SSOT. Différentes plateformes peuvent avoir différentes données.
 
 ---
 
@@ -105,7 +105,7 @@ Avant toute action plateforme:
 - [ ] Confiance > 90% ?
 - [ ] Détails répétés à Omar ?
 - [ ] Valeurs exactes (pas calculées) ?
-- [ ] State files non modifiés destructivement ?
+- [ ] Data files non modifiés destructivement ?
 
 Si une réponse est NON → **STOP** et ajuste.
 

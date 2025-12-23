@@ -227,7 +227,7 @@ When we build on one company with the best track record for engineers—the best
 | Date          | Release                         | Significance                                                                                                        |
 | ------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | June 2024     | Sonnet 3.5                      | One of the best tool-calling models. Best at the time.                                                              |
-| February 2025 | Claude 3.7 + Claude Code        | First big introduction to agentic coding. The big three became the core four: Context + Model + Prompt + **Tools**. |
+| February 2025 | Claude 3.7 + Claude Code        | First big introduction to agentic coding. The big three became the **core** four: **Context** + **Model** + **Prompt** + **Tools**. |
 | Mid 2025      | Claude Code SDK                 | Custom agents. Build your own.                                                                                      |
 | Late 2025     | Sub-agents                      | Orchestrating multiple agents through an agent.                                                                     |
 | Late 2025     | Haiku 4.5, Sonnet 4.5, Opus 4.5 | Continued iteration. Skills released.                                                                               |

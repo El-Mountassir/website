@@ -3,7 +3,7 @@
 > **This file is automatically updated by Claude Code hooks.**
 > Do not edit manually — changes will be overwritten.
 
-**Last updated**: 2025-12-23 02:27:02 UTC
+**Last updated**: 2025-12-23 11:35:43 UTC
 
 ---
 
@@ -97,6 +97,7 @@
 │       │   ├── claude-code-chrome.md
 │       │   ├── claude-code-permissions.md
 │       │   └── client-communication-best-practices.md
+│       ├── architecture.md
 │       └── INDEX.md
 ├── history/
 │   └── 2025/
@@ -136,7 +137,7 @@
 │   │   ├── 2025-12-22-sync-claude-code-claude-web.md
 │   │   └── .gitkeep
 │   └── README.md
-├── omar/
+├── .omar/
 │   ├── context/
 │   │   └── README.md
 │   ├── models/
@@ -155,7 +156,8 @@
 │       │   ├── analytics/
 │       │   ├── knowledge/
 │       │   ├── memory/
-│       │   └── rag/
+│       │   ├── rag/
+│       │   └── CLAUDE.md
 │       ├── archive/
 │       │   └── 2025/
 │       ├── .claude/
@@ -183,11 +185,12 @@
 │       ├── src/
 │       │   ├── apps/
 │       │   ├── packages/
-│       │   └── tools/
+│       │   ├── tools/
+│       │   └── CLAUDE.md
 │       ├── AGENTS.md
 │       ├── CLAUDE.md
 │       ├── .gitignore
-│       ├── INDEX.md
+│       ├── README.md
 │       ├── ROADMAP.md
 │       └── STRUCTURE.md
 ├── scripts/
@@ -201,6 +204,7 @@
 │   ├── books/
 │   ├── drafts/
 │   │   ├── 2026-tech-stack.md
+│   │   ├── enterrpise.md
 │   │   └── .md
 │   ├── memory/
 │   │   ├── decisions.md
@@ -223,7 +227,8 @@
 │   ├── 52c6a6d8-39f0-5442-aba1-cc7d7174b268.pdf
 │   ├── account_activities_202512.csv
 │   ├── INDEX.md
-│   └── Invoice-QYCPRZIA-0001.pdf
+│   ├── Invoice-QYCPRZIA-0001.pdf
+│   └── s43681-024-00489-4.pdf
 ├── templates/
 │   ├── commands/
 │   │   └── slash-command.md
@@ -258,7 +263,7 @@
 ├── ROADMAP.md
 └── STRUCTURE.md
 
-108 directories, 140 files
+108 directories, 145 files
 ```
 
 ---

@@ -82,7 +82,7 @@ El-Mountassir/
 │   ├── finance/             # Financial records [PROTECTED]
 │   └── legal/               # Legal documents [PROTECTED]
 │
-├── omar/                    # Omar's personal context
+├── .omar/                   # Omar's personal context (Carbon-based agent)
 │   └── context/             # Profile & preferences
 │
 └── learning/                # Learning materials
@@ -126,16 +126,17 @@ El-Mountassir/
 
 Before modifying factual information (accounts, subscriptions, credentials, state):
 
-| Step | Question |
-|------|----------|
-| 1 | Do I have EXPLICIT information about this? |
-| 2 | Could there be TWO things I'm conflating into one? |
-| 3 | Am I REPLACING or ADDING? |
-| 4 | Did the user explicitly ask for this change? |
+| Step | Question                                           |
+| ---- | -------------------------------------------------- |
+| 1    | Do I have EXPLICIT information about this?         |
+| 2    | Could there be TWO things I'm conflating into one? |
+| 3    | Am I REPLACING or ADDING?                          |
+| 4    | Did the user explicitly ask for this change?       |
 
 If ANY answer is uncertain → **STOP and ASK**.
 
 **Confidence mapping for data changes**:
+
 - Account/subscription changes = 🟠 40-59% (ask first)
 - Structural changes without explicit request = 🟡 60-79% (propose, don't act)
 - Data modifications = ALWAYS important decisions
@@ -144,11 +145,11 @@ If ANY answer is uncertain → **STOP and ASK**.
 
 > **If you asked and got no answer, REMIND.**
 
-| Situation | Action |
-|-----------|--------|
+| Situation                                         | Action                                                  |
+| ------------------------------------------------- | ------------------------------------------------------- |
 | Question asked, user continued on different topic | Remind: "Before we continue, you didn't answer about X" |
-| Question asked, user ended session | Add to `admin/inbox/pending.md` |
-| Important decision needed, user seems distracted | Be persistent, re-ask |
+| Question asked, user ended session                | Add to `admin/inbox/pending.md`                         |
+| Important decision needed, user seems distracted  | Be persistent, re-ask                                   |
 
 **Omar is human.** He gets distracted. He doesn't read everything. It's YOUR job to ensure important things aren't missed.
 
@@ -156,13 +157,13 @@ If ANY answer is uncertain → **STOP and ASK**.
 
 > **Omar's words are a starting point, not the final word.**
 
-| Behavior | Explanation |
-|----------|-------------|
-| **Read between the lines** | Extrapolate intent from words |
-| **Challenge** | If something seems wrong, say so |
-| **Propose** | Add ideas even if not asked |
-| **Disagree** | Express disagreement respectfully |
-| **Think out-of-the-box** | Go beyond literal interpretation |
+| Behavior                   | Explanation                       |
+| -------------------------- | --------------------------------- |
+| **Read between the lines** | Extrapolate intent from words     |
+| **Challenge**              | If something seems wrong, say so  |
+| **Propose**                | Add ideas even if not asked       |
+| **Disagree**               | Express disagreement respectfully |
+| **Think out-of-the-box**   | Go beyond literal interpretation  |
 
 Omar is OPEN to discussion. He wants agents who THINK, not just execute.
 
@@ -331,7 +332,7 @@ Setup + TAC Learning → toward the NORTH STAR.
 
 ## USER CONTEXT
 
-[omar/context/README.md](omar/context/README.md) @omar/context/README.md
+[.omar/context/README.md](.omar/context/README.md) @.omar/context/README.md
 
 ---
 
@@ -354,6 +355,7 @@ Setup + TAC Learning → toward the NORTH STAR.
 > **Agents can communicate with Omar via `admin/inbox/pending.md`**
 
 Use the inbox when:
+
 - Something needs Omar's decision
 - Important FYI that shouldn't be lost
 - Action items that only Omar can do

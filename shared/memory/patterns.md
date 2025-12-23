@@ -298,13 +298,14 @@ During drafting/alpha phase, incrementing PATCH (0.0.1 → 0.0.2) instead of PRE
 
 **During alpha/drafting**: Increment the PRE-RELEASE identifier ONLY.
 
-| Change Type              | Version Pattern                       | Example                              |
-| ------------------------ | ------------------------------------- | ------------------------------------ |
-| **Drafting iterations**  | `x.y.z-alpha.N` → `x.y.z-alpha.N+1`   | `0.0.1-alpha.3` → `0.0.1-alpha.4`    |
-| **Ready for review**     | `x.y.z-alpha.N` → `x.y.z-rc.0`        | `0.0.1-alpha.7` → `0.0.1-rc.0`       |
-| **Stable release**       | `x.y.z-rc.N` → `x.y.z`                | `0.0.1-rc.1` → `0.0.1`               |
+| Change Type             | Version Pattern                     | Example                           |
+| ----------------------- | ----------------------------------- | --------------------------------- |
+| **Drafting iterations** | `x.y.z-alpha.N` → `x.y.z-alpha.N+1` | `0.0.1-alpha.3` → `0.0.1-alpha.4` |
+| **Ready for review**    | `x.y.z-alpha.N` → `x.y.z-rc.0`      | `0.0.1-alpha.7` → `0.0.1-rc.0`    |
+| **Stable release**      | `x.y.z-rc.N` → `x.y.z`              | `0.0.1-rc.1` → `0.0.1`            |
 
 **PATCH/MINOR/MAJOR only bump when**:
+
 - PATCH: Actual bug fix or backward-compatible change in STABLE content
 - MINOR: New feature added (after stable release)
 - MAJOR: Breaking change
@@ -360,22 +361,22 @@ When documenting Docker subscriptions or platform configs:
 
 #### What CLI CAN Reveal
 
-| Info | Command |
-|------|---------|
-| Docker Desktop version | `docker version` |
-| Engine version | `docker info` |
-| MCP Toolkit status | `docker mcp server ls` |
-| MCP catalog | `docker mcp catalog show docker-mcp` |
-| Plugins | `docker info \| grep Plugins` |
+| Info                   | Command                              |
+| ---------------------- | ------------------------------------ |
+| Docker Desktop version | `docker version`                     |
+| Engine version         | `docker info`                        |
+| MCP Toolkit status     | `docker mcp server ls`               |
+| MCP catalog            | `docker mcp catalog show docker-mcp` |
+| Plugins                | `docker info \| grep Plugins`        |
 
 #### What CLI CANNOT Reveal
 
-| Info | Where to Get It |
-|------|-----------------|
-| Docker Hub email | Ask user or Docker Desktop UI |
-| Docker Hub username | Ask user or Docker Desktop UI |
-| Subscription plan | Ask user or docker.com/billing |
-| Billing details | docker.com/billing |
+| Info                | Where to Get It                |
+| ------------------- | ------------------------------ |
+| Docker Hub email    | Ask user or Docker Desktop UI  |
+| Docker Hub username | Ask user or Docker Desktop UI  |
+| Subscription plan   | Ask user or docker.com/billing |
+| Billing details     | docker.com/billing             |
 
 #### Example
 
@@ -406,20 +407,20 @@ Agent receives partial information and assumes it's complete. Makes modification
 
 **Context is ALWAYS partial.** Before modifying factual data:
 
-| Question | Why |
-|----------|-----|
+| Question                                            | Why                             |
+| --------------------------------------------------- | ------------------------------- |
 | Is this the ONLY thing, or could there be multiple? | Avoid conflating distinct items |
-| Am I REPLACING or ADDING? | Preserve existing information |
-| Did user explicitly request this change? | Avoid overreach |
-| Could I be making an assumption? | Catch hidden biases |
+| Am I REPLACING or ADDING?                           | Preserve existing information   |
+| Did user explicitly request this change?            | Avoid overreach                 |
+| Could I be making an assumption?                    | Catch hidden biases             |
 
 #### Confidence for Data Modifications
 
-| Type | Minimum Confidence | Action |
-|------|-------------------|--------|
-| Account/subscription changes | 🟠 40-59% | Ask first |
-| Structural rewrites | 🟡 60-79% | Propose, don't act |
-| Any data modification | — | Treat as important decision |
+| Type                         | Minimum Confidence | Action                      |
+| ---------------------------- | ------------------ | --------------------------- |
+| Account/subscription changes | 🟠 40-59%          | Ask first                   |
+| Structural rewrites          | 🟡 60-79%          | Propose, don't act          |
+| Any data modification        | —                  | Treat as important decision |
 
 #### Example
 
@@ -457,24 +458,24 @@ Need a professional, frictionless way for clients to schedule meetings. Manual b
 
 Use **Google Calendar Appointment Schedules** with:
 
-| Setting | Recommendation | Rationale |
-|---------|---------------|-----------|
-| **Durations** | 30 min + 60 min (separate pages) | Different meeting types |
-| **Availability** | Business hours, Mon-Fri | Professional boundaries |
-| **Buffer time** | 15 minutes | Prep + notes between meetings |
-| **Min notice** | 24 hours | No last-minute surprises |
-| **Max advance** | 28 days | Reasonable planning horizon |
-| **Conferencing** | Google Meet (auto) | Zero friction for remote |
-| **Timezone** | Set explicitly | Avoid confusion with international clients |
+| Setting          | Recommendation                   | Rationale                                  |
+| ---------------- | -------------------------------- | ------------------------------------------ |
+| **Durations**    | 30 min + 60 min (separate pages) | Different meeting types                    |
+| **Availability** | Business hours, Mon-Fri          | Professional boundaries                    |
+| **Buffer time**  | 15 minutes                       | Prep + notes between meetings              |
+| **Min notice**   | 24 hours                         | No last-minute surprises                   |
+| **Max advance**  | 28 days                          | Reasonable planning horizon                |
+| **Conferencing** | Google Meet (auto)               | Zero friction for remote                   |
+| **Timezone**     | Set explicitly                   | Avoid confusion with international clients |
 
 #### When to Use Which Duration
 
-| Situation | Duration |
-|-----------|----------|
-| Initial discovery / deep dive | 60 min |
-| Quick follow-up / status | 30 min |
-| Project kickoff | 60 min |
-| Simple question | 30 min |
+| Situation                     | Duration |
+| ----------------------------- | -------- |
+| Initial discovery / deep dive | 60 min   |
+| Quick follow-up / status      | 30 min   |
+| Project kickoff               | 60 min   |
+| Simple question               | 30 min   |
 
 #### Example Share Message
 
@@ -490,10 +491,10 @@ For scheduling our meeting, please use my booking page:
 
 #### Calendar Integration Tips
 
-| Tip | Why |
-|-----|-----|
-| Block personal time as "Busy" | Prevents booking conflicts |
-| Create recurring focus blocks | Protects deep work time |
+| Tip                             | Why                            |
+| ------------------------------- | ------------------------------ |
+| Block personal time as "Busy"   | Prevents booking conflicts     |
+| Create recurring focus blocks   | Protects deep work time        |
 | Set clear availability end time | Prevents late evening bookings |
 
 #### SSOT Location
@@ -523,20 +524,20 @@ Agent evaluates tasks in isolation, missing the bigger picture. Labels client-re
 
 Before prioritizing ANY client-related task, ask:
 
-| Question | Why |
-|----------|-----|
-| **What's the total potential value?** | First project might be gateway to more |
-| **What's the portfolio impact?** | 1 project vs 50 projects = different priority |
-| **What's the relationship risk?** | Friction now = lost opportunity later |
-| **Is this a reference/portfolio client?** | Social proof value beyond revenue |
+| Question                                  | Why                                           |
+| ----------------------------------------- | --------------------------------------------- |
+| **What's the total potential value?**     | First project might be gateway to more        |
+| **What's the portfolio impact?**          | 1 project vs 50 projects = different priority |
+| **What's the relationship risk?**         | Friction now = lost opportunity later         |
+| **Is this a reference/portfolio client?** | Social proof value beyond revenue             |
 
 #### Client Value Tiers
 
-| Tier | Characteristics | Priority |
-|------|-----------------|----------|
+| Tier          | Characteristics                                           | Priority    |
+| ------------- | --------------------------------------------------------- | ----------- |
 | **Strategic** | High value potential, portfolio gateway, reference client | 🔴 CRITICAL |
-| **Standard** | Normal project, clear scope, one-off | 🟡 Medium |
-| **Low-touch** | Small, routine, maintenance | 🟢 Low |
+| **Standard**  | Normal project, clear scope, one-off                      | 🟡 Medium   |
+| **Low-touch** | Small, routine, maintenance                               | 🟢 Low      |
 
 #### Example
 
@@ -550,18 +551,205 @@ Before prioritizing ANY client-related task, ask:
 
 #### Real Case: Gagliano
 
-| Factor | Value |
-|--------|-------|
-| First project | Cash Depot demo |
-| Potential | 50 websites |
-| Revenue | ~$15,000 |
-| Impact | Payment friction = could block entire portfolio |
-| Correct priority | 🔴 CRITICAL, not 🟡 Medium |
+| Factor           | Value                                           |
+| ---------------- | ----------------------------------------------- |
+| First project    | Cash Depot demo                                 |
+| Potential        | 50 websites                                     |
+| Revenue          | ~$15,000                                        |
+| Impact           | Payment friction = could block entire portfolio |
+| Correct priority | 🔴 CRITICAL, not 🟡 Medium                      |
 
 #### Anti-Pattern
 
 - Labeling client admin as "paperasse" when it's actually "unlocking strategic value"
 - Looking at immediate task, not relationship trajectory
 - Treating first-project clients same as one-off clients
+
+---
+
+### Pattern: Reference over Inline (@imports)
+
+**Author**: Omar
+**Confidence**: ✅ Certitude (95%)
+**Source**: 2025-12-24 session capture — Omar's frustration
+
+#### Problem
+
+CLAUDE.md and other config files contain inline content instead of references. This causes:
+
+- Bloated files that are hard to scan
+- Duplication when same content needed elsewhere
+- No single source of truth for repeated concepts
+- Hard to maintain as content evolves
+
+**Omar's words**: "tout est inline, rien n'est hyperlinked"
+
+#### Solution
+
+Use `@imports` for content that:
+
+1. Is longer than ~5 lines
+2. Could be needed in multiple places
+3. Has its own identity (NORTH STAR, HARD STOPS, etc.)
+4. Changes independently of the importing file
+
+| Content               | Inline | Reference                             |
+| --------------------- | ------ | ------------------------------------- |
+| NORTH STAR definition | ❌     | ✅ `@shared/philosophy/north-star.md` |
+| Quick table           | ✅     | ❌                                    |
+| Standards content     | ❌     | ✅ `@shared/standards/*.md`           |
+| Single line rule      | ✅     | ❌                                    |
+
+#### Example
+
+```markdown
+❌ INLINE (Anti-Pattern):
+
+## NORTH STAR
+
+> **Demonstrate that one person + a fleet of AI agents can build...**
+> [20 more lines of explanation]
+
+✅ REFERENCE (Pattern):
+
+## NORTH STAR
+
+@shared/philosophy/north-star.md
+```
+
+#### Migration Path
+
+1. Identify inline content blocks > 5 lines
+2. Extract to appropriate `shared/` location
+3. Replace with `@path/to/file.md`
+4. Verify import works in CLAUDE.md
+
+#### Anti-Pattern
+
+"Inline everything" — makes files unmanageable, duplicates content, loses SSOT.
+
+---
+
+### Pattern: Agent Depth Limitation (3-Level Rule)
+
+**Author**: Omar + Claude
+**Confidence**: 🟢 Recommandation (85%)
+**Source**: 2025-12-24 session — "pattern de 3-depth"
+
+#### Problem
+
+AI agents struggle to effectively navigate and structure filesystems beyond 3 levels of depth. Beyond this, agents:
+
+- Lose context of where they are
+- Create inconsistent structures
+- Fail to find files they just created
+- Generate duplicate files in wrong locations
+
+**Omar's observation**: Agents reliably work at `area/domain/category/` but struggle with `area/domain/category/subcategory/item/`.
+
+#### Solution
+
+Keep directory structures to maximum 3 levels of semantic depth:
+
+```
+✅ GOOD (3 levels):
+shared/memory/patterns.md
+projects/thaifa/state/
+admin/time/booking-pages.md
+
+❌ RISKY (4+ levels):
+shared/standards/management/work/tasks/active/
+projects/thaifa/data/specs/platform/config/rules/
+```
+
+#### Taxonomy Pattern
+
+```
+Level 1: Area       → tech/, biz/, shared/, projects/
+Level 2: Domain     → memory/, standards/, thaifa/
+Level 3: Category   → patterns.md, missions/, state/
+```
+
+#### Workarounds for Deep Content
+
+| Need              | Solution                      |
+| ----------------- | ----------------------------- |
+| More organization | Use flat files with prefixes  |
+| Grouping          | Use single file with sections |
+| Archival          | Date-based folders at level 3 |
+
+#### Example
+
+```
+❌ TOO DEEP:
+projects/thaifa/data/specs/platform/config/rules/transport.md
+
+✅ FLATTENED:
+projects/thaifa/data/specs/platform-rules.md
+ → Contains transport section internally
+```
+
+#### Anti-Pattern
+
+Deep nesting because "it's more organized" — it's not if agents can't navigate it.
+
+---
+
+### Pattern: Explicit Delegation in Agentic Systems
+
+**Author**: Omar
+**Confidence**: 🟡 Intuition (70%)
+**Source**: 2025-12-24 session — "pas de délégation"
+
+#### Problem
+
+Single-agent interactions become bottlenecks. Human orchestrates everything directly. Agent doesn't spawn sub-agents or delegate. Result: cognitive overload on human, underutilization of agentic capabilities.
+
+**Omar's observation**: Work piles up because there's no delegation mechanism being used.
+
+#### Solution
+
+Formalize delegation patterns:
+
+| Task Type              | Delegation Strategy        |
+| ---------------------- | -------------------------- |
+| Research               | Spawn Explore agent        |
+| Multi-file changes     | Spawn build-agent per file |
+| Documentation scraping | Spawn docs-scraper agent   |
+| Independent subtasks   | Parallel Task calls        |
+
+#### When to Delegate
+
+```
+IF task is:
+  - Parallelizable (independent parts)
+  - Research-heavy (needs exploration)
+  - Context-heavy (would exceed window)
+  - Time-consuming (blocking main flow)
+THEN: Delegate to sub-agent
+```
+
+#### Human-Agent Delegation
+
+| Role         | Responsibility                       |
+| ------------ | ------------------------------------ |
+| Human (Omar) | Goals, boundaries, escalations       |
+| Main Agent   | Orchestration, delegation, synthesis |
+| Sub-agents   | Specialized execution                |
+
+#### Example
+
+```
+❌ SEQUENTIAL (Bottleneck):
+1. Read file A → 2. Read file B → 3. Read file C → 4. Analyze all
+
+✅ PARALLEL (Delegated):
+1. Spawn 3 agents to read A, B, C simultaneously
+2. Synthesize results
+```
+
+#### Anti-Pattern
+
+"I'll do everything myself" — defeats the purpose of agentic systems.
 
 ---

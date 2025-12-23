@@ -247,7 +247,7 @@ Before delivering, verify:
 # [Deliverable Title]
 
 **Generated**: YYYY-MM-DD
-**Pipeline**: history/YYYY/QQ/reports/[topic]/
+**Pipeline**: archive/YYYY/QQ/reports/[topic]/
 
 ## Summary
 
@@ -306,7 +306,7 @@ If quality gates fail:
 
 ```bash
 # Full pipeline creates:
-history/YYYY/QQ/reports/topic/
+archive/YYYY/QQ/reports/topic/
 ├── step-back.md
 ├── sources.md
 ├── patterns.md

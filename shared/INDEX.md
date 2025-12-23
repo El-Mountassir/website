@@ -111,7 +111,7 @@ Content here.
 | Reusable patterns | `shared/memory/patterns.md` | Verification workflows |
 | Standards | `shared/standards/` | Confidence system, SemVer |
 | Agent-specific config | `.{agent}/` | Claude rules, Gemini settings |
-| Human-specific (private) | `omar/` | Personal context, goals |
+| Human-specific (agent) | `.omar/` | Personal context, goals (Carbon-based agent) |
 
 ---
 

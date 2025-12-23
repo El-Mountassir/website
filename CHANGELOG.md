@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Architecture Reference document (`docs/reference/architecture.md`) — 7 sections:
+  - **Substrate Layer** (NEW) — Carbon-Silicon Partnership foundation
+  - Three-Layer Model (Human Control Plane + Agent Harness + Conventions)
+  - Everything-as-Code (EaC) philosophy
+  - Hybrid Multi-Repo Architecture (for 10+ clients)
+  - Current Mono-Repo Structure (3-Level Rule)
+  - Agent Harness Components (6 from Parallel.ai)
+  - Core Four framework (IndyDevDan) — Context + Model + Prompt + Tools
+- Decisions captured in `shared/memory/decisions.md`:
+  - Three-Layer Model
+  - Everything-as-Code (EaC) Philosophy
+  - Multi-Repo Hybrid for 10+ Clients
+  - Agentic ⊂ Digital Transformation positioning
+  - ROADMAP.md as Single Source of Priority
+- Patterns captured in `shared/memory/patterns.md`:
+  - Reference over Inline (@imports)
+  - Agent Depth Limitation (3-Level Rule)
+  - Explicit Delegation in Agentic Systems
+- ROADMAP.md: Added OPERATIONAL PRIORITIES section (NOW/NEXT/LATER/DONE)
 - Time Management: Google Calendar booking pages documentation (`admin/time/booking-pages.md`)
 - Time Management: Client Meeting booking URLs (30 min + 60 min)
 - Pattern: "Client Booking Page Setup" in `shared/memory/patterns.md`
@@ -18,6 +37,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Gagliano: Cash Depot email thread documentation
 
 ### Changed
+- **Structural: `omar/` → `.omar/`** — A2A protocol alignment (all agents use `.{agent}/` pattern)
+- Architecture Reference: Added Section 0 "Substrate Layer" — Carbon-Silicon Partnership (v1.3.0)
+- Architecture Reference: Migrated all ASCII diagrams to Mermaid (8 diagrams total)
+- Architecture Reference: Enriched Core Four with INPUT → PROCESS → OUTPUT → FEEDBACK flow
+- Architecture Reference: Unified agent directories in File Access Pattern diagram (v1.4.0)
 - Thaifa project: Major restructure (archive/, data/, docs/, src/, ai/)
 - User preferences updated to v1.1.0 with booking pages
 

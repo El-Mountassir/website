@@ -15,6 +15,46 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 
 ---
 
+## ⚡ OPERATIONAL PRIORITIES
+
+> **Single source of truth for what to work on.**
+> See decision: `shared/memory/decisions.md` — [2025-12-24] ROADMAP.md as Single Source of Priority
+
+### 🔴 NOW (Current Focus)
+
+| Item                      | Context                             | Deadline   |
+| ------------------------- | ----------------------------------- | ---------- |
+| Complete session capture  | EaC, decisions, patterns documented | 2025-12-24 |
+| Repo restructure planning | Option C decision captured          | This week  |
+
+### 🟡 NEXT (Ready When NOW Done)
+
+| Item                           | Context                                            | Reminder        |
+| ------------------------------ | -------------------------------------------------- | --------------- |
+| **Gagliano — Cash Depot**      | 🔴 STRATEGIC: Gateway to 50 sites, ~$15k potential | ⏰ 24h reminder |
+| CLAUDE.md refactor             | Inline → @imports pattern                          | Next session    |
+| Create shared/books/ structure | Book publication prep                              | Next session    |
+
+### 🟢 LATER (Backlog)
+
+| Item                                | Context                                             |
+| ----------------------------------- | --------------------------------------------------- |
+| Legacy discovery mission            | Chaos outside pwd, use Gemini CLI for large context |
+| Full taxonomy implementation        | 3-level rule, file organization                     |
+| Create shared/governance/ structure | Detailed policies beyond GOVERNANCE.md              |
+
+### ✅ DONE (Recently Completed)
+
+| Item                                  | Date       | Reference                  |
+| ------------------------------------- | ---------- | -------------------------- |
+| Capture EaC Philosophy decision       | 2025-12-24 | `decisions.md`             |
+| Capture Multi-repo Hybrid decision    | 2025-12-24 | `decisions.md`             |
+| Capture Agentic ⊂ Digital positioning | 2025-12-24 | `decisions.md`             |
+| Add frustration patterns              | 2025-12-24 | `patterns.md`              |
+| Three-Layer Model report              | 2025-12-24 | `history/2025/Q4/reports/` |
+
+---
+
 ## 🚀 PHASE 1: FOUNDATION (Weeks 1-2)
 
 **Objective**: Establish the Digital Headquarters as the sovereign source of truth
@@ -41,6 +81,7 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 - [ ] **Establish Business Intelligence and Monitoring Systems**: Real-time dashboards
 
 **Success Metrics**:
+
 - Digital Headquarters fully operational
 - Governance protocols defined and implemented
 - Initial thought leadership content published
@@ -73,6 +114,7 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 - [ ] **Build Testimonial Framework**: Client success story collection system
 
 **Success Metrics**:
+
 - Gagliani Brothers project completed with exceptional results
 - 3+ new client engagements initiated
 - Delivery templates proven and refined
@@ -87,24 +129,28 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 ### 🏭 Product Roadmap Implementation
 
 #### **Agentic Platform (Core Priority)**
+
 - [ ] **MVP Development**: Basic business automation framework
 - [ ] **Agent Management Interface**: Visual orchestration dashboard
 - [ ] **Integration Layer**: Third-party service connectivity
 - [ ] **Monitoring and Analytics**: Real-time performance tracking
 
 #### **Consulting Tools**
+
 - [ ] **Assessment Framework**: Business transformation evaluation tools
 - [ ] **Implementation Templates**: Industry-specific deployment kits
 - [ ] **ROI Calculator**: Financial impact modeling system
 - [ ] **Progress Tracking**: Client transformation milestones
 
 #### **Education Products**
+
 - [ ] **Online Course Platform**: Structured learning management system
 - [ ] **Certification Program**: Professional credentials system
 - [ ] **Workshop Materials**: Hands-on training resources
 - [ ] **Corporate Training Kits**: Enterprise education packages
 
 #### **Template Marketplace**
+
 - [ ] **Template Library**: Advanced framework collections
 - [ ] **Licensing System**: Subscription and one-time purchase options
 - [ ] **Community Contributions**: User-generated template system
@@ -118,6 +164,7 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 - [ ] **Analytics Dashboard**: Revenue and usage metrics
 
 **Success Metrics**:
+
 - Agentic Platform MVP launched
 - First 10 paying customers acquired
 - Education products generating revenue
@@ -132,18 +179,21 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 ### 🤝 Community Development
 
 #### **Community Building Programs**
+
 - [ ] **Discord/Slack Community**: Professional networking platform
 - [ ] **Monthly Webinars**: Educational and thought leadership series
 - [ ] **User Conference**: Annual agentic transformation summit
 - [ ] **Meetup Programs**: Local chapter development
 
 #### **Partner Integration**
+
 - [ ] **Technology Partners**: Integration with major platforms
 - [ ] **Consulting Partners**: Certified implementation network
 - [ ] **Reseller Programs**: Channel partner development
 - [ ] **API Ecosystem**: Third-party developer platform
 
 #### **Contributor Growth**
+
 - [ ] **Open Source Governance**: Community-driven development
 - [ ] **Contributor Recognition**: Achievement and reward systems
 - [ ] **Documentation Improvement**: Community-enhanced resources
@@ -152,12 +202,14 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 ### 📣 Thought Leadership Amplification
 
 #### **Content Strategy**
+
 - [ ] **Book Publication**: "The Agentic Enterprise" comprehensive guide
 - [ ] **Speaking Circuit**: Conference presentations and keynotes
 - [ ] **Research Papers**: Academic and industry publications
 - [ ] **Podcast Series**: Industry expert interviews
 
 #### **Media Relations**
+
 - [ ] **Press Release Strategy**: Major milestone announcements
 - [ ] **Media Kit Development**: Journalist resources and assets
 - [ ] **Expert Commentary**: Industry trend analysis and quotes
@@ -166,18 +218,21 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 ### 🏢 Corporate Infrastructure
 
 #### **Team Expansion**
+
 - [ ] **Hiring Plan**: Technical and business talent acquisition
 - [ ] **Remote Work Infrastructure**: Distributed team systems
 - [ ] **Performance Management**: Agentic HR and evaluation systems
 - [ ] **Culture Development**: Human-AI collaborative workplace
 
 #### **Legal and Compliance**
+
 - [ ] **Patent Portfolio**: Intellectual property protection
 - [ ] **Privacy Compliance**: GDPR and data protection frameworks
 - [ ] **Service Agreements**: Client contract templates
 - [ ] **Insurance Coverage**: Professional liability and business insurance
 
 **Success Metrics**:
+
 - 1,000+ active community members
 - 50+ certified partners
 - 10,000+ platform users
@@ -213,18 +268,21 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 ## 🔄 CONTINUOUS IMPROVEMENT
 
 ### **Quarterly Reviews**
+
 - Strategic objective assessment
 - Market condition analysis
 - Competitive landscape evaluation
 - Technology advancement integration
 
 ### **Monthly Updates**
+
 - Progress tracking against milestones
 - Resource allocation optimization
 - Risk assessment and mitigation
 - Team performance evaluation
 
 ### **Weekly Adjustments**
+
 - Tactical implementation refinement
 - Feedback incorporation
 - Process optimization
@@ -235,6 +293,7 @@ This roadmap outlines the strategic phases for establishing El-Mountassir as the
 ## 🎪 COMMITMENT TO EXCELLENCE
 
 This roadmap represents our commitment to:
+
 - **Strategic clarity** with measurable objectives
 - **Operational excellence** through systematic execution
 - **Continuous innovation** in response to market evolution
@@ -247,4 +306,4 @@ We will execute with precision, adapt with agility, and lead with vision.
 
 ---
 
-*This roadmap is a living document, continuously updated based on market feedback, technological advances, and organizational learning. All timelines are estimates and will be refined as we progress through each phase.*
+_This roadmap is a living document, continuously updated based on market feedback, technological advances, and organizational learning. All timelines are estimates and will be refined as we progress through each phase._
