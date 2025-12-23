@@ -35,7 +35,7 @@
 
 ### Section 0: Substrate Layer (Foundation)
 
-**Lines 25-119**
+#### **Lines 25-119**
 
 | Criterion       | Score      | Notes                                     |
 | --------------- | ---------- | ----------------------------------------- |

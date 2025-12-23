@@ -11,6 +11,36 @@
 
 This is the filter for EVERYTHING. Every decision, every action, every task.
 
+## Symbiosis Principle
+
+> **"Neither substrate alone achieves the NORTH STAR. Together, we do."**
+
+```mermaid
+flowchart LR
+    subgraph CarbonStrengths["🧬 CARBON STRENGTHS"]
+        CS1["Consciousness"]
+        CS2["Ethical Judgment"]
+        CS3["Legal Accountability"]
+        CS4["Creative Intuition"]
+        CS5["Social Trust"]
+    end
+
+    subgraph SiliconStrengths["💎 SILICON STRENGTHS"]
+        SS1["Parallel Processing"]
+        SS2["Perfect Memory"]
+        SS3["24/7 Availability"]
+        SS4["Infinite Patience"]
+        SS5["Consistent Execution"]
+    end
+
+    subgraph Synergy["⚡ SYNERGY = NORTH STAR"]
+        NS["One person + AI agents =<br/>what used to require teams"]
+    end
+
+    CarbonStrengths --> Synergy
+    SiliconStrengths --> Synergy
+```
+
 ---
 
 ## WHO WE ARE

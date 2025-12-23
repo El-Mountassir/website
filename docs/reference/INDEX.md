@@ -12,11 +12,11 @@ When working on a topic, check if a guide exists below. **Read the guide BEFORE 
 
 ## Architecture
 
-| Document | Purpose | Link |
-|----------|---------|------|
-| **Reference** | Main architecture (7 sections) | [architecture/](architecture/) |
-| **Evaluation** | Scoring report (4.65/5) | [architecture/evaluation.md](architecture/evaluation.md) |
-| **Backlog** | Improvement tracker | [architecture/backlog.md](architecture/backlog.md) |
+| Document       | Purpose                        | Link                                                     |
+| -------------- | ------------------------------ | -------------------------------------------------------- |
+| **Reference**  | Main architecture (7 sections) | [architecture/](architecture/)                           |
+| **Evaluation** | Scoring report (4.65/5)        | [architecture/evaluation.md](architecture/evaluation.md) |
+| **Backlog**    | Improvement tracker            | [architecture/backlog.md](architecture/backlog.md)       |
 
 ---
 

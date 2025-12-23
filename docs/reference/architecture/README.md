@@ -7,11 +7,11 @@
 
 ## Documents
 
-| Document | Purpose | Version |
-|----------|---------|---------|
-| [reference.md](reference.md) | Main architecture reference (7 sections) | v1.4.0 |
-| [evaluation.md](evaluation.md) | Comprehensive scoring report | 4.65/5 |
-| [backlog.md](backlog.md) | Improvement tracker | 9 items |
+| Document                           | Purpose                                  | Version |
+| ---------------------------------- | ---------------------------------------- | ------- |
+| [architecture.md](architecture.md) | Main architecture reference (8 sections) | v1.4.0  |
+| [evaluation.md](evaluation.md)     | Comprehensive scoring report             | 4.65/5  |
+| [backlog.md](backlog.md)           | Improvement tracker                      | 9 items |
 
 ---
 
@@ -32,10 +32,10 @@
 
 ## Related Resources
 
-| Resource | Location |
-|----------|----------|
-| Decisions | `shared/memory/decisions.md` |
-| Patterns | `shared/memory/patterns.md` |
+| Resource           | Location                                               |
+| ------------------ | ------------------------------------------------------ |
+| Decisions          | `shared/memory/decisions.md`                           |
+| Patterns           | `shared/memory/patterns.md`                            |
 | Three-Layer Report | `history/2025/Q4/reports/agent-harness-human-control/` |
 
 ---

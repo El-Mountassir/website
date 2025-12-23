@@ -19,6 +19,7 @@
 4. [Current Mono-Repo Structure](#4-current-mono-repo-structure)
 5. [Agent Harness Components](#5-agent-harness-components)
 6. [The Core Four](#6-the-core-four-indydevdan)
+7. [Positioning Formula](#7-positioning-formula)
 
 ---
 
@@ -277,6 +278,7 @@ El-Mountassir/
 
 ```markdown
 # In project CLAUDE.md:
+
 @../core/shared/standards/confidence-system.md
 @../core/.claude/rules/partnership.md
 etc
@@ -483,7 +485,7 @@ flowchart LR
 
 ---
 
-## Positioning Formula
+## 7. Positioning Formula
 
 > **Decision**: `decisions.md` — [2025-12-24] Agentic ⊂ Digital Transformation
 
